@@ -17,17 +17,21 @@ class NavBar extends React.Component {
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
           <Header inverted as='h1'>Club Hub</Header>
         </Menu.Item>
-
-        <Menu.Item as={NavLink} activeClassName="" exact to="/">
-          <Header inverted as='h3'><Icon size={'small'} className={'users'}/>Clubs</Header>
-        </Menu.Item>
+        
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
           <Header inverted as='h3'><Icon size={'small'} className={'question circle'}/>About Us</Header>
         </Menu.Item>
+        <Menu.Item as={NavLink} activeClassName="" exact to="/">
+          <Header inverted as='h3'><Icon size={'small'} className={'users'}/>Clubs</Header>
+        </Menu.Item>
 
         {this.props.currentUser ? (
-            [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Stuff</Menu.Item>,
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>List Stuff</Menu.Item>]
+            [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>
+              <Header inverted as={'h3'}><Icon size={'small'} className={'user circle'}/>Profile</Header>
+            </Menu.Item>,
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>
+                <Header inverted as={'h3'}><Icon size={'small'} className={'list'}/>Subscriptions</Header>
+              </Menu.Item>]
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
             <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>Admin</Menu.Item>
