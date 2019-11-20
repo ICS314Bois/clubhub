@@ -5,8 +5,8 @@ import { Card, Feed, Grid, Header, Icon, Image, List } from 'semantic-ui-react';
 class ProfilePage extends React.Component {
   render() {
     return (
-        <Grid container stackable columns={3}>
-            <Grid.Column>
+        <Grid padded={'horizontally'} relaxed={'very'} columns={3}>
+            <Grid.Column width={3}>
             <Header as={'h2'}>Interests</Header>
             <hr/>
             <List bulleted>
@@ -33,7 +33,7 @@ class ProfilePage extends React.Component {
             </Card.Group>
           </Grid.Column>
 
-          <Grid.Column>
+          <Grid.Column width={9}>
             <Header as={'h2'}>Clubs</Header>
             <hr/>
             <Card.Group>
@@ -79,7 +79,7 @@ class ProfilePage extends React.Component {
             </Card.Group>
           </Grid.Column>
 
-          <Grid.Column>
+          <Grid.Column stretched width={4}>
             <Card>
               <Card.Content>
                 <Card.Header>Club Notifications</Card.Header>
