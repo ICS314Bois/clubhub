@@ -1,15 +1,17 @@
 .landing-background {
-  background: url(https://www.cappex.com/sites/default/files/styles/1600x900/public/images/hero/college/141574_hero.jpg?itok=-NqYlmxX) no-repeat bottom fixed;
+  background: url(https://images.wallpaperscraft.com/image/sunset_sky_hills_117374_1920x1080.jpg) no-repeat bottom fixed;
   background-size: auto;
   height: 600px;
   padding-top: 5px;
   padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .search-bar {
   padding-top: 225px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .footer {
-  font-family: 'sans-serif';
+  font-family: 'Open Sans', sans-serif;
 }

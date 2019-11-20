@@ -1,13 +1,17 @@
 import React from 'react';
-import { Container, Grid, Search, Button, Icon } from 'semantic-ui-react';
+import { Container, Grid, Search, Button, Icon, Header } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
-class Landing extends React.Component {
+class SearchComponent extends React.Component {
   render() {
+    const fontStyle = { fontFamily: 'Open Sans' };
     return (
-        <div className='landing-background'>
+        <div style={fontStyle} className='landing-background'>
           <Container className='search-bar'>
             <Grid>
+              <Grid.Row centered>
+                <Header as='h1' inverted>Clubs Of Manoa</Header>
+              </Grid.Row>
               <Grid.Row centered>
                 <Search
                   placeholder='Start your club search...'
@@ -22,9 +26,6 @@ class Landing extends React.Component {
                   <Button.Content visible>Sign In</Button.Content>
                 </Button>
               </Grid.Row>
-              <Grid.Row>
-                Need Help?
-              </Grid.Row>
             </Grid>
            </Container>
         </div>
@@ -32,4 +33,4 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+export default SearchComponent;
