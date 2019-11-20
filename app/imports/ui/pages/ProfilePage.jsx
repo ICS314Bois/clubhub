@@ -1,26 +1,85 @@
 import React from 'react';
-import { Grid, Image, Header, Card, Feed } from 'semantic-ui-react';
+import { Card, Feed, Grid, Header, Icon, Image, List } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
   render() {
     return (
-        <Grid verticalAlign='middle' textAlign='center' container column={3}>
-
-          <Grid.Column width={4}>
-            <Image src="/images/meteor-logo.png"/>
-            <Header as={'h1'}>Rusty Jacinto</Header>
-            <Header as={'h3'}>This is a bio!</Header>
+        <Grid container stackable columns={3}>
+            <Grid.Column>
+            <Header as={'h2'}>Interests</Header>
+            <hr/>
+            <List bulleted>
+              <List.Item>Music</List.Item>
+              <List.Item>Media</List.Item>
+              <List.Item>Art</List.Item>
+            </List>
+            <Header as={'h2'}>Recommendations</Header>
+            <hr/>
+            <Card.Group>
+              <Card>
+                <Card.Content>
+                  <Image
+                      floated='right'
+                      size='mini'
+                      src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+                  />
+                  <Card.Header>Mock Club</Card.Header>
+                  <Card.Description>
+                    This is a <strong>club</strong>!
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+            </Card.Group>
           </Grid.Column>
 
-          <Grid.Column width={8}>
-            <h2>Interests</h2>
+          <Grid.Column>
+            <Header as={'h2'}>Clubs</Header>
             <hr/>
-            <h2>Clubs</h2>
-            <hr/>
+            <Card.Group>
+              <Card>
+                <Card.Content>
+                  <Image
+                      floated='right'
+                      size='mini'
+                      src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+                  />
+                  <Card.Header>Mock Club</Card.Header>
+                  <Card.Description>
+                    This is a <strong>club</strong>!
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+              <Card>
+                <Card.Content>
+                  <Image
+                      floated='right'
+                      size='mini'
+                      src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+                  />
+                  <Card.Header>Mock Club</Card.Header>
+                  <Card.Description>
+                    This is a <strong>club</strong>!
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+              <Card>
+                <Card.Content>
+                  <Image
+                      floated='right'
+                      size='mini'
+                      src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+                  />
+                  <Card.Header>Mock Club</Card.Header>
+                  <Card.Description>
+                    This is a <strong>club</strong>!
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+            </Card.Group>
           </Grid.Column>
 
-          <Grid.Column width={4}>
+          <Grid.Column>
             <Card>
               <Card.Content>
                 <Card.Header>Club Notifications</Card.Header>
@@ -60,7 +119,6 @@ class ProfilePage extends React.Component {
               </Card.Content>
             </Card>
           </Grid.Column>
-
         </Grid>
     );
   }
