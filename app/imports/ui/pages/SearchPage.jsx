@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image, Icon, Card, } from 'semantic-ui-react';
+import { Grid, Image, Icon, Card, Search } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class SearchPage extends React.Component {
@@ -8,6 +8,12 @@ class SearchPage extends React.Component {
         <Grid verticalAlign='middle' textAlign='center' container>
 	<Search/>
 		<Card>
+			hello
+		</Card>
+	<Card>
+			hello
+		</Card>
+	<Card>
 			hello
 		</Card>
         </Grid>
