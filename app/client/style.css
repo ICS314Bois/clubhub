@@ -1,10 +1,15 @@
 .landing-background {
   background: url(https://www.cappex.com/sites/default/files/styles/1600x900/public/images/hero/college/141574_hero.jpg?itok=-NqYlmxX) no-repeat bottom fixed;
   background-size: auto;
-  height: 450px;
-  padding-top: 10px;
+  height: 600px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 .search-bar {
   padding-top: 225px;
+}
+
+.footer {
+  font-family: 'sans-serif';
 }
