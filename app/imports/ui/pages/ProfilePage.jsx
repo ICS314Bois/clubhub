@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image, Header } from 'semantic-ui-react';
+import { Grid, Image, Header, Card, Feed } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
@@ -14,15 +14,51 @@ class ProfilePage extends React.Component {
           </Grid.Column>
 
           <Grid.Column width={8}>
-            <h1>Interests</h1>
+            <h2>Interests</h2>
             <hr/>
-            <h1>Clubs</h1>
+            <h2>Clubs</h2>
             <hr/>
           </Grid.Column>
 
           <Grid.Column width={4}>
-            <h1>Notifications</h1>
-            <hr/>
+            <Card>
+              <Card.Content>
+                <Card.Header>Club Notifications</Card.Header>
+              </Card.Content>
+              <Card.Content>
+                <Feed>
+                  <Feed.Event>
+                    <Feed.Label image='/images/meteor-logo.png' />
+                    <Feed.Content>
+                      <Feed.Date content='1 day ago' />
+                      <Feed.Summary>
+                        <a>Anime Club</a> meeting to be held on September 27 in Kyukendall Hall 305.
+                      </Feed.Summary>
+                    </Feed.Content>
+                  </Feed.Event>
+
+                  <Feed.Event>
+                    <Feed.Label image='/images/meteor-logo.png' />
+                    <Feed.Content>
+                      <Feed.Date content='3 days ago' />
+                      <Feed.Summary>
+                        <a>Archery Club</a> meeting on October 22 is CANCELLED.
+                      </Feed.Summary>
+                    </Feed.Content>
+                  </Feed.Event>
+
+                  <Feed.Event>
+                    <Feed.Label image='/images/meteor-logo.png' />
+                    <Feed.Content>
+                      <Feed.Date content='4 days ago' />
+                      <Feed.Summary>
+                        <a>Music Club</a> meeting to be held on April 22 in the auditorium.
+                      </Feed.Summary>
+                    </Feed.Content>
+                  </Feed.Event>
+                </Feed>
+              </Card.Content>
+            </Card>
           </Grid.Column>
 
         </Grid>
