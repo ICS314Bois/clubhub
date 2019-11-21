@@ -11,7 +11,7 @@ class SearchComponent extends React.Component {
           <Container className='search-bar'>
             <Grid>
               <Grid.Row centered>
-                <Header as='h1'>Clubs Of Manoa</Header>
+                <Header as='h1' inverted>Clubs Of Manoa</Header>
               </Grid.Row>
               <Grid.Row centered>
                 <Search
