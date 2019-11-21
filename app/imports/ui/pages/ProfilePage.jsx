@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Feed, Grid, Header, Icon, Image, List } from 'semantic-ui-react';
+import BottomLanding from '../components/BottomLanding';
 
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
@@ -58,7 +59,6 @@ class ProfilePage extends React.Component {
                 </Card.Content>
               </Card>
             </Card.Group>
-
           </Grid.Column>
 
           <Grid.Column width={9}>
@@ -161,6 +161,7 @@ class ProfilePage extends React.Component {
             </Card>
           </Grid.Column>
         </Grid>
+          <BottomLanding/>
         </div>
     );
   }

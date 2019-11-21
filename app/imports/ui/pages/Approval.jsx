@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button, Card, Image, Header, Container } from 'semantic-ui-react';
+import BottomLanding from '../components/BottomLanding';
 
 class Approval extends React.Component {
   render() {
     const padding = { paddingTop: '10px' };
     return (
         <div className='approval-page'>
+          <div className={'landing-background'}>
           <Container style={padding}>
             <Header as='h4'>Requests</Header>
             <hr/>
@@ -33,6 +35,8 @@ class Approval extends React.Component {
               </Card.Content>
             </Card>
           </Container>
+        </div>
+          <BottomLanding/>
         </div>
     );
   }
