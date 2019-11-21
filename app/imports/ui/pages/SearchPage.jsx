@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Image, Icon, Card, Search } from 'semantic-ui-react';
+import BottomLanding from '../components/BottomLanding';
 
  let clubs =  {
     "ClubName": "Accounting Club at UH Manoa",
@@ -14,7 +15,9 @@ import { Grid, Image, Icon, Card, Search } from 'semantic-ui-react';
 /** A simple static component to render some text for the landing page. */
 class SearchPage extends React.Component {
   render() {
+    const padding = { paddingTop: '10px', paddingBottom: '10px' };
     return (
+        <div style={padding}>
         <Grid verticalAlign='middle'container>
 	<Grid.Row>
 	<Search/>
@@ -164,10 +167,12 @@ class SearchPage extends React.Component {
         22 Friends
       </a>
     </Card.Content>
-</Card>
-    </Card.Group>
-	</Grid.Row>
-        </Grid>
+            </Card>
+              </Card.Group>
+	          </Grid.Row>
+          </Grid>
+          <BottomLanding/>
+        </div>
     );
   }
 }
