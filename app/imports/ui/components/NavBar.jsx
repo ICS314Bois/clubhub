@@ -25,10 +25,10 @@ class NavBar extends React.Component {
 
         {this.props.currentUser ? (
             [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>
-              <Header inverted as={'h3'}><Icon size={'small'} className={'user circle'}/>Profile</Header>
+              <Header inverted as={'h3'}><Icon size={'small'} className={'list'}/>Interests</Header>
             </Menu.Item>,
               <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>
-                <Header inverted as={'h3'}><Icon size={'small'} className={'list'}/>Interests</Header>
+                <Header inverted as={'h3'}><Icon size={'small'} className={'map signs'}/>Find a Club</Header>
               </Menu.Item>]
         ) : ''}
 
