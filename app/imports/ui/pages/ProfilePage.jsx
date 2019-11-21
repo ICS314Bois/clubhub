@@ -5,16 +5,17 @@ import { Card, Feed, Grid, Header, Icon, Image, List } from 'semantic-ui-react';
 class ProfilePage extends React.Component {
   render() {
     return (
+        <div className={'landing-background'}>
         <Grid padded={'horizontally'} relaxed={'very'} columns={3}>
             <Grid.Column width={3}>
-            <Header as={'h2'}>Interests</Header>
+            <Header inverted as={'h2'} >Interests</Header>
             <hr/>
-            <List bulleted>
+            <List bulleted size={'large'}>
               <List.Item>Music</List.Item>
               <List.Item>Media</List.Item>
               <List.Item>Art</List.Item>
             </List>
-            <Header as={'h2'}>Recommendations</Header>
+            <Header inverted as={'h2'}>Recommendations</Header>
             <hr/>
             <Card.Group>
               <Card>
@@ -30,13 +31,53 @@ class ProfilePage extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
+              <Card>
+              <Card.Content>
+                <Image
+                    floated='right'
+                    size='mini'
+                    src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+                />
+                <Card.Header>Mock Club</Card.Header>
+                <Card.Description>
+                  This is a <strong>club</strong>!
+                </Card.Description>
+              </Card.Content>
+            </Card>
+              <Card>
+                <Card.Content>
+                  <Image
+                      floated='right'
+                      size='mini'
+                      src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+                  />
+                  <Card.Header>Mock Club</Card.Header>
+                  <Card.Description>
+                    This is a <strong>club</strong>!
+                  </Card.Description>
+                </Card.Content>
+              </Card>
             </Card.Group>
+
           </Grid.Column>
 
           <Grid.Column width={9}>
-            <Header as={'h2'}>Clubs</Header>
+            <Header inverted as={'h2'}>Clubs</Header>
             <hr/>
             <Card.Group>
+              <Card color={'red'}>
+                <Card.Content>
+                  <Image
+                      floated='right'
+                      size='mini'
+                      src='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+                  />
+                  <Card.Header>Mock Club</Card.Header>
+                  <Card.Description>
+                    This is a <strong>club</strong>!
+                  </Card.Description>
+                </Card.Content>
+              </Card>
               <Card>
                 <Card.Content>
                   <Image
@@ -79,7 +120,7 @@ class ProfilePage extends React.Component {
             </Card.Group>
           </Grid.Column>
 
-          <Grid.Column stretched width={4}>
+          <Grid.Column width={4}>
             <Card>
               <Card.Content>
                 <Card.Header>Club Notifications</Card.Header>
@@ -120,6 +161,7 @@ class ProfilePage extends React.Component {
             </Card>
           </Grid.Column>
         </Grid>
+        </div>
     );
   }
 }
