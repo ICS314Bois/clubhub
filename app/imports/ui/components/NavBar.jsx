@@ -7,8 +7,9 @@ import { Menu, Dropdown, Header, Icon } from 'semantic-ui-react';
 import { Roles } from 'meteor/alanning:roles';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
-/** Clubs tab needs to be linked */
-/** About Us tab needs to be linked */
+/** (Universal) Clubs tab needs to be routed */
+/** (User) Interests tab needs to be routed */
+/** (Admin) Admin page needs to be routed */
 class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '0px' };
@@ -23,11 +24,11 @@ class NavBar extends React.Component {
         </Menu.Item>
 
         {this.props.currentUser ? (
-            [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>
-              <Header inverted as={'h3'}><Icon size={'small'} className={'user circle'}/>Profile</Header>
+            [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>
+              <Header inverted as={'h3'}><Icon size={'small'} className={'list'}/>Interests</Header>
             </Menu.Item>,
               <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>
-                <Header inverted as={'h3'}><Icon size={'small'} className={'list'}/>Interests</Header>
+                <Header inverted as={'h3'}><Icon size={'small'} className={'map signs'}/>Find a Club</Header>
               </Menu.Item>]
         ) : ''}
 
