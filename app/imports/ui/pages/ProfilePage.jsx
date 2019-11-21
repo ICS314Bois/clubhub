@@ -5,7 +5,7 @@ import { Card, Feed, Grid, Header, Icon, Image, List } from 'semantic-ui-react';
 class ProfilePage extends React.Component {
   render() {
     return (
-        <div className={'uh-golf-background'}>
+        <div className={'landing-background'}>
         <Grid padded={'horizontally'} relaxed={'very'} columns={3}>
             <Grid.Column width={3}>
             <Header inverted as={'h2'} >Interests</Header>

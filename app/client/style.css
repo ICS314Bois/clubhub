@@ -1,4 +1,8 @@
-.uh-golf-background {
-  background: url('images/uh-golf-scenery.jpg') no-repeat center center fixed;
-  background-size: cover;
+.landing-background {
+  background: url(https://images.wallpaperscraft.com/image/sunset_sky_hills_117374_1920x1080.jpg) no-repeat bottom fixed;
+  background-size: auto;
+  height: 600px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
