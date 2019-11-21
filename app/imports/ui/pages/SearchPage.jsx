@@ -20,7 +20,7 @@ class SearchPage extends React.Component {
 	<Search/>
 	</Grid.Row>
 	<Grid.Row>
-	<Card.Group>
+	<Card.Group itemsPerRow={4}>
 <Card>
     <Image fluid src={clubs.Image}/>
     <Card.Content>
@@ -93,10 +93,6 @@ class SearchPage extends React.Component {
       </a>
     </Card.Content>
 </Card>
-    </Card.Group>
-	</Grid.Row>
-    <Grid.Row>
-	<Card.Group>
 <Card>
     <Image fluid src={clubs.Image}/>
     <Card.Content>
