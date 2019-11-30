@@ -17,6 +17,7 @@ import Signout from '../pages/Signout';
 import SearchPage from '../pages/SearchPage';
 import ProfilePage from '../pages/ProfilePage';
 import Approval from '../pages/Approval';
+import ListClubs from '../pages/ListClubs';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -32,6 +33,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <Route path="/profile" component={ProfilePage}/>
               <Route path="/approval" component={Approval}/>
+              <Route path="/clublist" component={ListClubs}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
