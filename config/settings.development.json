@@ -11,1886 +11,366 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
 
-  "clubData" : [
-  {
-    "ClubName": "Academy for Creative Media Student Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Emma Daily",
-    "ContactEmail": "edaily@hawaii.edu",
-    "Website": "",
-    "Email": "edaily@hawaii.edu"
-  },
-  {
-    "ClubName": "Accounting Club at UH Manoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Chelsi Morishige",
-    "ContactEmail": "chelsicm@hawaii.edu",
-    "Website": "acuhmanoa.com",
-    "Email": "chelsicm@hawaii.edu"
-  },
-  {
-    "ClubName": "Adventist Christian Fellowship",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Victor Kolonzo",
-    "ContactEmail": "vkilonzo@hawaii.edu",
-    "Website": "",
-    "Email": "vkilonzo@hawaii.edu"
-  },
-  {
-    "ClubName": "Advocates for Public Interest Law",
-    "Type": "Academic/Professional",
-    "ContactName": "Rebekah Ray",
-    "ContactEmail": "rray2@hawaii.edu",
-    "Website": "",
-    "Email": "rray2@hawaii.edu"
-  },
-  {
-    "ClubName": "AAUW-UHM",
-    "Type": "Political",
-    "ContactName": "Ronja Steinbach",
-    "ContactEmail": "ronja36@hawaii.edu",
-    "Website": "",
-    "Email": "ronja36@hawaii.edu"
-  },
-  {
-    "ClubName": "AECT-Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Waynele Yu",
-    "ContactEmail": "waynele@hawaii.edu",
-    "Website": "https://bit.ly/aect-hi",
-    "Email": "waynele@hawaii.edu"
-  },
-  {
-    "ClubName": "Aikido @ UHM",
-    "Type": "Sports/Leisure",
-    "ContactName": "Timothy Halliday",
-    "ContactEmail": "halliday@hawaii.edu",
-    "Website": "",
-    "Email": "halliday@hawaii.edu"
-  },
-  {
-    "ClubName": "Alpha Gamma Delta, Delta Sigma Chapter",
-    "Type": "Fraternity/Sorority",
-    "ContactName": "Emma Archambeau",
-    "ContactEmail": "earchamb@hawaii.edu",
-    "Website": "hawaii.alphagammadelta.org",
-    "Email": "earchamb@hawaii.edu"
-  },
-  {
-    "ClubName": "Alpha Sigma Phi",
-    "Type": "Fraternity/Sorority",
-    "ContactName": "Abel Salinas",
-    "ContactEmail": "abels@hawaii.edu",
-    "Website": "",
-    "Email": "abels@hawaii.edu"
-  },
-  {
-    "ClubName": "AlohaNation Flowarts",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Nathan Onaka",
-    "ContactEmail": "onankan@hawaii.edu",
-    "Website": "anfclub.github.io/AlohaNation-Flowarts",
-    "Email": "onankan@hawaii.edu"
-  },
-  {
-    "ClubName": "AMA/HMA Student Chapter at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Jester Galiza",
-    "ContactEmail": "jpgaliza@hawaii.edu",
-    "Website": "",
-    "Email": "jpgaliza@hawaii.edu"
-  },
-  {
-    "ClubName": "American Cetacean Society Student Coalition at University of Hawaii at Manoa",
-    "Type": "Service",
-    "ContactName": "Opal Stanfield",
-    "ContactEmail": "opalstan@hawaii.edu",
-    "Website": "",
-    "Email": "opalstan@hawaii.edu"
-  },
-  {
-    "ClubName": "American Indian Science and Engineering Society",
-    "Type": "Academic/Professional",
-    "ContactName": "Kathleen Kodama",
-    "ContactEmail": "kmmk4@hawaii.edu",
-    "Website": "aiseshawaii.weebly.com",
-    "Email": "kmmk4@hawaii.edu"
-  },
-  {
-    "ClubName": "American Institute of Architecture Students",
-    "Type": "Academic/Professional",
-    "ContactName": "Celeste Guarin",
-    "ContactEmail": "cguarin@hawaii.edu",
-    "Website": "aiashawaii.com",
-    "Email": "cguarin@hawaii.edu"
-  },
-  {
-    "ClubName": "American Library Association Student Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Katie Joe Lang",
-    "ContactEmail": "langk@hawaii.edu",
-    "Website": "",
-    "Email": "langk@hawaii.edu"
-  },
-  {
-    "ClubName": "American Marketing Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Ashley Regaspi",
-    "ContactEmail": "aregaspi@hawaii.edu",
-    "Website": "amauhm.org",
-    "Email": "aregaspi@hawaii.edu"
-  },
-  {
-    "ClubName": "American Meterological Society Aloha Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Terrence John Corrigan",
-    "ContactEmail": "tjc21@hawaii.edu",
-    "Website": "amsalohachapter.wixsite.com/aloha",
-    "Email": "tjc21@hawaii.edu"
-  },
-  {
-    "ClubName": "American Society of Civil Engineers",
-    "Type": "Academic/Professional",
-    "ContactName": "Maynard Lazo",
-    "ContactEmail": "lazom@hawaii.edu",
-    "Website": "",
-    "Email": "lazom@hawaii.edu"
-  },
-  {
-    "ClubName": "American Society of Mechanical Enginers",
-    "Type": "Academic/Professional",
-    "ContactName": "Daryll Suyat",
-    "ContactEmail": "suyatd@hawaii.edu",
-    "Website": "",
-    "Email": "suyatd@hawaii.edu"
-  },
-  {
-    "ClubName": "American Society for Microbiology Hawaii Student Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Albert To",
-    "ContactEmail": "albertto@hawaii.edu",
-    "Website": "http://www.asmbranches.org/brhawaii/",
-    "Email": "albertto@hawaii.edu"
-  },
-  {
-    "ClubName": "Anesthesiology Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Nicholas Fancher",
-    "ContactEmail": "nfancher@hawaii.edu",
-    "Website": "sites.google.com/view/jabsomaig",
-    "Email": "nfancher@hawaii.edu"
-  },
-  {
-    "ClubName": "Animal Science Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Cody Ching",
-    "ContactEmail": "codylc@hawaii.edu",
-    "Website": "",
-    "Email": "codylc@hawaii.edu"
-  },
-  {
-    "ClubName": "Anthropology Undergraduate Student Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Jitrudi Scheiman",
-    "ContactEmail": "jms26@hawaii.edu",
-    "Website": "",
-    "Email": "jms26@hawaii.edu"
-  },
-  {
-    "ClubName": "Artists and Musicians at JABSOM",
-    "Type": "Adademic/Professional",
-    "ContactName": "Amandalin Rock",
-    "ContactEmail": "rocka@hawaii.edu",
-    "Website": "",
-    "Email": "rocka@hawaii.edu"
-  },
-  {
-    "ClubName": "Associated Students at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Jester Galiza",
-    "ContactEmail": "jpgaliza@hawaii.edu",
-    "Website": "",
-    "Email": "jpgaliza@hawaii.edu"
-  },
-  {
-    "ClubName": "Association For Computing Machinery at Manoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Marty Joshua Apilado",
-    "ContactEmail": "mjka@hawaii.edu",
-    "Website": "acmanoa.github.io",
-    "Email": "mjka@hawaii.edu"
-  },
-  {
-    "ClubName": "Atherton YMCA",
-    "Type": "Academic/Professional",
-    "ContactName": "Christina Andres",
-    "ContactEmail": "andrescc@hawaii.edu",
-    "Website": "athertonymca.org",
-    "Email": "andrescc@hawaii.edu"
-  },
-  {
-    "ClubName": "Athletic Training Student Society",
-    "Type": "Academic/Professional",
-    "ContactName": "Kumiko Hashida",
-    "ContactEmail": "hashidak@hawaii.edu",
-    "Website": "",
-    "Email": "hashidak@hawaii.edu"
-  },
-  {
-    "ClubName": "Autonomous Control Theory-Unmanned Aerial Systems",
-    "Type": "Academic/Professional",
-    "ContactName": "Evan Kawamura",
-    "ContactEmail": "evankawa@hawaii.edu",
-    "Website": "manoa.hawaii.edu/actuas",
-    "Email": "evankawa@hawaii.edu"
-  },
-  {
-    "ClubName": "Bachelor of Social Work Organization",
-    "Type": "Academic/Professional",
-    "ContactName": "Kelsey Mills",
-    "ContactEmail": "kelseyjp@hawaii.edu",
-    "Website": "",
-    "Email": "kelseyjp@hawaii.edu"
-  },
-  {
-    "ClubName": "Baha'i Association at UH Manoa",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Dale Spenner",
-    "ContactEmail": "spenner@hawaii.edu",
-    "Website": "",
-    "Email": "spenner@hawaii.edu"
-  },
-  {
-    "ClubName": "Baptist College Ministries",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Nathaniel Atwell",
-    "ContactEmail": "natwell@hawaii.edu",
-    "Website": "www.bcmoahu.org",
-    "Email": "natwell@hawaii.edu"
-  },
-  {
-    "ClubName": "Belly Dance Raqs- Manoa",
-    "Type": "Sports/Leisure",
-    "ContactName": "Brittany Castle",
-    "ContactEmail": "bcastle9@hawaii.edu",
-    "Website": "",
-    "Email": "bcastle9@hawaii.edu"
-  },
-  {
-    "ClubName": "Best Buddies Hawaii-UH Manoa/SAAC Chapter",
-    "Type": "Service",
-    "ContactName": "Rhonda S. Black",
-    "ContactEmail": "rblack@hawaii.edu",
-    "Website": "www.bestbuddies.org/find-programs/hawaii",
-    "Email": "rblack@hawaii.edu"
-  },
-  {
-    "ClubName": "Beta Alpha Psi, Delta Theta Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Janae Stilwell",
-    "ContactEmail": "janaeeps@hawaii.edu",
-    "Website": "www.bapuhm.org",
-    "Email": "janaeeps@hawaii.edu"
-  },
-  {
-    "ClubName": "Beta Beta Gamma Sorority",
-    "Type": "Fraternity/Sorority",
-    "ContactName": "Moana Nomura",
-    "ContactEmail": "nomura76@hawaii.edu",
-    "Website": "http://betabetagamma.weebly.com",
-    "Email": "nomura76@hawaii.edu"
-  },
-  {
-    "ClubName": "Black Law Students Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Britagne Johnson",
-    "ContactEmail": "bnjohnso@hawaii.edu",
-    "Website": "",
-    "Email": "bnjohnso@hawaii.edu"
-  },
-  {
-    "ClubName": "Blue Zones Project",
-    "Type": "Service",
-    "ContactName": "Robert Nieto",
-    "ContactEmail": "robertfn@hawaii.edu",
-    "Website": "",
-    "Email": "robertfn@hawaii.edu"
-  },
-  {
-    "ClubName": "Botanical Society of America Hawaii Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Christian Streit",
-    "ContactEmail": "cstreit@hawaii.edu",
-    "Website": "www.botany.org",
-    "Email": "cstreit@hawaii.edu"
-  },
-  {
-    "ClubName": "Buddhi Yoga Manoa",
-    "Type": "Sports/Leisure",
-    "ContactName": "Veronica Gibson",
-    "ContactEmail": "vgibson@hawaii.edu",
-    "Website": "",
-    "Email": "vgibson@hawaii.edu"
-  },
-  {
-    "ClubName": "Business Executive Society of Tomorrow",
-    "Type": "Academic/Professional",
-    "ContactName": "Kristyn Fujii",
-    "ContactEmail": "fujiik7@hawaii.edu",
-    "Website": "bestuhm.org",
-    "Email": "fujiik7@hawaii.edu"
-  },
-  {
-    "ClubName": "Campus Drummers",
-    "Type": "Leisure/Recreational",
-    "ContactName": "Susan Jacob",
-    "ContactEmail": "sjacob77@hawaii.edu",
-    "Website": "",
-    "Email": "sjacob77@hawaii.edu"
-  },
-  {
-    "ClubName": "Cannabis Club",
-    "Type": "Sports/Leisure",
-    "ContactName": "Damon Grayson",
-    "ContactEmail": "dgrayson@hawaii.edu",
-    "Website": "",
-    "Email": "dgrayson@hawaii.edu"
-  },
-  {
-    "ClubName": "Capoeira Senzala",
-    "Type": "Sports/Leisure",
-    "ContactName": "Rachel Mamiya Hernandez",
-    "ContactEmail": "rmamiya@hawaii.edu",
-    "Website": "",
-    "Email": "rmamiya@hawaii.edu"
-  },
-  {
-    "ClubName": "CARP Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Chizuko Allen",
-    "ContactEmail": "chizuko@hawaii.edu",
-    "Website": "www.carplife.org",
-    "Email": "chizuko@hawaii.edu"
-  },
-  {
-    "ClubName": "Change for Charity",
-    "Type": "Service",
-    "ContactName": "Michaela Kop",
-    "ContactEmail": "mkop@hawaii.edu",
-    "Website": "",
-    "Email": "mkop@hawaii.edu"
-  },
-  {
-    "ClubName": "Chemistry Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Taha Elwir",
-    "ContactEmail": "elwira@hawaii.edu",
-    "Website": "chemclubatuhm.weebly.com",
-    "Email": "elwira@hawaii.edu"
-  },
-  {
-    "ClubName": "Chess Club",
-    "Type": "Leisure/Recreational",
-    "ContactName": "Michael Omori",
-    "ContactEmail": "omorim@hawaii.edu",
-    "Website": "",
-    "Email": "omorim@hawaii.edu"
-  },
-  {
-    "ClubName": "Chi Epsilon",
-    "Type": "Academic/Professional",
-    "ContactName": "Theodore Uekawa",
-    "ContactEmail": "tuekawa@hawaii.edu",
-    "Website": "Sites.google.com/site/xeuhmanoa/",
-    "Email": "hawaii.xe@gmail.com"
-  },
-  {
-    "ClubName": "Chinese Students and Scholars Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Manrui Xue",
-    "ContactEmail": "mxue@hawaii.edu",
-    "Website": "http://www2.hawaii.edu/~cssauh/",
-    "Email": "mxue@hawaii.edu"
-  },
-  {
-    "ClubName": "Chinese Xiqu Club",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Xingli Zhang",
-    "ContactEmail": "xinliz@hawaii.edu",
-    "Website": "",
-    "Email": "xinliz@hawaii.edu"
-  },
-  {
-    "ClubName": "Church in Honolulu",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Yinghui Chen",
-    "ContactEmail": "yinghui@hawaii.edu",
-    "Website": "churchinhonolulu.net",
-    "Email": "yinghui@hawaii.edu"
-  },
-  {
-    "ClubName": "Circle K International",
-    "Type": "Service",
-    "ContactName": "Kristian Kim",
-    "ContactEmail": "knik@hawaii.edu",
-    "Website": "ckiuhmaweebly.com",
-    "Email": "knik@hawaii.edu"
-  },
-  {
-    "ClubName": "Clay Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Brad Taylor",
-    "ContactEmail": "brad2@hawaiiedu",
-    "Website": "",
-    "Email": "brad2@hawaiiedu"
-  },
-  {
-    "ClubName": "Clinical and Translational Research Program Student Organization at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Devin Takahashi",
-    "ContactEmail": "devint@hawaii.edu",
-    "Website": "",
-    "Email": "devint@hawaii.edu"
-  },
-  {
-    "ClubName": "Club Management of America",
-    "Type": "Academic/Professional",
-    "ContactName": "Kylie Butts",
-    "ContactEmail": "kyliekb@hawaii.edu",
-    "Website": "cmaa.org/studentmembership",
-    "Email": "kyliekb@hawaii.edu"
-  },
-  {
-    "ClubName": "Coalition to Stop Campus Hunger",
-    "Type": "Service",
-    "ContactName": "Ratu Serupepeli Tagivakatini",
-    "ContactEmail": "ratuseru@hawaii.edu",
-    "Website": "",
-    "Email": "ratuseru@hawaii.edu"
-  },
-  {
-    "ClubName": "C.O.P. Alaka'ina",
-    "Type": "Academic/Professional",
-    "ContactName": "Ilikea Silva",
-    "ContactEmail": "ilikea.silva@hawaii.edu",
-    "Website": "www.hawaii.edu/cop/mentoring",
-    "Email": "ilikea.silva@hawaii.edu"
-  },
-  {
-    "ClubName": "Cru",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Liam Tsamous",
-    "ContactEmail": "ltsamous@hawaii.edu",
-    "Website": "hawaiicru.jimdo.com",
-    "Email": "ltsamous@hawaii.edu"
-  },
-  {
-    "ClubName": "CTAHR Student Ambassadors",
-    "Type": "Academic/Professional",
-    "ContactName": "Michelle Au",
-    "ContactEmail": "aumi@hawaii.edu",
-    "Website": "cms.ctahr.hawaii.edu/Academics/ASAO/Ambassadors",
-    "Email": "aumi@hawaii.edu"
-  },
-  {
-    "ClubName": "Delta Sigma Pi, Rho Chi",
-    "Type": "Fraternity/Sorority",
-    "ContactName": "Victoria Huynh",
-    "ContactEmail": "vjhuynh@hawaii.edu",
-    "Website": "dspuhm.com",
-    "Email": ""
-  },
-  {
-    "ClubName": "Disney Ohana Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Delaney Singletary",
-    "ContactEmail": "delaneys@hawaii.edu",
-    "Website": "disneyoc.wixsite.com/disneyohanaclub",
-    "Email": "delaneys@hawaii.edu"
-  },
-  {
-    "ClubName": "Emergency Medicine Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Amandalin Rock",
-    "ContactEmail": "rocka@hawaii.edu",
-    "Website": "",
-    "Email": "rocka@hawaii.edu"
-  },
-  {
-    "ClubName": "Engineering Ohana",
-    "Type": "Academic/Professional",
-    "ContactName": "Creselle Moraels",
-    "ContactEmail": "creselle@hawaii.edu",
-    "Website": "eng.hawaii.edu",
-    "Email": "creselle@hawaii.edu"
-  },
-  {
-    "ClubName": "Engineering Network",
-    "Type": "Academic/Professional",
-    "ContactName": "Jing Yang Zheng",
-    "ContactEmail": "jzheng@hawaii.edu",
-    "Website": "enuhm.com",
-    "Email": "jzheng@hawaii.edu"
-  },
-  {
-    "ClubName": "Eta Kappa Nu",
-    "Type": "Honorary Society",
-    "ContactName": "Jeanalyn Wadsock-Myers",
-    "ContactEmail": "jlwm@hawaii.edu",
-    "Website": "hknhawaii.weebly.com",
-    "Email": "jlwm@hawaii.edu"
-  },
-  {
-    "ClubName": "Eta Sigma Delta",
-    "Type": "Academic/Professional",
-    "ContactName": "Tara-Ann Marie Pacubas",
-    "ContactEmail": "tpacubas@hawaii.edu",
-    "Website": "https://www.chrie.org/i4a/pages/index.cfm?pageid=1",
-    "Email": "tpacubas@hawaii.edu"
-  },
-  {
-    "ClubName": "Ethnic Studies Student Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Ruben Campos",
-    "ContactEmail": "recampos@hawaii.edu",
-    "Website": "",
-    "Email": "recampos@hawaii.edu"
-  },
-  {
-    "ClubName": "Every Nation Campus Pearlside",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Taylor Mahi",
-    "ContactEmail": "tmahi@hawaii.edu",
-    "Website": "",
-    "Email": "tmahi@hawaii.edu"
-  },
-  {
-    "ClubName": "Family Medicine Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Anthony Knon",
-    "ContactEmail": "aknon@hawaii.edu",
-    "Website": "",
-    "Email": "aknon@hawaii.edu"
-  },
-  {
-    "ClubName": "Financial Management Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Nicholas Miyamoto",
-    "ContactEmail": "npmiyamo@hawaii.edu",
-    "Website": "fmahawaii.club",
-    "Email": "npmiyamo@hawaii.edu"
-  },
-  {
-    "ClubName": "Food Science and Human Nutrition Council",
-    "Type": "Academic/Professional",
-    "ContactName": "Michael Yanos",
-    "ContactEmail": "mpyanos@hawaii.edu",
-    "Website": "fshncouncil.wordpress.com",
-    "Email": "mpyanos@hawaii.edu"
-  },
-  {
-    "ClubName": "Formula SAE Rainbow Warrior Racing",
-    "Type": "Academic/Professional",
-    "ContactName": "Silvija Djelic",
-    "ContactEmail": "silvijad@hawaii.edu",
-    "Website": "rip.eng.hawaii.edu/project/sae-formula",
-    "Email": "silvijad@hawaii.edu"
-  },
-  {
-    "ClubName": "Freestyle Dance Club",
-    "Type": "Sports/Leisure",
-    "ContactName": "Jason Wong",
-    "ContactEmail": "jbwong@hawaii.edu",
-    "Website": "",
-    "Email": "jbwong@hawaii.edu"
-  },
-  {
-    "ClubName": "Friends of the Family",
-    "Type": "Academic/Professional",
-    "ContactName": "Brigitte Tampon-Aragon",
-    "ContactEmail": "btampona@hawaii.edu",
-    "Website": "fofatuhm.wixsite.com/home",
-    "Email": "btampona@hawaii.edu"
-  },
-  {
-    "ClubName": "Generation Action at the University of Hawai'i at Mānoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Emma Ishihara",
-    "ContactEmail": "emmaishi@hawaii.edu",
-    "Website": "act.plannedparenthoodaction.org/groups-university-of-hawaii-manoa-generation-action",
-    "Email": "emmaishi@hawaii.edu"
-  },
-  {
-    "ClubName": "Glass Art Family",
-    "Type": "Academic/Professional",
-    "ContactName": "Nygell  Halverson",
-    "ContactEmail": "nygell@hawaii.edu",
-    "Website": "",
-    "Email": "nygell@hawaii.edu"
-  },
-  {
-    "ClubName": "Golden Key International Honour Society",
-    "Type": "Academic/Professional",
-    "ContactName": "Arlene Colis",
-    "ContactEmail": "arlenejc@hawaii.edu",
-    "Website": "goldenkeyhawaii.wixsite.com/uhmgkwebsite",
-    "Email": "arlenejc@hawaii.edu"
-  },
-  {
-    "ClubName": "Graduate Arts Council",
-    "Type": "Academic/Professional",
-    "ContactName": "Katherine Kazlauskas",
-    "ContactEmail": "kvk@hawaii.edu",
-    "Website": "",
-    "Email": "kvk@hawaii.edu"
-  },
-  {
-    "ClubName": "Graduate Business Student Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Kirstin Seal",
-    "ContactEmail": "seal@hawaii.edu",
-    "Website": "sites.google.com/a/hawaii.edu/graduate-business-student-association",
-    "Email": "seal@hawaii.edu"
-  },
-  {
-    "ClubName": "Graduate Hui Ola Pono",
-    "Type": "Academic/Professional",
-    "ContactName": "Princess Mae Visconde",
-    "ContactEmail": "pviscond@hawaii.ed",
-    "Website": "",
-    "Email": "pviscond@hawaii.ed"
-  },
-  {
-    "ClubName": "Graduate Student Sociological Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Hannah Liebreich",
-    "ContactEmail": "hannahli@hawaii.edu",
-    "Website": "",
-    "Email": "hannahli@hawaii.edu"
-  },
-  {
-    "ClubName": "Graduate Women in Science Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Madeline McKenna",
-    "ContactEmail": "mmck@hawaii.edu",
-    "Website": "www.gwishawaii.org",
-    "Email": "mmck@hawaii.edu"
-  },
-  {
-    "ClubName": "Grey Hats at UHM",
-    "Type": "Academic/Professional",
-    "ContactName": "Chad Morita",
-    "ContactEmail": "chadmmm@hawaii.edu",
-    "Website": "",
-    "Email": "chadmmm@hawaii.edu"
-  },
-  {
-    "ClubName": "Hanwoori Hawaii",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Ingrid Adams",
-    "ContactEmail": "adamsi@hawaii.edu",
-    "Website": "",
-    "Email": "adamsi@hawaii.edu"
-  },
-  {
-    "ClubName": "Hawaii African Dance and Drum Club RIO at UHM",
-    "Type": "Recreation/Leisure",
-    "ContactName": "Elizabeth (Liza) Simon",
-    "ContactEmail": "csimon@hawaii.edu",
-    "Website": "",
-    "Email": "csimon@hawaii.edu"
-  },
-  {
-    "ClubName": "Hawaii Chapter of the Society for Conservation Biology",
-    "Type": "Academic/Professional",
-    "ContactName": "Chad Wilhite",
-    "ContactEmail": "cwilhite@hawaii.edu",
-    "Website": "www.hiscb.org",
-    "Email": "cwilhite@hawaii.edu"
-  },
-  {
-    "ClubName": "Hawaii Educational Research Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Susan Saka",
-    "ContactEmail": "ssaka@hawaii.edu",
-    "Website": "hawaii.edu/hera",
-    "Email": "ssaka@hawaii.edu"
-  },
-  {
-    "ClubName": "Hawaii H.O.M.E. Project",
-    "Type": "Service",
-    "ContactName": "Jason Huynh",
-    "ContactEmail": "huynhjas@hawaii.edu",
-    "Website": "www.hawaiihomeproject.org",
-    "Email": "huynhjas@hawaii.edu"
-  },
-  {
-    "ClubName": "Hawaii Shotokan Karate",
-    "Type": "Sports/Leisure",
-    "ContactName": "Scott Oshiro",
-    "ContactEmail": "scottosh@hawaii.edu",
-    "Website": "hawaiishotokankarate.com",
-    "Email": "scottosh@hawaii.edu"
-  },
-  {
-    "ClubName": "Hawaii Streams and Ecosystems",
-    "Type": "Service",
-    "ContactName": "Aurelia Gonzalez",
-    "ContactEmail": "aureliag@hawaii.edu",
-    "Website": "",
-    "Email": "aureliag@hawaii.edu"
-  },
-  {
-    "ClubName": "Hawaii Student Entrepreneurs",
-    "Type": "Academic/Professional",
-    "ContactName": "Asher Uchiyama",
-    "ContactEmail": "au234@hawaii.edu",
-    "Website": "http://www.hsentrepreneurs.com",
-    "Email": "au234@hawaii.edu"
-  },
-  {
-    "ClubName": "Hawaii Undergraduate Initiative",
-    "Type": "Academic/Professional",
-    "ContactName": "Kaitlin Nalani Tilitile",
-    "ContactEmail": "tilitie@hawaii.edu",
-    "Website": "manoa.hawaii.edu/omsshui",
-    "Email": "tilitie@hawaii.edu"
-  },
-  {
-    "ClubName": "Her Campus Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Avery Nueva",
-    "ContactEmail": "averymn@hawaii.edu",
-    "Website": "https://www.hercampus.com/school/hawaii",
-    "Email": "averymn@hawaii.edu"
-  },
-  {
-    "ClubName": "High Intensity Athletics at UHM",
-    "Type": "Sports/Leisure",
-    "ContactName": "Lynette Rudolfo",
-    "ContactEmail": "rudolfo@hawaii.edu",
-    "Website": "",
-    "Email": "rudolfo@hawaii.edu"
-  },
-  {
-    "ClubName": "Higher Education Student Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Kawehi Kina",
-    "ContactEmail": "kinak@hawaii.edu",
-    "Website": "",
-    "Email": "kinak@hawaii.edu"
-  },
-  {
-    "ClubName": "HOSA at UHM",
-    "Type": "Academic/Professional",
-    "ContactName": "Jessica Loi",
-    "ContactEmail": "jkloi@hawaii.edu",
-    "Website": "hosauhm.wixsite.com/home",
-    "Email": "jkloi@hawaii.edu"
-  },
-  {
-    "ClubName": "Hui Dui",
-    "Type": "Academic/Professional",
-    "ContactName": "Katie Joe Lang",
-    "ContactEmail": "langk@hawaii.edu",
-    "Website": "",
-    "Email": "langk@hawaii.edu"
-  },
-  {
-    "ClubName": "Hui Mālama Honua",
-    "Type": "Academic/Professional",
-    "ContactName": "Donna Lee (Sweetie) Kuehu",
-    "ContactEmail": "dkueku@hawaii.edu",
-    "Website": "",
-    "Email": "dkueku@hawaii.edu"
-  },
-  {
-    "ClubName": "Hui Ola Pono",
-    "Type": "Academic/Professional",
-    "ContactName": "Swastika Maharjan",
-    "ContactEmail": "swastika@hawaii.edu",
-    "Website": "publichealthhui.weebly.com",
-    "Email": "swastika@hawaii.edu"
-  },
-  {
-    "ClubName": "Ilima Sacnas Chapter at UH",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Dr. Healani Chang",
-    "ContactEmail": "hchang@hawaii.edu",
-    "Website": "www.sacnashawaii.org",
-    "Email": "hchang@hawaii.edu"
-  },
-  {
-    "ClubName": "Information Technology Management Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Luke Clements",
-    "ContactEmail": "lclement@hawaii.edu",
-    "Website": "http://www.itmahawaii.com/",
-    "Email": "lclement@hawaii.edu"
-  },
-  {
-    "ClubName": "Interactive Story Telling Club",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Kyle Tran",
-    "ContactEmail": "kyletran@hawaii.edu",
-    "Website": "",
-    "Email": "kyletran@hawaii.edu"
-  },
-  {
-    "ClubName": "Inter-Business Council",
-    "Type": "Academic/Professional",
-    "ContactName": "Jordan Abanto",
-    "ContactEmail": "abanto@hawaii.edu",
-    "Website": "www.ibcuhm.com",
-    "Email": "abanto@hawaii.edu"
-  },
-  {
-    "ClubName": "International Business Organization",
-    "Type": "Academic/Professional",
-    "ContactName": "Rachel Dunn",
-    "ContactEmail": "dunnrach@hawaii.edu",
-    "Website": "ibouhm.com",
-    "Email": "dunnrach@hawaii.edu"
-  },
-  {
-    "ClubName": "International Student Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Ryan Matsumoto",
-    "ContactEmail": "ryantm2@hawaii.edu",
-    "Website": "www.isauhm.com",
-    "Email": "ryantm2@hawaii.edu"
-  },
-  {
-    "ClubName": "Internal Medicine Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Geoffrey Kusaka",
-    "ContactEmail": "gkusaka@hawaii.edu",
-    "Website": "",
-    "Email": "gkusaka@hawaii.edu"
-  },
-  {
-    "ClubName": "Intervarsity Christian Fellowship",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Sabrina Summers",
-    "ContactEmail": "summerss@hawaii.edu",
-    "Website": "www.intervarsityhawaii.org",
-    "Email": "summerss@hawaii.edu"
-  },
-  {
-    "ClubName": "Institute of Electrical and Electronic Engineers",
-    "Type": "Academic/Professional",
-    "ContactName": "Christopher J Blake",
-    "ContactEmail": "cjblake@hawaii.edu",
-    "Website": "ieeeatuhm.com",
-    "Email": "cjblake@hawaii.edu"
-  },
-  {
-    "ClubName": "Jehowah's Witnesses at the University of Hawai'i - Manoa",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Roberta Baird",
-    "ContactEmail": "bairdr@hawaii.edu",
-    "Website": "",
-    "Email": "bairdr@hawaii.edu"
-  },
-  {
-    "ClubName": "Judo Club/Team at University of Hawaii at Manoa",
-    "Type": "Sports/Leisure",
-    "ContactName": "Larson Abilla",
-    "ContactEmail": "labilla@hawaii.edu",
-    "Website": "www2.hawaii.edu/~judo",
-    "Email": "labilla@hawaii.edu"
-  },
-  {
-    "ClubName": "K-Mixx Club",
-    "Type": "Leisure/Recreational",
-    "ContactName": "Isaiah Avilla",
-    "ContactEmail": "isaiaha@hawaii.edu",
-    "Website": "",
-    "Email": "isaiaha@hawaii.edu"
-  },
-  {
-    "ClubName": "Ka Lau O Ka Lahui",
-    "Type": "Service",
-    "ContactName": "Karli Rose Keanu",
-    "ContactEmail": "kkeanu4@hawaii.edu",
-    "Website": "",
-    "Email": "kkeanu4@hawaii.edu"
-  },
-  {
-    "ClubName": "Ka Lama Kukui Interest Group",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Amandalin Rock",
-    "ContactEmail": "rocka@hawaii.edu",
-    "Website": "",
-    "Email": "rocka@hawaii.edu"
-  },
-  {
-    "ClubName": "Kālai Pohaku",
-    "Type": "Academic/Professional",
-    "ContactName": "Diana Moana Nomura",
-    "ContactEmail": "nomura76@hawaii.edu",
-    "Website": "",
-    "Email": "nomura76@hawaii.edu"
-  },
-  {
-    "ClubName": "Ka Mea Kolo Entomology Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Michelle Au",
-    "ContactEmail": "aumi@hawaii.edu",
-    "Website": "sites.google.com/site/kameakolo",
-    "Email": "aumi@hawaii.edu"
-  },
-  {
-    "ClubName": "Kanoa",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Ebony Tapasa",
-    "ContactEmail": "etapasa@hawaii.edu",
-    "Website": "",
-    "Email": "etapasa@hawaii.edu"
-  },
-  {
-    "ClubName": "Kappa Sigma",
-    "Type": "Fraternity/Sorority",
-    "ContactName": "Carlos Tucker",
-    "ContactEmail": "carlos42@hawaii.edu",
-    "Website": "",
-    "Email": "carlos42@hawaii.edu"
-  },
-  {
-    "ClubName": "Katipunan Club",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Christine Joy Baltazar",
-    "ContactEmail": "cbaltaza@hawaii.edu",
-    "Website": "https://manoa.hawaii.edu/rio/katipunan/",
-    "Email": "cbaltaza@hawaii.edu"
-  },
-  {
-    "ClubName": "Kempo Club at UHM",
-    "Type": "Sports/Leisure",
-    "ContactName": "Kevin Hanaoka",
-    "ContactEmail": "hanaokak@hawaii.edu",
-    "Website": "",
-    "Email": "hanaokak@hawaii.edu"
-  },
-  {
-    "ClubName": "Kim's Tae Kwon Do @ UHM",
-    "Type": "Sports/Leisure",
-    "ContactName": "Mason Nakadomari",
-    "ContactEmail": "nakadoma@hawaii.edu",
-    "Website": "hawaiitaekwondo.com",
-    "Email": "nakadoma@hawaii.edu"
-  },
-  {
-    "ClubName": "Kinesiology and Rehabilitation Sciences Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Keaton Yaw",
-    "ContactEmail": "keatony@hawaii.edu",
-    "Website": "",
-    "Email": "keatony@hawaii.edu"
-  },
-  {
-    "ClubName": "Korean Drama Interest Group",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Jarren Takaki",
-    "ContactEmail": "jarrent@hawaii.edu",
-    "Website": "",
-    "Email": "jarrent@hawaii.edu"
-  },
-  {
-    "ClubName": "La Raza Unida",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Shea Ryan Charles",
-    "ContactEmail": "sc67@hawaii.edu",
-    "Website": "",
-    "Email": "sc67@hawaii.edu"
-  },
-  {
-    "ClubName": "Lifesaver Club",
-    "Type": "Service",
-    "ContactName": "Sarai Vargas",
-    "ContactEmail": "svargas9@hawaii.edu",
-    "Website": "",
-    "Email": "svargas9@hawaii.edu"
-  },
-  {
-    "ClubName": "Living Stone Chinese Christian Fellowship",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Liana Wang",
-    "ContactEmail": "lwang2@hawaii.edu",
-    "Website": "",
-    "Email": "lwang2@hawaii.edu"
-  },
-  {
-    "ClubName": "Loea Consulting Group (Consultx)",
-    "Type": "Academic/Professional",
-    "ContactName": "Ha Nguyen",
-    "ContactEmail": "ha777@hawaii.edu",
-    "Website": "",
-    "Email": "ha777@hawaii.edu"
-  },
-  {
-    "ClubName": "Lotus",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Venkataraman Balaraman",
-    "ContactEmail": "Fmuza@hawaii.edu",
-    "Website": "",
-    "Email": "Fmuza@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Astronomical Technologies (MAT)",
-    "Type": "Academic/Professional",
-    "ContactName": "Clinton Ng",
-    "ContactEmail": "Clng@hawaii.edu",
-    "Website": "",
-    "Email": "clng@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Creative Production",
-    "Type": "Academic/Professional",
-    "ContactName": "Tiffany Anne Ganti",
-    "ContactEmail": "tganti@hawaii.edu",
-    "Website": "",
-    "Email": "tganti@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Darts",
-    "Type": "Sports/Leisure",
-    "ContactName": "Katsuyuki Yoshia",
-    "ContactEmail": "ky7312@hawaii.edu",
-    "Website": "",
-    "Email": "ky7312@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Debate Union at UHM",
-    "Type": "Academic/Professional",
-    "ContactName": "Michelle Park",
-    "ContactEmail": "parkmj@hawaii.edu",
-    "Website": "",
-    "Email": "parkmj@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Improv Players",
-    "Type": "Sports/Leisure",
-    "ContactName": "Emily Steward",
-    "ContactEmail": "esteward@hawaii.edu",
-    "Website": "",
-    "Email": "esteward@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Peer Advisor Program",
-    "Type": "Academic/Professional",
-    "ContactName": "Sherylynne Andrada",
-    "ContactEmail": "sma3@hawaii.edu",
-    "Website": "manoa.hawaii.edu/undergrad/mac/mpa",
-    "Email": "sma3@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Pre-Law Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Teana Motoyama",
-    "ContactEmail": "teanam@hawaii.edu",
-    "Website": "",
-    "Email": "teanam@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Sophomore Experience",
-    "Type": "Student Affairs",
-    "ContactName": "Leilani Harjati",
-    "ContactEmail": "ltakeuc@hawaii.edu",
-    "Website": "http://manoa.hawaii.edu/undergrad/sophomore",
-    "Email": "ltakeuc@hawaii.edu"
-  },
-  {
-    "ClubName": "Manoa Ultimate Disc",
-    "Type": "Sports/Leisure",
-    "ContactName": "Van Wishingrad",
-    "ContactEmail": "vanw@hawaii.edu",
-    "Website": "",
-    "Email": "vanw@hawaii.edu"
-  },
-  {
-    "ClubName": "Marine Robotics at University of Hawaii",
-    "Type": "Sports/Leisure",
-    "ContactName": "Paula Rae Penullar",
-    "ContactEmail": "paularae@hawaii.edu",
-    "Website": "rig.eng.hawaii.edu/research/unmanned-x-systems/",
-    "Email": "paularae@hawaii.edu"
-  },
-  {
-    "ClubName": "Medt Student Organization",
-    "Type": "Academic/Professional",
-    "ContactName": "Lauren Loualhati",
-    "ContactEmail": "lloual3@hawaii.edu",
-    "Website": "",
-    "Email": "lloual3@hawaii.edu"
-  },
-  {
-    "ClubName": "Medical Education Student Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Dann Poe ī",
-    "ContactEmail": "dpoei@hawaii.edu",
-    "Website": "",
-    "Email": "dpoei@hawaii.edu"
-  },
-  {
-    "ClubName": "Medical Innovation and Design Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Alexander Ribao",
-    "ContactEmail": "ribaoa@hawaii.edu",
-    "Website": "mindhawaii.com",
-    "Email": "ribaoa@hawaii.edu"
-  },
-  {
-    "ClubName": "Medical Students for Choice",
-    "Type": "Academic/Professional",
-    "ContactName": "Clare-Marie Anderson",
-    "ContactEmail": "cmanders@hawaii.edu",
-    "Website": "msfc.org",
-    "Email": "cmanders@hawaii.edu"
-  },
-  {
-    "ClubName": "Medical Student Mentorship Program",
-    "Type": "Academic/Professional",
-    "ContactName": "Eileen Chen",
-    "ContactEmail": "esrchen@hawaii.edu",
-    "Website": "uhmsmp.org",
-    "Email": "esrchen@hawaii.edu"
-  },
-  {
-    "ClubName": "Medical Students of the Class of 2022 at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Jester Galiza",
-    "ContactEmail": "jpgaliza@hawaii.edu",
-    "Website": "",
-    "Email": "jpgaliza@hawaii.edu"
-  },
-  {
-    "ClubName": "Micronesia Connections at UH Manoa",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Austin Haleyalpiy",
-    "ContactEmail": "austin46@hawaii.edu",
-    "Website": "",
-    "Email": "austin46@hawaii.edu"
-  },
-  {
-    "ClubName": "MILUN",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Man Dhoj Rai",
-    "ContactEmail": "mandhoj@hawaii.edu",
-    "Website": "",
-    "Email": "mandhoj@hawaii.edu"
-  },
-  {
-    "ClubName": "Mortar Board Senior National Honor Society (Hui Po'okela Chapter)",
-    "Type": "Academic/Professional",
-    "ContactName": "Aime Le",
-    "ContactEmail": "ale77@hawaii.edu",
-    "Website": "mortarboardmanoa.weebly.com",
-    "Email": "ale77@hawaii.edu"
-  },
-  {
-    "ClubName": "Nā Hawai'i 'Imi Loa Hui Haumāna",
-    "Type": "Service",
-    "ContactName": "Sharnelle Renti Cruz",
-    "ContactEmail": "sprc@hawaii.edu",
-    "Website": "http://nhilhh.weebly.com",
-    "Email": "sprc@hawaii.edu"
-  },
-  {
-    "ClubName": "Na Koa",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Jace Nakama",
-    "ContactEmail": "jacect@hawaii.edu",
-    "Website": "oahuchurch.org",
-    "Email": "jacect@hawaii.edu"
-  },
-  {
-    "ClubName": "Na Koa Lani Booster Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Brock Barr",
-    "ContactEmail": "barrb@hawaii.edu",
-    "Website": "",
-    "Email": "barrb@hawaii.edu"
-  },
-  {
-    "ClubName": "Narrative Medicine Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Kyung Moo Kim",
-    "ContactEmail": "kkim29@hawaii.edu",
-    "Website": "",
-    "Email": "kkim29@hawaii.edu"
-  },
-  {
-    "ClubName": "National Panhellenic Conferene",
-    "Type": "Fraternity/Sorority",
-    "ContactName": "Avery Nueva",
-    "ContactEmail": "averymn@hawaii.edu",
-    "Website": "uhmpanhel.com",
-    "Email": "averymn@hawaii.edu"
-  },
-  {
-    "ClubName": "Natural Sciences Student Ambassadors",
-    "Type": "Academic/Professional",
-    "ContactName": "Taha Elwir",
-    "ContactEmail": "elwira@hawaii.edu",
-    "Website": "",
-    "Email": "elwira@hawaii.edu"
-  },
-  {
-    "ClubName": "OB/GYN Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Clare-Marie Anderson",
-    "ContactEmail": "cmanders@hawaii.edu",
-    "Website": "",
-    "Email": "cmanders@hawaii.edu"
-  },
-  {
-    "ClubName": "Oncology Interest Group at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Nicholas Fancher",
-    "ContactEmail": "nfancher@hawaii.edu",
-    "Website": "",
-    "Email": "nfancher@hawaii.edu"
-  },
-  {
-    "ClubName": "Opthalmology Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Kevin Card",
-    "ContactEmail": "cardk@hawaii.edu",
-    "Website": "",
-    "Email": "cardk@hawaii.edu"
-  },
-  {
-    "ClubName": "Pacific Asia Travel Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Jay-O Alforque",
-    "ContactEmail": "alforque@hawaii.edu",
-    "Website": "patahawaii.com",
-    "Email": "alforque@hawaii.edu"
-  },
-  {
-    "ClubName": "Pacific Asian Legal Student Organization",
-    "Type": "Academic/Professional",
-    "ContactName": "Richard Crum",
-    "ContactEmail": "crumr@hawaii.edu",
-    "Website": "https://www.law.hawaii.edu/student-organization",
-    "Email": "crumr@hawaii.edu"
-  },
-  {
-    "ClubName": "Partners in Health Engage UH Manoa Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Akane Dunn",
-    "ContactEmail": "akane2@hawaii.edu",
-    "Website": "https://www.pih.org/engage",
-    "Email": "akane2@hawaii.edu"
-  },
-  {
-    "ClubName": "Partnership for Social Justice at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Amandalin Rock",
-    "ContactEmail": "rocka@hawaii.edu",
-    "Website": "",
-    "Email": "rocka@hawaii.edu"
-  },
-  {
-    "ClubName": "Patient Safety and Quality Improvement  Interest Group",
-    "Type": "Academic/Professional",
-    "ContactName": "Kristine Vo",
-    "ContactEmail": "kbvo@hawaii.edu",
-    "Website": "",
-    "Email": "kbvo@hawaii.edu"
-  },
-  {
-    "ClubName": "Pediatric Interest Group at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Kevin Pham",
-    "ContactEmail": "kevinph@hawaii.edu",
-    "Website": "",
-    "Email": "kevinph@hawaii.edu"
-  },
-  {
-    "ClubName": "Peer Mentor Ohana",
-    "Type": "Academic/Professional",
-    "ContactName": "Rosemarie Woodruff",
-    "ContactEmail": "woodruff@hawaii.edu",
-    "Website": "",
-    "Email": ""
-  },
-  {
-    "ClubName": "Peer Mentoring Program at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Amandalin Rock",
-    "ContactEmail": "rocka@hawaii.edu",
-    "Website": "",
-    "Email": "rocka@hawaii.edu"
-  },
-  {
-    "ClubName": "Phi Alpha Nu Sigma Honor Society",
-    "Type": "Academic/Professional",
-    "ContactName": "Julie Anne Bacaro",
-    "ContactEmail": "jafb@hawaii.edu",
-    "Website": "",
-    "Email": "jafb@hawaii.edu"
-  },
-  {
-    "ClubName": "Phi Alpha Theta (Alpha Beta Epsilon)",
-    "Type": "Academic/Professional",
-    "ContactName": "Emily Holmberg",
-    "ContactEmail": "emilyhol@hawaii.edu",
-    "Website": "phialphatheta.org",
-    "Email": "emilyhol@hawaii.edu"
-  },
-  {
-    "ClubName": "Phi Mu",
-    "Type": "Fraternity/Sorority",
-    "ContactName": "Sarai Vargas",
-    "ContactEmail": "svargas9@hawaii.edu",
-    "Website": "hawaii.phimu.org",
-    "Email": "svargas9@hawaii.edu"
-  },
-  {
-    "ClubName": "Philippine Medical Student Association of Hawaii",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Arlene Kiyohara",
-    "ContactEmail": "arlenecp@hawaii.edu",
-    "Website": "",
-    "Email": "arlenecp@hawaii.edu"
-  },
-  {
-    "ClubName": "Pi Gamma Mu",
-    "Type": "Honorary Society",
-    "ContactName": "Vendela Lindahl",
-    "ContactEmail": "vendelal@hawaii.edu",
-    "Website": "",
-    "Email": "vendelal@hawaii.edu"
-  },
-  {
-    "ClubName": "Pi Sigma Alpha- Tau Pi Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Justin Menina",
-    "ContactEmail": "jmenina@hawaii.edu",
-    "Website": "",
-    "Email": "jmenina@hawaii.edu"
-  },
-  {
-    "ClubName": "Pi Tau Sigma",
-    "Type": "Academic/Professional",
-    "ContactName": "Michael Dang",
-    "ContactEmail": "mkdang@hawaii.edu",
-    "Website": "uhmsigmapi.wixsite.com",
-    "Email": "mkdang@hawaii.edu"
-  },
-  {
-    "ClubName": "Planners of Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Nanea Lo",
-    "ContactEmail": "naneaclo@hawaii.edu",
-    "Website": "plannersofhawaii.weebly.com",
-    "Email": "planofhi@hawaii.edu"
-  },
-  {
-    "ClubName": "Political Science Club at UH",
-    "Type": "Academic/Professional",
-    "ContactName": "Justin Menina",
-    "ContactEmail": "jmenina@hawaii.edu",
-    "Website": "",
-    "Email": "jmenina@hawaii.edu"
-  },
-  {
-    "ClubName": "Powerlifting Club at the University of Hawaii at Manoa",
-    "Type": "Sports/Leisure",
-    "ContactName": "Jaron Yamane",
-    "ContactEmail": "jarony@hawaii.edu",
-    "Website": "",
-    "Email": "jarony@hawaii.edu"
-  },
-  {
-    "ClubName": "Pre-Medical Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Taylor Pu'uohau",
-    "ContactEmail": "tpuuohau@hawaii.edu",
-    "Website": "http://premed-at-uhm.uhm.squarespace.com",
-    "Email": "tpuuohau@hawaii.edu"
-  },
-  {
-    "ClubName": "Pre-Phamarcy Association at UH Manoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Tran Trinh",
-    "ContactEmail": "trant2@hawaii.edu",
-    "Website": "uhmprepharmacyassociation.wordpress.com",
-    "Email": "trant2@hawaii.edu"
-  },
-  {
-    "ClubName": "Primary Care Progress at University of Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Jester Galiza",
-    "ContactEmail": "jpgaliza@hawaii.edu",
-    "Website": "",
-    "Email": "jpgaliza@hawaii.edu"
-  },
-  {
-    "ClubName": "Protection of Ocean and Nature Organization",
-    "Type": "Service",
-    "ContactName": "Maiko Ikeda",
-    "ContactEmail": "maikoi@hawaii.edu",
-    "Website": "ponohawaii.org",
-    "Email": "maikoi@hawaii.edu"
-  },
-  {
-    "ClubName": "Psi SIgma: The Psychology Connection",
-    "Type": "Academic/Professional",
-    "ContactName": "BrandonBanuelos",
-    "ContactEmail": "bbanuelo@hawaii.ed",
-    "Website": "thepsychologyconnection.blogspot.com",
-    "Email": "bbanuelo@hawaii.ed"
-  },
-  {
-    "ClubName": "Public Administration Student Organization",
-    "Type": "Academic/Professional",
-    "ContactName": "Lydia Chung",
-    "ContactEmail": "lydiajc@hawaii.edu",
-    "Website": "",
-    "Email": "lydiajc@hawaii.edu"
-  },
-  {
-    "ClubName": "Public Relations Student Society of America",
-    "Type": "Academic/Professional",
-    "ContactName": "Mei Jie Wu",
-    "ContactEmail": "meijiew@hawaii.edu",
-    "Website": "",
-    "Email": "meijiew@hawaii.edu"
-  },
-  {
-    "ClubName": "Rainbow Jugglers Juggling Club",
-    "Type": "Sports/Leisure",
-    "ContactName": "Stephen Case",
-    "ContactEmail": "stevec@hawaii.edu",
-    "Website": "www.rainbowjugglers.org",
-    "Email": "stevec@hawaii.edu"
-  },
-  {
-    "ClubName": "Regent and Presidential Scholars Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Noah Rodrigues",
-    "ContactEmail": "noahrodr@hawaii.edu",
-    "Website": "",
-    "Email": "noahrodr@hawaii.edu"
-  },
-  {
-    "ClubName": "Reformed University Fellowship",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Joshua Hu",
-    "ContactEmail": "joshuahu@hawaii.edu",
-    "Website": "rvfhawaii.org",
-    "Email": "joshuahu@hawaii.edu"
-  },
-  {
-    "ClubName": "Rural Health Interest Group at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Amandalin Rock",
-    "ContactEmail": "rocka@hawaii.edu",
-    "Website": "",
-    "Email": "rocka@hawaii.edu"
-  },
-  {
-    "ClubName": "S-cubed",
-    "Type": "Academic/Professional",
-    "ContactName": "Barbara Watanabe",
-    "ContactEmail": "blwatana@hawaii.edu",
-    "Website": "manoa.hawaii.edu/undergrad/sss",
-    "Email": "blwatana@hawaii.edu"
-  },
-  {
-    "ClubName": "Salsa Dancing @ UHM",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Gordon Walker",
-    "ContactEmail": "gwalker@hawaii.edu",
-    "Website": "",
-    "Email": "gwalker@hawaii.edu"
-  },
-  {
-    "ClubName": "Science Communicators Ohana",
-    "Type": "Academic/Professional",
-    "ContactName": "Sarah Tucker",
-    "ContactEmail": "tucker4@hawaii.edu",
-    "Website": "",
-    "Email": "tucker4@hawaii.edu"
-  },
-  {
-    "ClubName": "Second Language Studies Student Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Leeseul Park",
-    "ContactEmail": "leeseul@hawaii.edu",
-    "Website": "http://blog.hawaii.edu/slssa/",
-    "Email": "leeseul@hawaii.edu"
-  },
-  {
-    "ClubName": "Shooting Stars",
-    "Type": "Academic/Professional",
-    "ContactName": "Michael Liu",
-    "ContactEmail": "liumicha@hawaii.edu",
-    "Website": "",
-    "Email": "liumicha@hawaii.edu"
-  },
-  {
-    "ClubName": "Silver Wings",
-    "Type": "Academic/Professional",
-    "ContactName": "Anthony Lee",
-    "ContactEmail": "awl@hawaii.edu",
-    "Website": "",
-    "Email": "awl@hawaii.edu"
-  },
-  {
-    "ClubName": "Smash Bros. Club at The University of Hawaii at Manoa",
-    "Type": "Leisure/Recreational",
-    "ContactName": "Isaiah Sheppard-Nelson",
-    "ContactEmail": "isaiahsn@hawaii.edu",
-    "Website": "",
-    "Email": "isaiahsn@hawaii.edu"
-  },
-  {
-    "ClubName": "Society of American Archivists University of Hawai'i Student Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Marleah Renti Cruz",
-    "ContactEmail": "marleah@hawaii.edu",
-    "Website": "http://hisaasc.weebly.com",
-    "Email": "marleah@hawaii.edu"
-  },
-  {
-    "ClubName": "Society of Automotive Engineers at UH Manoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Michael Dang",
-    "ContactEmail": "mkdang@hawaii.edu",
-    "Website": "",
-    "Email": "mkdang@hawaii.edu"
-  },
-  {
-    "ClubName": "Society for Human Resource Management, Aloha Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Josiah J. Villar",
-    "ContactEmail": "josiahlj@hawaii.edu",
-    "Website": "shrmuhm.com",
-    "Email": "josiahlj@hawaii.edu"
-  },
-  {
-    "ClubName": "Society of Nepalese in Hawaii",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Man Dhoj Rai",
-    "ContactEmail": "mandhoj@hawaii.edu",
-    "Website": "www.esneha.org",
-    "Email": "mandhoj@hawaii.edu"
-  },
-  {
-    "ClubName": "Society of Physics Students at the University of Hawaii at Manoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Zachary Martin",
-    "ContactEmail": "zmart@hawaii.edu",
-    "Website": "",
-    "Email": "zmart@hawaii.edu"
-  },
-  {
-    "ClubName": "Society of Women Engineers",
-    "Type": "Academic/Professional",
-    "ContactName": "Candice Sarangay",
-    "ContactEmail": "sarangay@hawaii.edu",
-    "Website": "uhm.swe.org",
-    "Email": "sarangay@hawaii.edu"
-  },
-  {
-    "ClubName": "Spanish and Portugese Club",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Megan Fereira",
-    "ContactEmail": "fereira@hawaii.edu",
-    "Website": "",
-    "Email": "fereira@hawaii.edu"
-  },
-  {
-    "ClubName": "Speech Communication Society",
-    "Type": "Academic/Professional",
-    "ContactName": "Kittra Evenson",
-    "ContactEmail": "evenson8@hawaii.edu",
-    "Website": "",
-    "Email": "evenson8@hawaii.edu"
-  },
-  {
-    "ClubName": "STAR Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Sharon Widup",
-    "ContactEmail": "swidup@hawaii.edu",
-    "Website": "https://www.star.hawaii.edu",
-    "Email": "swidup@hawaii.edu"
-  },
-  {
-    "ClubName": "Stole Society",
-    "Type": "Student Affairs",
-    "ContactName": "Mark Oandasan",
-    "ContactEmail": "markco@hawaii.edu",
-    "Website": "",
-    "Email": "markco@hawaii.edu"
-  },
-  {
-    "ClubName": "Students for a National Health Program at University of Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Jester Galiza",
-    "ContactEmail": "jpgaliza@hawaii.edu",
-    "Website": "",
-    "Email": "jpgaliza@hawaii.edu"
-  },
-  {
-    "ClubName": "Student Immunization Initiative",
-    "Type": "Academic/Professional",
-    "ContactName": "Albert To",
-    "ContactEmail": "albertto@hawaii.edu",
-    "Website": "https://www.sihawaii.org",
-    "Email": "albertto@hawaii.edu"
-  },
-  {
-    "ClubName": "Student Interest Group for Neurology and Psychiatry",
-    "Type": "Academic/Professional",
-    "ContactName": "Christina Tse",
-    "ContactEmail": "tsec@hawaii.edu",
-    "Website": "",
-    "Email": "tsec@hawaii.edu"
-  },
-  {
-    "ClubName": "Students Interested in Pathology",
-    "Type": "Academic/Professional",
-    "ContactName": "Chad Russell",
-    "ContactEmail": "chadruss@hawaii.edu",
-    "Website": "",
-    "Email": "chadruss@hawaii.edu"
-  },
-  {
-    "ClubName": "Students with Keiki @ the University of Hawaii- Manoa",
-    "Type": "Student Affairs",
-    "ContactName": "Angelique K. Solomon",
-    "ContactEmail": "gotkids@hawaii.edu",
-    "Website": "uhmstudentswkeiki.wixsite.com/website",
-    "Email": "gotkids@hawaii.edu"
-  },
-  {
-    "ClubName": "Student Nurses' Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Miki Matsuoka",
-    "ContactEmail": "mm4109@hawaii.edu",
-    "Website": "",
-    "Email": "snamanoa@hawaii.edu"
-  },
-  {
-    "ClubName": "Student Veteran Organization",
-    "Type": "Academic/Professional",
-    "ContactName": "Andrew Lanza",
-    "ContactEmail": "ajlanza@hawaii.edu",
-    "Website": "",
-    "Email": "ajlanza@hawaii.edu"
-  },
-  {
-    "ClubName": "Supporting Women in Information, Technology and Computing in Hawaii at the University of Hawaii at Manoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Quinne Uchida",
-    "ContactEmail": "qauchida@hawaii.edu",
-    "Website": "swith-uhm.github.io",
-    "Email": "qauchida@hawaii.edu"
-  },
-  {
-    "ClubName": "Surfrider Foundation UH Manoa Club",
-    "Type": "Sports/Leisure",
-    "ContactName": "Laurel Perun",
-    "ContactEmail": "lperun@hawaii.edu",
-    "Website": "uhmanoasurfrider.wordpress.com",
-    "Email": "lperun@hawaii.edu"
-  },
-  {
-    "ClubName": "Thai Studies Club",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Anongard Nusartlert",
-    "ContactEmail": "an2009@hawaii.edu",
-    "Website": "thaistudieshawaii.wordpress.com",
-    "Email": "an2009@hawaii.edu"
-  },
-  {
-    "ClubName": "The Anime Manga Society of Hawaii at UH Manoa",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Barryn Chun",
-    "ContactEmail": "chun808@hawaii.edu",
-    "Website": "www.amsmanoa.org",
-    "Email": "chun808@hawaii.edu"
-  },
-  {
-    "ClubName": "The Elohist Club at UH",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Christopher Blake",
-    "ContactEmail": "cjblake@hawaii.edu",
-    "Website": "elohist.club",
-    "Email": "cjblake@hawaii.edu"
-  },
-  {
-    "ClubName": "The Engineers' Council at the University of Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Jianna Leonora Orias",
-    "ContactEmail": "jlorias@hawaii.edu",
-    "Website": "http://www.ecuh.org",
-    "Email": "jlorias@hawaii.edu"
-  },
-  {
-    "ClubName": "The Ethnomusicology Association",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Travis Shaver",
-    "ContactEmail": "tshaver@hawaii.edu",
-    "Website": "https://www.emauhm.org/",
-    "Email": "tshaver@hawaii.edu"
-  },
-  {
-    "ClubName": "The Healing Earth Initiative",
-    "Type": "Service",
-    "ContactName": "Ashley Ostendorf",
-    "ContactEmail": "ashleyno@hawaii.edu",
-    "Website": "",
-    "Email": "ashleyno@hawaii.edu"
-  },
-  {
-    "ClubName": "The iMua Learned Society at the Univeristy of Hawaii (iMua Living Labs)",
-    "Type": "Academic/Professional",
-    "ContactName": "Justin Menina",
-    "ContactEmail": "jmenina@hawaii.edu",
-    "Website": "manoa.cc",
-    "Email": "jmenina@hawaii.edu"
-  },
-  {
-    "ClubName": "The Language Documentation Training Center",
-    "Type": "Academic/Professional",
-    "ContactName": "Jessica Charest",
-    "ContactEmail": "jcharest@hawaii.edu",
-    "Website": "ldtc.org",
-    "Email": "jcharest@hawaii.edu"
-  },
-  {
-    "ClubName": "The National Society of Collegiate Scholars, University of Hawai'i at Manoa Chapter",
-    "Type": "Academic/Professional",
-    "ContactName": "Alyssa Hironaka",
-    "ContactEmail": "alyssahi@hawaii.edu",
-    "Website": "nscs.org",
-    "Email": "alyssahi@hawaii.edu"
-  },
-  {
-    "ClubName": "The Navigators",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Lauren Block",
-    "ContactEmail": "blockln7@hawaii.edu",
-    "Website": "",
-    "Email": "blockln7@hawaii.edu"
-  },
-  {
-    "ClubName": "The Pre-Dental Association at the University of Hawaii at Manoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Paolo Atienza",
-    "ContactEmail": "patienza@hawaii.edu",
-    "Website": "",
-    "Email": "patienza@hawaii.edu"
-  },
-  {
-    "ClubName": "The Students for Success Club",
-    "Type": "Academic/Professional",
-    "ContactName": "Nicole Panos",
-    "ContactEmail": "npanos@hawaii.edu",
-    "Website": "",
-    "Email": "npanos@hawaii.edu"
-  },
-  {
-    "ClubName": "Timpuyog Organization",
-    "Type": "Ethnic/Cultural",
-    "ContactName": "Jane Nicole Teneza",
-    "ContactEmail": "teneza20@hawaii.edu",
-    "Website": "manoa.hawaii.edu/ilokano/timpuyog.html",
-    "Email": "teneza20@hawaii.edu"
-  },
-  {
-    "ClubName": "Transcendental Meditation Club",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Taryn Bond",
-    "ContactEmail": "BondTL@hawaii.edu",
-    "Website": "",
-    "Email": "BondTL@hawaii.edu"
-  },
-  {
-    "ClubName": "Travel Industry Management Student Association",
-    "Type": "Academic/Professional",
-    "ContactName": "Sharmaine Domingo",
-    "ContactEmail": "sd21@hawaii.edu",
-    "Website": "www.timsaatuhm.com",
-    "Email": "sd21@hawaii.edu"
-  },
-  {
-    "ClubName": "Tropical Plant and Soil Sciences Graduate Student Organization",
-    "Type": "Academic/Professional",
-    "ContactName": "Jaclyn Nicole R. Uy",
-    "ContactEmail": "uyjnr69@hawaii.edu",
-    "Website": "",
-    "Email": "uyjnr69@hawaii.edu"
-  },
-  {
-    "ClubName": "Ultrasound Interest Group at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Amandalin Rock",
-    "ContactEmail": "rocka@hawaii.edu",
-    "Website": "",
-    "Email": "rocka@hawaii.edu"
-  },
-  {
-    "ClubName": "Volunteers for Intercultural and Definitive Adventures (VIDA)",
-    "Type": "Service",
-    "ContactName": "Airi Morita",
-    "ContactEmail": "airimori@hawaii.edu",
-    "Website": "https://vidahawaii.wixsite.com/uhmanoa      http://www.vidavounteer.org",
-    "Email": "airimori@hawaii.edu"
-  },
-  {
-    "ClubName": "WADEM SIG at UHM",
-    "Type": "Academic/Professional",
-    "ContactName": "Gary Glauberman",
-    "ContactEmail": "glauber@hawaii.edu",
-    "Website": "",
-    "Email": "glauber@hawaii.edu"
-  },
-  {
-    "ClubName": "Waikiki Acrobatics Troupe",
-    "Type": "Leisure/Recreational",
-    "ContactName": "Liam Griffin",
-    "ContactEmail": "liam9999@hawaii.edu",
-    "Website": "",
-    "Email": "liam9999@hawaii.edu"
-  },
-  {
-    "ClubName": "Wesley Foundation @ UH Manoa",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Sateki Taulanga",
-    "ContactEmail": "st37@hawaii.edu",
-    "Website": "Wesleyfoundationhawaii.com",
-    "Email": "st37@hawaii.edu"
-  },
-  {
-    "ClubName": "Wilderness Medicine Hawaii",
-    "Type": "Academic/Professional",
-    "ContactName": "Weston Mccue",
-    "ContactEmail": "wmccue@hawaii.edu",
-    "Website": "",
-    "Email": "wmccue@hawaii.edu"
-  },
-  {
-    "ClubName": "Women's Interest Group at JABSOM",
-    "Type": "Academic/Professional",
-    "ContactName": "Amandalin Rock",
-    "ContactEmail": "rocka@hawaii.edu",
-    "Website": "",
-    "Email": "rocka@hawaii.edu"
-  },
-  {
-    "ClubName": "Younglife",
-    "Type": "Religious/Spiritual",
-    "ContactName": "Makenzie Hickey",
-    "ContactEmail": "mmhickey@hawaii.edu",
-    "Website": "younglife.org",
-    "Email": "mmhickey@hawaii.edu"
-  }
-]
+  "clubData": [
+    {
+      "ClubName": "Academy for Creative Media Student Association",
+      "Type": "Academic/Professional",
+      "ContactName": "Emma Daily",
+      "Email": "edaily@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "edaily@hawaii.edu"
+    },
+    {
+      "ClubName": "Accounting Club at UH Manoa",
+      "Type": "Academic/Professional",
+      "ContactName": "Chelsi Morishige",
+      "Email": "chelsicm@hawaii.edu",
+      "Website": "acuhmanoa.com",
+      "RIOEmail": "chelsicm@hawaii.edu"
+    },
+    {
+      "ClubName": "Adventist Christian Fellowship",
+      "Type": "Religious/Spiritual",
+      "ContactName": "Victor Kolonzo",
+      "Email": "vkilonzo@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "vkilonzo@hawaii.edu"
+    },
+    {
+      "ClubName": "Advocates for Public Interest Law",
+      "Type": "Academic/Professional",
+      "ContactName": "Rebekah Ray",
+      "Email": "rray2@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "rray2@hawaii.edu"
+    },
+    {
+      "ClubName": "AAUW-UHM",
+      "Type": "Political",
+      "ContactName": "Ronja Steinbach",
+      "Email": "ronja36@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "ronja36@hawaii.edu"
+    },
+    {
+      "ClubName": "AECT-Hawaii",
+      "Type": "Academic/Professional",
+      "ContactName": "Waynele Yu",
+      "Email": "waynele@hawaii.edu",
+      "Website": "https://bit.ly/aect-hi",
+      "RIOEmail": "waynele@hawaii.edu"
+    },
+    {
+      "ClubName": "Aikido @ UHM",
+      "Type": "Sports/Leisure",
+      "ContactName": "Timothy Halliday",
+      "Email": "halliday@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "halliday@hawaii.edu"
+    },
+    {
+      "ClubName": "Alpha Gamma Delta, Delta Sigma Chapter",
+      "Type": "Fraternity/Sorority",
+      "ContactName": "Emma Archambeau",
+      "Email": "earchamb@hawaii.edu",
+      "Website": "hawaii.alphagammadelta.org",
+      "RIOEmail": "earchamb@hawaii.edu"
+    },
+    {
+      "ClubName": "Alpha Sigma Phi",
+      "Type": "Fraternity/Sorority",
+      "ContactName": "Abel Salinas",
+      "Email": "abels@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "abels@hawaii.edu"
+    },
+    {
+      "ClubName": "AlohaNation Flowarts",
+      "Type": "Ethnic/Cultural",
+      "ContactName": "Nathan Onaka",
+      "Email": "onankan@hawaii.edu",
+      "Website": "anfclub.github.io/AlohaNation-Flowarts",
+      "RIOEmail": "onankan@hawaii.edu"
+    },
+    {
+      "ClubName": "AMA/HMA Student Chapter at JABSOM",
+      "Type": "Academic/Professional",
+      "ContactName": "Jester Galiza",
+      "Email": "jpgaliza@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "jpgaliza@hawaii.edu"
+    },
+    {
+      "ClubName": "American Cetacean Society Student Coalition at University of Hawaii at Manoa",
+      "Type": "Service",
+      "ContactName": "Opal Stanfield",
+      "Email": "opalstan@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "opalstan@hawaii.edu"
+    },
+    {
+      "ClubName": "American Indian Science and Engineering Society",
+      "Type": "Academic/Professional",
+      "ContactName": "Kathleen Kodama",
+      "Email": "kmmk4@hawaii.edu",
+      "Website": "aiseshawaii.weebly.com",
+      "RIOEmail": "kmmk4@hawaii.edu"
+    },
+    {
+      "ClubName": "American Institute of Architecture Students",
+      "Type": "Academic/Professional",
+      "ContactName": "Celeste Guarin",
+      "Email": "cguarin@hawaii.edu",
+      "Website": "aiashawaii.com",
+      "RIOEmail": "cguarin@hawaii.edu"
+    },
+    {
+      "ClubName": "American Library Association Student Chapter",
+      "Type": "Academic/Professional",
+      "ContactName": "Katie Joe Lang",
+      "Email": "langk@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "langk@hawaii.edu"
+    },
+    {
+      "ClubName": "American Marketing Association",
+      "Type": "Academic/Professional",
+      "ContactName": "Ashley Regaspi",
+      "Email": "aregaspi@hawaii.edu",
+      "Website": "amauhm.org",
+      "RIOEmail": "aregaspi@hawaii.edu"
+    },
+    {
+      "ClubName": "American Meterological Society Aloha Chapter",
+      "Type": "Academic/Professional",
+      "ContactName": "Terrence John Corrigan",
+      "Email": "tjc21@hawaii.edu",
+      "Website": "amsalohachapter.wixsite.com/aloha",
+      "RIOEmail": "tjc21@hawaii.edu"
+    },
+    {
+      "ClubName": "American Society of Civil Engineers",
+      "Type": "Academic/Professional",
+      "ContactName": "Maynard Lazo",
+      "Email": "lazom@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "lazom@hawaii.edu"
+    },
+    {
+      "ClubName": "American Society of Mechanical Enginers",
+      "Type": "Academic/Professional",
+      "ContactName": "Daryll Suyat",
+      "Email": "suyatd@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "suyatd@hawaii.edu"
+    },
+    {
+      "ClubName": "American Society for Microbiology Hawaii Student Chapter",
+      "Type": "Academic/Professional",
+      "ContactName": "Albert To",
+      "Email": "albertto@hawaii.edu",
+      "Website": "http://www.asmbranches.org/brhawaii/",
+      "RIOEmail": "albertto@hawaii.edu"
+    },
+    {
+      "ClubName": "Anesthesiology Interest Group",
+      "Type": "Academic/Professional",
+      "ContactName": "Nicholas Fancher",
+      "Email": "nfancher@hawaii.edu",
+      "Website": "sites.google.com/view/jabsomaig",
+      "RIOEmail": "nfancher@hawaii.edu"
+    },
+    {
+      "ClubName": "Animal Science Club",
+      "Type": "Academic/Professional",
+      "ContactName": "Cody Ching",
+      "Email": "codylc@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "codylc@hawaii.edu"
+    },
+    {
+      "ClubName": "Anthropology Undergraduate Student Association",
+      "Type": "Academic/Professional",
+      "ContactName": "Jitrudi Scheiman",
+      "Email": "jms26@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "jms26@hawaii.edu"
+    },
+    {
+      "ClubName": "Artists and Musicians at JABSOM",
+      "Type": "Adademic/Professional",
+      "ContactName": "Amandalin Rock",
+      "Email": "rocka@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "rocka@hawaii.edu"
+    },
+    {
+      "ClubName": "Associated Students at JABSOM",
+      "Type": "Academic/Professional",
+      "ContactName": "Jester Galiza",
+      "Email": "jpgaliza@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "jpgaliza@hawaii.edu"
+    },
+    {
+      "ClubName": "Association For Computing Machinery at Manoa",
+      "Type": "Academic/Professional",
+      "ContactName": "Marty Joshua Apilado",
+      "Email": "mjka@hawaii.edu",
+      "Website": "acmanoa.github.io",
+      "RIOEmail": "mjka@hawaii.edu"
+    },
+    {
+      "ClubName": "Atherton YMCA",
+      "Type": "Academic/Professional",
+      "ContactName": "Christina Andres",
+      "Email": "andrescc@hawaii.edu",
+      "Website": "athertonymca.org",
+      "RIOEmail": "andrescc@hawaii.edu"
+    },
+    {
+      "ClubName": "Athletic Training Student Society",
+      "Type": "Academic/Professional",
+      "ContactName": "Kumiko Hashida",
+      "Email": "hashidak@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "hashidak@hawaii.edu"
+    },
+    {
+      "ClubName": "Autonomous Control Theory-Unmanned Aerial Systems",
+      "Type": "Academic/Professional",
+      "ContactName": "Evan Kawamura",
+      "Email": "evankawa@hawaii.edu",
+      "Website": "manoa.hawaii.edu/actuas",
+      "RIOEmail": "evankawa@hawaii.edu"
+    },
+    {
+      "ClubName": "Bachelor of Social Work Organization",
+      "Type": "Academic/Professional",
+      "ContactName": "Kelsey Mills",
+      "Email": "kelseyjp@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "kelseyjp@hawaii.edu"
+    },
+    {
+      "ClubName": "Baha'i Association at UH Manoa",
+      "Type": "Religious/Spiritual",
+      "ContactName": "Dale Spenner",
+      "Email": "spenner@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "spenner@hawaii.edu"
+    },
+    {
+      "ClubName": "Baptist College Ministries",
+      "Type": "Religious/Spiritual",
+      "ContactName": "Nathaniel Atwell",
+      "Email": "natwell@hawaii.edu",
+      "Website": "www.bcmoahu.org",
+      "RIOEmail": "natwell@hawaii.edu"
+    },
+    {
+      "ClubName": "Belly Dance Raqs- Manoa",
+      "Type": "Sports/Leisure",
+      "ContactName": "Brittany Castle",
+      "Email": "bcastle9@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "bcastle9@hawaii.edu"
+    },
+    {
+      "ClubName": "Best Buddies Hawaii-UH Manoa/SAAC Chapter",
+      "Type": "Service",
+      "ContactName": "Rhonda S. Black",
+      "Email": "rblack@hawaii.edu",
+      "Website": "www.bestbuddies.org/find-programs/hawaii",
+      "RIOEmail": "rblack@hawaii.edu"
+    },
+    {
+      "ClubName": "Beta Alpha Psi, Delta Theta Chapter",
+      "Type": "Academic/Professional",
+      "ContactName": "Janae Stilwell",
+      "Email": "janaeeps@hawaii.edu",
+      "Website": "www.bapuhm.org",
+      "RIOEmail": "janaeeps@hawaii.edu"
+    },
+    {
+      "ClubName": "Beta Beta Gamma Sorority",
+      "Type": "Fraternity/Sorority",
+      "ContactName": "Moana Nomura",
+      "Email": "nomura76@hawaii.edu",
+      "Website": "http://betabetagamma.weebly.com",
+      "RIOEmail": "nomura76@hawaii.edu"
+    },
+    {
+      "ClubName": "Black Law Students Association",
+      "Type": "Academic/Professional",
+      "ContactName": "Britagne Johnson",
+      "Email": "bnjohnso@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "bnjohnso@hawaii.edu"
+    },
+    {
+      "ClubName": "Blue Zones Project",
+      "Type": "Service",
+      "ContactName": "Robert Nieto",
+      "Email": "robertfn@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "robertfn@hawaii.edu"
+    },
+    {
+      "ClubName": "Botanical Society of America Hawaii Chapter",
+      "Type": "Academic/Professional",
+      "ContactName": "Christian Streit",
+      "Email": "cstreit@hawaii.edu",
+      "Website": "www.botany.org",
+      "RIOEmail": "cstreit@hawaii.edu"
+    },
+    {
+      "ClubName": "Buddhi Yoga Manoa",
+      "Type": "Sports/Leisure",
+      "ContactName": "Veronica Gibson",
+      "Email": "vgibson@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "vgibson@hawaii.edu"
+    },
+    {
+      "ClubName": "Business Executive Society of Tomorrow",
+      "Type": "Academic/Professional",
+      "ContactName": "Kristyn Fujii",
+      "Email": "fujiik7@hawaii.edu",
+      "Website": "bestuhm.org",
+      "RIOEmail": "fujiik7@hawaii.edu"
+    },
+    {
+      "ClubName": "Campus Drummers",
+      "Type": "Leisure/Recreational",
+      "ContactName": "Susan Jacob",
+      "Email": "sjacob77@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "sjacob77@hawaii.edu"
+    },
+    {
+      "ClubName": "Cannabis Club",
+      "Type": "Sports/Leisure",
+      "ContactName": "Damon Grayson",
+      "Email": "dgrayson@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "dgrayson@hawaii.edu"
+    },
+    {
+      "ClubName": "Capoeira Senzala",
+      "Type": "Sports/Leisure",
+      "ContactName": "Rachel Mamiya Hernandez",
+      "Email": "rmamiya@hawaii.edu",
+      "Website": "",
+      "RIOEmail": "rmamiya@hawaii.edu"
+    },
+    {
+      "ClubName": "CARP Hawaii",
+      "Type": "Academic/Professional",
+      "ContactName": "Chizuko Allen",
+      "Email": "chizuko@hawaii.edu",
+      "Website": "www.carplife.org",
+      "RIOEmail": "chizuko@hawaii.edu"
+    }
+  ]
 }
