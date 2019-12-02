@@ -15,8 +15,9 @@ class ListClubs extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
+    const padding = { paddingTop: '10px' };
     return (
-        <Container>
+        <Container style={padding}>
           <Header as="h2" textAlign="center">Club List</Header>
           <Card.Group>
             {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
