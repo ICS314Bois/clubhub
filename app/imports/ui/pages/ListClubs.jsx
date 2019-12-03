@@ -17,9 +17,9 @@ class ListClubs extends React.Component {
   renderPage() {
     const padding = { paddingTop: '10px' };
     return (
-        <div className={'landing-background'}>
+        <div className={'uh-background'}>
           <Container style={padding}>
-            <Header as="h2" textAlign="center">Club List</Header>
+            <Header as="h2" textAlign="center" inverted>Club List</Header>
             <Card.Group>
               {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
             </Card.Group>
