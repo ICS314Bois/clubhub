@@ -6,7 +6,7 @@ import BottomLanding from '../components/BottomLanding';
 class ProfilePage extends React.Component {
   render() {
     return (
-        <div className={'landing-background'}>
+        <div className={'uh-background'}>
         <Grid padded={'horizontally'} relaxed={'very'} columns={3}>
             <Grid.Column width={3}>
             <Header inverted as={'h2'} >Interests</Header>

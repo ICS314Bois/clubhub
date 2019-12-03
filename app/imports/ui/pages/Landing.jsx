@@ -6,7 +6,7 @@ import BottomLanding from '../components/BottomLanding';
 class Landing extends React.Component {
   render() {
     return (
-      <div>
+      <div className={'uh-background'}>
         <SearchComponent/>
         <BottomLanding/>
       </div>

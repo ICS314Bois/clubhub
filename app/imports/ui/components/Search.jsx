@@ -7,7 +7,7 @@ class SearchComponent extends React.Component {
     const fontStyle = { fontFamily: 'Open Sans' };
 
     return (
-        <div style={fontStyle} className='landing-background'>
+        <div style={fontStyle}>
           <Container className='search-bar'>
             <Grid>
               <Grid.Row centered>
@@ -22,7 +22,7 @@ class SearchComponent extends React.Component {
               <Grid.Row centered>
                 <Button animated='vertical'>
                   <Button.Content hidden>
-                  <Icon name='user' />
+                  <Icon className={'user'} />
                   </Button.Content>
                   <Button.Content visible>Sign In</Button.Content>
                 </Button>
