@@ -19,7 +19,7 @@ class NavBar extends React.Component {
           <Header inverted as='h1'>Club Hub</Header>
         </Menu.Item>
 
-        <Menu.Item as={NavLink} activeClassName="" exact to="/">
+        <Menu.Item as={NavLink} activeClassName="" exact to="/clublist">
           <Header inverted as='h3'><Icon size={'small'} className={'users'}/>Clubs</Header>
         </Menu.Item>
 

@@ -17,12 +17,14 @@ class ListClubs extends React.Component {
   renderPage() {
     const padding = { paddingTop: '10px' };
     return (
-        <Container style={padding}>
-          <Header as="h2" textAlign="center">Club List</Header>
-          <Card.Group>
-            {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
-          </Card.Group>
-        </Container>
+        <div className={'landing-background'}>
+          <Container style={padding}>
+            <Header as="h2" textAlign="center">Club List</Header>
+            <Card.Group>
+              {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
+            </Card.Group>
+          </Container>
+        </div>
     );
   }
 }
