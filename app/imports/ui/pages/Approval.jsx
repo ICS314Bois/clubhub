@@ -7,7 +7,7 @@ class Approval extends React.Component {
     const padding = { paddingTop: '10px' };
     return (
         <div className='approval-page'>
-          <div className={'landing-background'}>
+          <div className={'uh-background'}>
           <Container style={padding}>
             <Header as='h4'>Requests</Header>
             <hr/>

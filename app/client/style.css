@@ -7,6 +7,15 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.uh-background {
+  background: url("images/uh-golf-scenery.jpg") no-repeat bottom fixed;
+  background-size: auto;
+  height: 600px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .search-bar {
   padding-top: 225px;
   font-family: 'Open Sans', sans-serif;
