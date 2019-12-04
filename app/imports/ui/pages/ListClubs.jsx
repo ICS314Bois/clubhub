@@ -10,7 +10,7 @@ import { Clubs } from '../../api/club/Club';
 class ListClubs extends React.Component {
 
   render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active>Getting Data</Loader>;
+    return (this.props.ready) ? this.renderPage() : <Loader active>Loading</Loader>;
   }
 
   /** Render the page once subscriptions have been received. */

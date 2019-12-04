@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 .sunset-background {
-  background: url(https://avante.biz/wp-content/uploads/Beach-Sunset-Wallpaper/Beach-Sunset-Wallpaper-037.jpg) no-repeat bottom fixed;
+  background: url('images/Beach-Sunset.jpg') no-repeat bottom fixed;
   background-size: cover;
   height: 1000px;
   padding-top: 5px;
@@ -20,4 +22,8 @@
 
 .approval-page {
   padding-bottom: 50px;
+}
+
+.poppins-font {
+  font-family: 'Poppins', sans-serif;
 }

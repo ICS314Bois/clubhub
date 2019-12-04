@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, Card  } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 
-class ClubCard extends React.Component {
+class ApprovalClubCard extends React.Component {
   render() {
     return (
         <Card centered>
@@ -17,16 +17,21 @@ class ClubCard extends React.Component {
           <Card.Content>
             {this.props.club.Email}
           </Card.Content>
-          <Button color={'green'}>
-            Follow
-          </Button>
+          <div className='ui two buttons'>
+            <Button basic color='green'>
+              Approve
+            </Button>
+            <Button basic color='red'>
+              Decline
+            </Button>
+          </div>
         </Card>
     );
   }
 }
 
-ClubCard.propTypes = {
+ApprovalClubCard.propTypes = {
   club: PropTypes.object.isRequired,
 };
 
-export default withRouter(ClubCard);
+export default withRouter(ApprovalClubCard);

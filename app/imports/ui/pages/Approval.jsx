@@ -1,45 +1,42 @@
 import React from 'react';
-import { Button, Card, Image, Header, Container } from 'semantic-ui-react';
-import BottomLanding from '../components/BottomLanding';
+import { Card, Header, Container, Loader } from 'semantic-ui-react';
+import { withTracker } from 'meteor/react-meteor-data';
+import ApprovalClubCard from '../components/ApprovalClubCard';
+import { Clubs } from '../../api/club/Club';
+import PropTypes from 'prop-types';
 
 class Approval extends React.Component {
-  render() {
+  render(){
+    return (this.props.ready) ? this.renderPage() : <Loader active>Loading</Loader>;
+  }
+
+  renderPage() {
     const padding = { paddingTop: '10px' };
     return (
-        <div className='approval-page'>
-          <div className={'uh-background'}>
+          <div className={'sunset-background'}>
           <Container style={padding}>
-            <Header as='h4'>Requests</Header>
+            <Header as='h1' inverted>Requests</Header>
             <hr/>
-            <Card>
-              <Card.Content>
-                <Image
-                  floated='right'
-                  size='mini'
-                  src='/images/avatar/large/steve.jpg'
-                />
-                <Card.Header>Steve Sanders</Card.Header>
-                <Card.Description>
-                  <strong>Add Club Request</strong>
-                </Card.Description>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui two buttons'>
-                  <Button basic color='green'>
-                    Approve
-                  </Button>
-                  <Button basic color='red'>
-                    Decline
-                  </Button>
-                </div>
-              </Card.Content>
-            </Card>
+            <Card.Group>
+              {this.props.clubs.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
+            </Card.Group>
           </Container>
-        </div>
-          <BottomLanding/>
         </div>
     );
   }
 }
 
-export default Approval;
+/** Require an array of Stuff documents in the props. */
+Approval.propTypes = {
+  clubs: PropTypes.array.isRequired,
+  ready: PropTypes.bool.isRequired,
+};
+
+/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+export default withTracker(() => {
+  const subscription = Meteor.subscribe('Clubs');
+  return {
+    clubs: Clubs.find({}).fetch(),
+    ready: subscription.ready(),
+  };
+})(Approval);
