@@ -17,7 +17,7 @@ class ListClubs extends React.Component {
   renderPage() {
     const padding = { paddingTop: '10px' };
     return (
-        <div className={'uh-background'}>
+        <div className={'sunset-background'}>
           <Container style={padding}>
             <Header as="h2" textAlign="center" inverted>Club List</Header>
             <Card.Group>

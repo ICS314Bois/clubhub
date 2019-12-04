@@ -17,8 +17,7 @@ class SearchPage extends React.Component {
   render() {
     const padding = { paddingTop: '10px', paddingBottom: '10px' };
     return (
-        <div className={'uh-background'}>
-        <div style={padding}>
+        <div className={'sunset-background'} style={padding}>
         <Grid verticalAlign='middle'container>
 	<Grid.Row>
 	<Search/>
@@ -172,8 +171,6 @@ class SearchPage extends React.Component {
               </Card.Group>
 	          </Grid.Row>
           </Grid>
-          <BottomLanding/>
-        </div>
         </div>
     );
   }
