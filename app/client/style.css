@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
 
 .sunset-background {
-  background: url('images/Beach-Sunset.jpg') no-repeat bottom fixed;
+  background: url('images/uhstudents.jpg') no-repeat bottom fixed;
   background-size: cover;
   height: 1000px;
   padding-top: 5px;
@@ -10,7 +10,7 @@
 }
 
 .purple-background {
-  background: #B46FBC;
+  background: whitesmoke;
 }
 
 .search-bar {
@@ -21,7 +21,7 @@
 .footer {
   font-family: 'Open Sans', sans-serif;
   background-color: #2f3032;
-  height: 200px;
+  height: 50px;
   padding-left: 75px;
 }
 
