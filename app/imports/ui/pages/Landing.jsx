@@ -10,14 +10,14 @@ class Landing extends React.Component {
           <Grid>
             <Grid.Row centered>
               <Header as={'h1'} size={'extra large'} inverted>
-                <div className={'solway-font'}>
+                <div className={'tomorrow-font'}>
                   Clubs Of Manoa
                 </div>
               </Header>
             </Grid.Row>
             <Grid.Row centered>
               <Header size={'medium'} inverted>
-                <div className={'solway-font'}>
+                <div className={'tomorrow-font'}>
                   More than 200 current Registered Independent Organizations (RIOs) at the University
                 of Hawaiʻi at Mānoa serve the campus and greater community by providing leadership development for
                 students and by promoting community spirit, activism, public service, and social, recreational, and
@@ -26,7 +26,7 @@ class Landing extends React.Component {
               </Header>
 
               <Header size={'medium'} inverted>
-                <div className={'solway-font'}>Student Life & Development values programs and services that complement all
+                <div className={'tomorrow-font'}>Student Life & Development values programs and services that complement all
                 students' educational development and support the development and growth of Registered Independent
                 Organizations. RIOs provide a laboratory of citizenship for training students in leadership and social
                 responsibility. RIOs afford students the opportunity to practice decision-making skills, develop
