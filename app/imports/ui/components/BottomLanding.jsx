@@ -16,7 +16,7 @@ class Bottom extends React.Component {
                 </Header>
               </Grid.Column>
               <Grid.Column>
-                <Header as='h3'textAlign='right' inverted>
+                <Header as='h3' textAlign='right' inverted>
                   <Icon name='pencil alternate inverted' size='small'/>
                   <Header.Content>Feedback</Header.Content>
                 </Header>

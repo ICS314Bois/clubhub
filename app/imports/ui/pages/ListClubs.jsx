@@ -20,7 +20,7 @@ class ListClubs extends React.Component {
         <Container style={padding}>
           <Header as="h2" textAlign="center">Club List</Header>
           <Card.Group>
-            {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
+            {this.props.clubFilter.map((club, index) => <ClubCard key={index} club={club}/>)}
           </Card.Group>
         </Container>
     );
@@ -31,6 +31,7 @@ class ListClubs extends React.Component {
 ListClubs.propTypes = {
   clubs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
+  clubFilter: PropTypes.array.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
