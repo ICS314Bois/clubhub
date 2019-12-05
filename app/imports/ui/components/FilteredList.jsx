@@ -3,11 +3,11 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Card, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
-import ClubCard from '../components/ClubCard';
+import ClubCard from './ClubCard';
 import { Clubs } from '../../api/club/Club';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListClubs extends React.Component {
+class FilteredList extends React.Component {
 
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting Data</Loader>;
@@ -15,12 +15,11 @@ class ListClubs extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    const padding = { paddingTop: '20px' };
+    const padding = { paddingTop: '20px', paddingBottom: '3020px' };
     return (
         <Container style={padding}>
-          <Header as="h2" textAlign="center">Club List</Header>
           <Card.Group>
-            {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
+            {this.props.clubFilter.map((club, index) => <ClubCard key={index} club={club}/>)}
           </Card.Group>
         </Container>
     );
@@ -28,9 +27,10 @@ class ListClubs extends React.Component {
 }
 
 /** Require an array of Stuff documents in the props. */
-ListClubs.propTypes = {
+FilteredList.propTypes = {
   clubs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
+  clubFilter: PropTypes.array.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
@@ -40,4 +40,4 @@ export default withTracker(() => {
     clubs: Clubs.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(ListClubs);
+})(FilteredList);
