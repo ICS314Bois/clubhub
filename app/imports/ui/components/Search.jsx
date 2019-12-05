@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Grid, Search, Button, Icon, Header } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 /** A simple static component to render some text for the landing page. */
 class SearchComponent extends React.Component {
@@ -20,7 +21,7 @@ class SearchComponent extends React.Component {
                 />
               </Grid.Row>
               <Grid.Row centered>
-                <Button animated='vertical'>
+                <Button animated='vertical' as={NavLink} exact to="/signup">
                   <Button.Content hidden>
                   <Icon className={'user'} />
                   </Button.Content>
