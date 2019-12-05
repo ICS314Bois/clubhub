@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Clubs } from '../../api/club/Club.js';
+import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 /* eslint-disable no-console */
 
@@ -18,8 +19,9 @@ if (Stuffs.find().count() === 0) {
   }
 }
 
+/**General Club data**/
 function addClub(data) {
-  console.log(`  Adding: ${data.ClubName}`);
+  console.log(`  Adding: ${data.ClubName} (${data.owner})`);
   Clubs.insert(data);
 }
 

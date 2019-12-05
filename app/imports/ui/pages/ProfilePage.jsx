@@ -4,8 +4,9 @@ import { Card, Feed, Grid, Header, Image, List, Loader } from 'semantic-ui-react
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import ClubCard from '../components/ClubCard';
+import ProfileClubCard from '../components/FollowedClubCard';
 import { Clubs } from '../../api/club/Club';
-import ProfileClubCard from '../components/ProfileClubCard';
+import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
@@ -15,19 +16,9 @@ class ProfilePage extends React.Component {
 
   renderPage() {
     return (
-        <div className={'sunset-background'}>
+        <div className={'purple-background'}>
         <Grid padded={'horizontally'} relaxed={'very'} columns={3}>
             <Grid.Column width={3}>
-              {/*Interests List
-                - Used for determining what club recommendations will appear
-              */}
-            <Header inverted as={'h2'} >Interests</Header>
-            <hr/>
-            <List bulleted size={'large'}>
-              <List.Item>Music</List.Item>
-              <List.Item>Media</List.Item>
-              <List.Item>Art</List.Item>
-            </List>
               {/*Recommendations
                 - Picks out random clubs to display onto the user's page
               */}
@@ -45,7 +36,7 @@ class ProfilePage extends React.Component {
             <Header inverted as={'h2'}>Clubs</Header>
             <hr/>
             <Card.Group>
-              {this.props.clubs.map((club, index) => <ProfileClubCard key={index} club={club}/>)}
+              {this.props.followedclubs.map((club, index) => <ProfileClubCard key={index} club={club}/>)}
             </Card.Group>
           </Grid.Column>
 
@@ -81,6 +72,7 @@ class ProfilePage extends React.Component {
 /** Require an array of Stuff documents in the props. */
 ProfilePage.propTypes = {
   clubs: PropTypes.array.isRequired,
+  followedclubs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -88,6 +80,7 @@ export default withTracker(() => {
   const subscription = Meteor.subscribe('Clubs');
   return {
     clubs: Clubs.find({}).fetch(),
+    followedclubs: FollowedClubs.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(ProfilePage);

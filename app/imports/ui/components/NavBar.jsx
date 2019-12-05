@@ -16,31 +16,43 @@ class NavBar extends React.Component {
     return (
       <Menu style={menuStyle} attached="top" borderless inverted>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
-          <Header inverted as='h1'>Club Hub</Header>
+          <Header inverted as='h1'>
+            <div className={'tomorrow-font'}>Club Hub</div>
+          </Header>
         </Menu.Item>
 
         <Menu.Item as={NavLink} activeClassName="" exact to="/clublist">
-          <Header inverted as='h3'><Icon size={'small'} className={'users'}/>Clubs</Header>
+          <Header inverted as='h3'>
+            <Icon size={'small'} className={'users'}/><div className={'tomorrow-font'}>Clubs</div>
+          </Header>
         </Menu.Item>
 
         {this.props.currentUser ? (
             [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>
-              <Header inverted as={'h3'}><Icon size={'small'} className={'list'}/>Interests</Header>
+              <Header inverted as={'h3'}>
+                <Icon size={'small'} className={'list'}/><div className={'tomorrow-font'}>Interests</div>
+              </Header>
             </Menu.Item>,
               <Menu.Item as={NavLink} activeClassName="active" exact to="/searchpage" key='list'>
-                <Header inverted as={'h3'}><Icon size={'small'} className={'map signs'}/>Find a Club</Header>
+                <Header inverted as={'h3'}>
+                  <Icon size={'small'} className={'map signs'}/><div className={'tomorrow-font'}>Find a Club</div>
+                </Header>
               </Menu.Item>]
         ) : ''}
 
         {Roles.userIsInRole(Meteor.userId(), '') ? (
             <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>
-              <Header inverted as={'h3'}><Icon size={'small'} className={'check'}/>Approval</Header>
+              <Header inverted as={'h3'}>
+                <Icon size={'small'} className={'check'}/><div className={'tomorrow-font'}>Approval</div>
+              </Header>
             </Menu.Item>
         ) : ''}
 
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
             <Menu.Item as={NavLink} activeClassName="active" exact to="/approval" key='admin'>
-              <Header inverted as={'h3'}><Icon size={'small'} className={'check'}/>Approval</Header>
+              <Header inverted as={'h3'}>
+                <Icon size={'small'} className={'check'}/><div className={'tomorrow-font'}>Approval</div>
+              </Header>
             </Menu.Item>
         ) : ''}
         <Menu.Item position="right">

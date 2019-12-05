@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Clubs } from '../../api/club/Club';
+import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 /** This subscription publishes only the documents associated with the logged in user */
 Meteor.publish('Stuff', function publish() {
@@ -20,6 +21,7 @@ Meteor.publish('StuffAdmin', function publish() {
   return this.ready();
 });
 
+/**Used to display all clubs**/
 Meteor.publish('Clubs', function publish() {
   if (this.userId) {
     return Clubs.find();
@@ -27,18 +29,13 @@ Meteor.publish('Clubs', function publish() {
   return this.ready();
 });
 
-/** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('ClubAdmin', function publish() {
-  if (this.userId && Roles.userIsInRole(this.userId, 'clubAdmin')) {
-    return Clubs.find();
+/**General logged-in user**/
+Meteor.publish('FollowedClubs', function publish() {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Clubs.find({ owner: username });
   }
   return this.ready();
 });
 
-/** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-Meteor.publish('SuperAdmin', function publish() {
-  if (this.userId && Roles.userIsInRole(this.userId, 'superAdmin')) {
-    return Clubs.find();
-  }
-  return this.ready();
-});
+

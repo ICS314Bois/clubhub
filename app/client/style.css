@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
 
 .sunset-background {
   background: url('images/Beach-Sunset.jpg') no-repeat bottom fixed;
@@ -6,6 +7,10 @@
   height: 1000px;
   padding-top: 5px;
   padding-bottom: 10px;
+}
+
+.purple-background {
+  background: #B46FBC;
 }
 
 .search-bar {
@@ -24,6 +29,10 @@
   padding-bottom: 50px;
 }
 
-.poppins-font {
-  font-family: 'Poppins', sans-serif;
+.solway-font {
+  font-family: 'Solway';
+}
+
+.tomorrow-font {
+  font-family: 'Tomorrow';
 }
