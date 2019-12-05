@@ -36,17 +36,14 @@ class Landing extends React.Component {
               </Header>
             </Grid.Row>
             <Grid.Row centered>
-              <Search
-                  placeholder='Start your club search...'
-                  icon='search icon'
-              />
+
             </Grid.Row>
             <Grid.Row centered>
               <Button animated='vertical'>
                 <Button.Content hidden>
-                  <Icon className={'user'} />
+                  <Icon className={'arrow'} />
                 </Button.Content>
-                <Button.Content visible>Sign In</Button.Content>
+                <Button.Content visible><a>Find a club now!</a></Button.Content>
               </Button>
             </Grid.Row>
           </Grid>

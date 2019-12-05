@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
-import { Menu, Dropdown, Header } from 'semantic-ui-react';
+import { Menu, Dropdown, Header, Icon } from 'semantic-ui-react';
 import { Roles } from 'meteor/alanning:roles';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
@@ -16,13 +16,19 @@ class NavBar extends React.Component {
     return (
         <Menu style={menuStyle} attached="top" borderless inverted>
           <Menu.Item as={NavLink} activeClassName="" exact to="/">
-            <Header as='h2' inverted>Club Hub</Header>
+            <Header as='h2' inverted><div className={'tomorrow-font'}>Club Hub</div></Header>
           </Menu.Item>
-          <Menu.Item position="right" as={NavLink} activeClassName="" exact to="/clublist">Clubs</Menu.Item>
+          <Menu.Item position="right" as={NavLink} activeClassName="" exact to="/clublist">
+            <Icon size={'small'} className={'users'}/><div className={'tomorrow-font'}>Clubs</div>
+          </Menu.Item>
 
           {this.props.currentUser ? (
-              [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>Interests</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/searchpage" key='list'>Find a Club</Menu.Item>]
+              [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>
+                <Icon size={'small'} className={'list'}/><div className={'tomorrow-font'}>Profile</div>
+              </Menu.Item>,
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/searchpage" key='list'>
+                  <Icon size={'small'} className={'map signs'}/><div className={'tomorrow-font'}>Find a Club</div>
+                </Menu.Item>]
           ) : ''}
 
           {Roles.userIsInRole(Meteor.userId(), '') ? (

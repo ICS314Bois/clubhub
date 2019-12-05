@@ -22,7 +22,7 @@ class ProfilePage extends React.Component {
               {/*Recommendations
                 - Picks out random clubs to display onto the user's page
               */}
-            <Header inverted as={'h2'}>Recommendations</Header>
+            <Header as={'h2'}>Recommendations</Header>
             <hr/>
             <Card.Group>
               {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
@@ -33,11 +33,10 @@ class ProfilePage extends React.Component {
             {/*Clubs list
               - Displays the clubs that your are subscribed to
             */}
-            <Header inverted as={'h2'}>Clubs</Header>
+            <Header as={'h2'}>Clubs</Header>
             <hr/>
             <Card.Group>
-              {this.props.clubs.map((club, index) => <FollowedClubCard key={index} club={club}/>)}
-              {/**{this.props.followedclubs.map((club, index) => <ProfileClubCard key={index} club={club}/>)}**/}
+              {this.props.followedclubs.map((club, index) => <ProfileClubCard key={index} club={club}/>)}
             </Card.Group>
           </Grid.Column>
 
