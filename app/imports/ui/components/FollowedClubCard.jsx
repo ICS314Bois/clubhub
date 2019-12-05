@@ -10,16 +10,16 @@ class FollowedClubCard extends React.Component {
     return (
         <Card centered>
           <Card.Content>
-            <Card.Header>{this.props.FollowedClubs.ClubName}</Card.Header>
-            <Card.Meta>{this.props.FollowedClubs.Type}</Card.Meta>
+            <Card.Header>{this.props.club.ClubName}</Card.Header>
+            <Card.Meta>{this.props.club.Type}</Card.Meta>
           </Card.Content>
           <Card.Content>
-            {this.props.FollowedClubs.ContactName}
+            {this.props.club.ContactName}
           </Card.Content>
           <Card.Content>
-            {this.props.FollowedClubs.Email}
+            {this.props.club.Email}
           </Card.Content>
-          <Button color={'red'} icon onClick={() => this.removeItem(this.props.FollowedClubs._id)}>
+          <Button color={'red'} icon onClick={() => this.removeItem(this.props.club._id)}>
             Unfollow
           </Button>
         </Card>

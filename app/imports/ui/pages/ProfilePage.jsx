@@ -4,7 +4,7 @@ import { Card, Feed, Grid, Header, Image, List, Loader } from 'semantic-ui-react
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import ClubCard from '../components/ClubCard';
-import ProfileClubCard from '../components/FollowedClubCard';
+import FollowedClubCard from '../components/FollowedClubCard';
 import { Clubs } from '../../api/club/Club';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
@@ -36,7 +36,8 @@ class ProfilePage extends React.Component {
             <Header inverted as={'h2'}>Clubs</Header>
             <hr/>
             <Card.Group>
-              {this.props.followedclubs.map((club, index) => <ProfileClubCard key={index} club={club}/>)}
+              {this.props.clubs.map((club, index) => <FollowedClubCard key={index} club={club}/>)}
+              {/**{this.props.followedclubs.map((club, index) => <ProfileClubCard key={index} club={club}/>)}**/}
             </Card.Group>
           </Grid.Column>
 
@@ -55,7 +56,7 @@ class ProfilePage extends React.Component {
                     <Feed.Content>
                       <Feed.Date content='1 day ago' />
                       <Feed.Summary>
-                        <a>Anime Club</a> meeting to be held on September 27 in Kyukendall Hall 305.
+
                       </Feed.Summary>
                     </Feed.Content>
                   </Feed.Event>
