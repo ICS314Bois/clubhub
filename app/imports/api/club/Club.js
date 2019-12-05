@@ -12,6 +12,7 @@ const ClubsSchema = new SimpleSchema({
   ContactName: String,
   Email: String,
   Website: { type: String, optional: true },
+  Image: { type: String, optional: true },
   RIOEmail: String,
 }, { tracker: Tracker });
 
