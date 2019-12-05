@@ -23,10 +23,7 @@ Meteor.publish('StuffAdmin', function publish() {
 
 /**Used to display all clubs**/
 Meteor.publish('Clubs', function publish() {
-  if (this.userId) {
     return Clubs.find();
-  }
-  return this.ready();
 });
 
 /**General logged-in user**/

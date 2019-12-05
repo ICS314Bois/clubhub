@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
-import { Menu, Dropdown, Header, Icon } from 'semantic-ui-react';
+import { Menu, Dropdown, Header } from 'semantic-ui-react';
 import { Roles } from 'meteor/alanning:roles';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
@@ -54,8 +54,21 @@ class NavBar extends React.Component {
                 <Icon size={'small'} className={'check'}/><div className={'tomorrow-font'}>Approval</div>
               </Header>
             </Menu.Item>
+        <Menu.Item position="right" as={NavLink} activeClassName="" exact to="/clublist">Clubs</Menu.Item>
+
+        {this.props.currentUser ? (
+            [<Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>Interests</Menu.Item>,
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/searchpage" key='list'>Find a Club</Menu.Item>]
         ) : ''}
-        <Menu.Item position="right">
+
+        {Roles.userIsInRole(Meteor.userId(), '') ? (
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>Approval</Menu.Item>
+        ) : ''}
+
+        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/approval" key='admin'>Approval</Menu.Item> 2ac065b98833b1ab375ce2a609a4c4c79847cbc3
+        ) : ''}
+        <Menu.Item>
           {this.props.currentUser === '' ? (
             <Dropdown text="Login" pointing="top right" icon={'user'}>
               <Dropdown.Menu>
@@ -72,7 +85,6 @@ class NavBar extends React.Component {
           )}
         </Menu.Item>
         <Menu.Item>
-
         </Menu.Item>
       </Menu>
     );
