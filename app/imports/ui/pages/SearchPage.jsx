@@ -1,182 +1,150 @@
 import React from 'react';
-import { Grid, Image, Icon, Card, Search } from 'semantic-ui-react';
+import _ from 'lodash';
+import { Form } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+import { withTracker } from 'meteor/react-meteor-data';
 import BottomLanding from '../components/BottomLanding';
+import { Clubs } from '../../api/club/Club';
+import ListClubs from './ListClubs';
 
- let clubs =  {
-    "ClubName": "Accounting Club at UH Manoa",
-    "Type": "Academic/Professional",
-    "ContactName": "Chelsi Morishige",
-    "ContactEmail": "chelsicm@hawaii.edu",
-    "Website": "acuhmanoa.com",
-    "Email": "chelsicm@hawaii.edu",
-    "Description": "chelsicm@hawaii.edu",
-    "Image" : "/images/meteor-logo.png"
-  }
 /** A simple static component to render some text for the landing page. */
 class SearchPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected: {
+        Academic: false,
+        Professional: false,
+        Athletic: false,
+        Religious: false,
+        Spiritual: false,
+        Political: false,
+        Sports: false,
+        Leisure: false,
+        Service: false,
+        Fraternity: false,
+        Sorority: false,
+        Recreational: false,
+      },
+    };
+  }
+
+  handleClubType = (event) => {
+    const key = event.target.value;
+    const newSelected = this.state.selected;
+    newSelected[key] = !newSelected[key];
+    this.setState({ selected: newSelected });
+  };
+
+  filterClubType = (club) => {
+    let ret = false;
+    _.forIn(this.state.selected, (value, key) => { if (club.Type.includes(key)) { ret = ret || value; } });
+    return ret;
+  };
+
   render() {
-    const padding = { paddingTop: '10px', paddingBottom: '10px' };
+    const clubFilter = _.filter(this.props.clubs, c => this.filterClubType(c));
+    const padding = { paddingLeft: '30px' };
     return (
-        <div className={'uh-background'}>
-        <div style={padding}>
-        <Grid verticalAlign='middle'container>
-	<Grid.Row>
-	<Search/>
-	</Grid.Row>
-	<Grid.Row>
-	<Card.Group itemsPerRow={4}>
-<Card>
-    <Image fluid src={clubs.Image}/>
-    <Card.Content>
-      <Card.Header>{clubs.ClubName}</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        {clubs.Description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content>
-  </Card>
-<Card>
-    <Image fluid src={clubs.Image}/>
-    <Card.Content>
-      <Card.Header>{clubs.ClubName}</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        {clubs.Description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content>
-  </Card>
-<Card>
-    <Image fluid src={clubs.Image}/>
-    <Card.Content>
-      <Card.Header>{clubs.ClubName}</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        {clubs.Description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content>
-</Card>
-<Card>
-    <Image fluid src={clubs.Image}/>
-    <Card.Content>
-      <Card.Header>{clubs.ClubName}</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        {clubs.Description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content>
-</Card>
-<Card>
-    <Image fluid src={clubs.Image}/>
-    <Card.Content>
-      <Card.Header>{clubs.ClubName}</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        {clubs.Description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content>
-  </Card>
-<Card>
-    <Image fluid src={clubs.Image}/>
-    <Card.Content>
-      <Card.Header>{clubs.ClubName}</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        {clubs.Description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content>
-  </Card>
-<Card>
-    <Image fluid src={clubs.Image}/>
-    <Card.Content>
-      <Card.Header>{clubs.ClubName}</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        {clubs.Description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content>
-</Card>
-<Card>
-    <Image fluid src={clubs.Image}/>
-    <Card.Content>
-      <Card.Header>{clubs.ClubName}</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        {clubs.Description}
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content>
-            </Card>
-              </Card.Group>
-	          </Grid.Row>
-          </Grid>
-          <BottomLanding/>
-        </div>
-        </div>
+    <div className='searchField'>
+      <Form>
+        <Form.Group style={padding} grouped>
+          <Form.Field
+              label='Academic'
+              value='Academic'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Professional'
+              value='Professional'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Athletic'
+              value='Athletic'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Religious'
+              value='Religious'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Spiritual'
+              value='Spiritual'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field label='Political'
+                      value='Political'
+                      type='checkbox'
+                      control='input'
+                      onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Sports'
+              value='Sports'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Leisure'
+              value='Leisure'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Service'
+              value='Service'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Fraternity'
+              value='Fraternity'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Sorority'
+              value='Sorority'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+          <Form.Field
+              label='Recreational'
+              value='Recreational'
+              type='checkbox'
+              control='input'
+              onChange={this.handleClubType}
+          />
+        </Form.Group>
+      </Form>
+      <ListClubs clubFilter={clubFilter}/>
+      <BottomLanding/>
+    </div>
     );
   }
 }
 
-export default SearchPage;
+SearchPage.propTypes = {
+  clubs: PropTypes.array.isRequired,
+};
+
+export default withTracker(() => ({
+    clubs: Clubs.find({}).fetch(),
+  }))(SearchPage);
