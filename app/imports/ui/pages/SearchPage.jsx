@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, Grid, Dropdown, Search } from 'semantic-ui-react';
+import { Form, Grid, Dropdown, Input } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Clubs } from '../../api/club/Club';
@@ -25,6 +25,7 @@ class SearchPage extends React.Component {
         Sorority: false,
         Recreational: false,
       },
+      search: '',
     };
   }
 
@@ -36,7 +37,9 @@ class SearchPage extends React.Component {
   };
 
   handleClubSearch = (event) => {
-    console.log(event);
+    let newSearch = this.state.search;
+    newSearch = event.target.value;
+    this.setState({ search: newSearch });
   };
 
   filterClubType = (club) => {
@@ -49,15 +52,49 @@ class SearchPage extends React.Component {
     return ret;
   };
 
+  // eslint-disable-next-line consistent-return
+  filterClubName = (club) => {
+    if (this.state.search === '') {
+      return false;
+    }
+
+    if (club.ClubName.includes(this.state.search)) {
+      return true;
+    }
+  };
+
+  clubList = (club1, club2) => {
+    const listRet = [];
+    if (_.isEmpty(club1)) {
+      for (let i = 0; i < club2.length; i++) {
+        listRet[listRet.length] = club2[i];
+      }
+    } else
+      if (_.isEmpty(club2)) {
+        for (let i = 0; i < club1.length; i++) {
+          listRet[listRet.length] = club1[i];
+        }
+      } else {
+        for (let i = 0; i < club1.length; i++) {
+          for (let j = 0; j < club2.length; j++) {
+            if (club1[i].ClubName === club2[j].ClubName) {
+              listRet[listRet.length] = club1[i];
+            }
+          }
+        }
+      }
+    return listRet;
+  };
+
   render() {
-    const clubFilter = _.filter(this.props.clubs, c => this.filterClubType(c));
+    const clubTypeFilter = _.filter(this.props.clubs, c => this.filterClubType(c));
+    const clubNameFilter = _.filter(this.props.clubs, c => this.filterClubName(c));
+    const clubListResult = this.clubList(clubTypeFilter, clubNameFilter);
     const padding = { paddingTop: '30px', paddingLeft: '15px' };
     return (
         <div className='searchField purple-background'>
           <Grid style={padding}>
-            <Search
-                onChange={this.handleClubSearch}
-            />
+            <Input icon='users' iconPosition='left' placeholder='Search Clubs...' onChange={this.handleClubSearch}/>
             <Dropdown
                 text='Club Filter'
                 icon='filter'
@@ -160,7 +197,7 @@ class SearchPage extends React.Component {
               </Dropdown.Menu>
             </Dropdown>
           </Grid>
-          <FilteredList clubFilter={clubFilter}/>
+          <FilteredList clubListResult={clubListResult}/>
         </div>
     );
   }
