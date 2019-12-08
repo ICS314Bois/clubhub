@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import BottomLanding from '../components/BottomLanding'
+import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
@@ -19,6 +19,7 @@ import SearchPage from '../pages/SearchPage';
 import ProfilePage from '../pages/ProfilePage';
 import Approval from '../pages/Approval';
 import ListClubs from '../pages/ListClubs';
+import FeedBackForum from '../pages/FeedBackForum';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -33,7 +34,8 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/profile" component={ProfilePage}/>
-              <Route path="/approval" component={Approval}/>
+              <ProtectedRoute path="/approval" component={Approval}/>
+              <ProtectedRoute path="/feedback" component={FeedBackForum}/>
               <Route path="/clublist" component={ListClubs}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
@@ -42,6 +44,7 @@ class App extends React.Component {
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
+            <Footer/>
           </div>
         </Router>
     );

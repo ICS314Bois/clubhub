@@ -3,7 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Card, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
-import ClubCard from '../components/ClubCard';
+import { NavLink } from 'react-router-dom';
+import ClubCardFullList from '../components/ClubCardFullList';
 import { Clubs } from '../../api/club/Club';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
@@ -20,8 +21,9 @@ class ListClubs extends React.Component {
         <div className={'purple-background'}>
           <Container style={padding}>
             <Header as="h2" textAlign="center" >Club List</Header>
-            <Card.Group>
-              {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
+            <div as={NavLink} className='tomorrow-font' exact to='/searchpage'>Search</div>
+            <Card.Group itemsPerRow={4}>
+              {this.props.clubs.map((club, index) => <ClubCardFullList key={index} club={club}/>)}
             </Card.Group>
           </Container>
         </div>

@@ -13,7 +13,7 @@ const ClubsSchema = new SimpleSchema({
   Email: String,
   Website: { type: String, optional: true },
   Image: { type: String, optional: true },
-  RIOEmail: String,
+  RIOEmail: { type: String, optional: true },
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
