@@ -92,7 +92,7 @@ class SearchPage extends React.Component {
     const clubListResult = this.clubList(clubTypeFilter, clubNameFilter);
     const padding = { paddingTop: '30px', paddingLeft: '15px' };
     return (
-        <div className='searchField purple-background'>
+        <div className='general-background'>
           <Grid style={padding}>
             <Input icon='users' iconPosition='left' placeholder='Search Clubs...' onChange={this.handleClubSearch}/>
             <Dropdown

@@ -44,103 +44,105 @@ class AddClub extends React.Component {
 
   renderPage() {
     return (
-        <div className='tomorrow-font'>
-          <Grid container centered>
-            <Grid.Column>
-              <Header as='h3' textAlign='center'>Edit Card</Header>
-              <br/>
-              <AutoForm schema={cardSchema} onSubmit={data => this.submit(data)} model={this.props.doc}>
-                <Segment>
-                  <Form.Group widths='equal'>
-                    <TextField name='ClubName'/>
-                    <TextField name='ContactName'/>
-                    <TextField name='Website'/>
-                  </Form.Group>
-                  <Form.Group Widths='equal'>
-                    <Form.Field
-                        label='Academic'
-                        value='Academic'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Professional'
-                        value='Professional'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Athletic'
-                        value='Athletic'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Religious'
-                        value='Religious'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Spiritual'
-                        value='Spiritual'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field label='Political'
-                                value='Political'
-                                type='checkbox'
-                                control='input'
-                    />
-                  </Form.Group>
-                  <Form.Group width='equal'>
-                    <Form.Field
-                        label='Sports'
-                        value='Sports'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Leisure'
-                        value='Leisure'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Service'
-                        value='Service'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Fraternity'
-                        value='Fraternity'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Sorority'
-                        value='Sorority'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Recreational'
-                        value='Recreational'
-                        type='checkbox'
-                        control='input'
-                    />
-                  </Form.Group>
-                  <Form.Group widths='equal'>
-                    <TextField name='Image'/>
-                    <TextField name='RIOEmail'/>
-                  </Form.Group>
-                  <SubmitField value='submit'/>
-                  <ErrorsField/>
-                </Segment>
-              </AutoForm>
-            </Grid.Column>
-          </Grid>
+        <div className='general-background'>
+          <div className='tomorrow-font'>
+            <Grid container centered>
+              <Grid.Column>
+                <Header as='h3' textAlign='center'>Edit Card</Header>
+                <br/>
+                <AutoForm schema={cardSchema} onSubmit={data => this.submit(data)} model={this.props.doc}>
+                  <Segment>
+                    <Form.Group widths='equal'>
+                      <TextField name='ClubName'/>
+                      <TextField name='ContactName'/>
+                      <TextField name='Website'/>
+                    </Form.Group>
+                    <Form.Group Widths='equal'>
+                      <Form.Field
+                          label='Academic'
+                          value='Academic'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Professional'
+                          value='Professional'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Athletic'
+                          value='Athletic'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Religious'
+                          value='Religious'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Spiritual'
+                          value='Spiritual'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field label='Political'
+                                  value='Political'
+                                  type='checkbox'
+                                  control='input'
+                      />
+                    </Form.Group>
+                    <Form.Group width='equal'>
+                      <Form.Field
+                          label='Sports'
+                          value='Sports'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Leisure'
+                          value='Leisure'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Service'
+                          value='Service'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Fraternity'
+                          value='Fraternity'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Sorority'
+                          value='Sorority'
+                          type='checkbox'
+                          control='input'
+                      />
+                      <Form.Field
+                          label='Recreational'
+                          value='Recreational'
+                          type='checkbox'
+                          control='input'
+                      />
+                    </Form.Group>
+                    <Form.Group widths='equal'>
+                      <TextField name='Image'/>
+                      <TextField name='RIOEmail'/>
+                    </Form.Group>
+                    <SubmitField value='submit'/>
+                    <ErrorsField/>
+                  </Segment>
+                </AutoForm>
+              </Grid.Column>
+            </Grid>
+          </div>
         </div>
     );
   }
