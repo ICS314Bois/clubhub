@@ -26,7 +26,7 @@ const cardSchema = new SimpleSchema({
 class AddClub extends React.Component {
   submit(data) {
     const {
-      ClubName, ContactName, Type, Email, Website, Image, RIOEmail
+      ClubName, ContactName, Type, Email, Website, Image, RIOEmail,
     } = data;
     Clubs.insert({ ClubName, ContactName, Type, Email, Website, Image, RIOEmail },
         (error) => {
