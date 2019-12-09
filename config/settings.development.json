@@ -1,38 +1,27 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "clubAdmin" },
+    { "email": "clubadmin@foo.com", "password": "changeme", "role": "clubAdmin" },
     { "email": "john@foo.com", "password": "changeme" },
-    { "email": "clubhub@foo.com", "password": "changeme", "role": "superAdmin" }
+    { "email": "superadmin@foo.com", "password": "changeme", "role": "superAdmin" }
   ],
 
-  "defaultClubs": [
+  "clubData": [
     {
-      "ClubName": "Academy for Creative Media Student Association",
+      "ClubName": "@test1",
       "Type": "Academic/Professional",
-      "ContactName": "Emma Daily",
-      "Email": "edaily@hawaii.edu",
+      "ContactName": "Rusty Jacinto",
+      "Email": "admin@foo.com",
       "Website": "",
       "RIOEmail": "edaily@hawaii.edu"
     },
     {
-      "ClubName": "Accounting Club at UH Manoa",
+      "ClubName": "@test2",
       "Type": "Academic/Professional",
-      "ContactName": "Chelsi Morishige",
-      "Email": "chelsicm@hawaii.edu",
-      "Website": "acuhmanoa.com",
-      "RIOEmail": "chelsicm@hawaii.edu"
-    },
-    {
-      "ClubName": "Adventist Christian Fellowship",
-      "Type": "Religious/Spiritual",
-      "ContactName": "Victor Kolonzo",
-      "Email": "vkilonzo@hawaii.edu",
+      "ContactName": "John Bigornia",
+      "Email": "admin@foo.com",
       "Website": "",
-      "RIOEmail": "vkilonzo@hawaii.edu"
-    }
-  ],
-
-  "clubData": [
+      "RIOEmail": "edaily@hawaii.edu"
+    },
     {
       "ClubName": "Academy for Creative Media Student Association",
       "Type": "Academic/Professional",

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Container, Grid, Header, Icon, Search } from 'semantic-ui-react';
+import { Button, Container, Grid, Header, Icon } from 'semantic-ui-react';
+import Link from 'react-router-dom/Link';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -41,9 +42,11 @@ class Landing extends React.Component {
             <Grid.Row centered>
               <Button animated='vertical'>
                 <Button.Content hidden>
-                  <Icon className={'arrow'} />
+                  <Icon className={'rightarrow'} />
                 </Button.Content>
-                <Button.Content visible><a>Find a club now!</a></Button.Content>
+                <Button.Content visible><a><Link className='tomorrow-font' exact to='/searchpage'>
+                  Find a club now!
+                </Link></a></Button.Content>
               </Button>
             </Grid.Row>
           </Grid>

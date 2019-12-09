@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card  } from 'semantic-ui-react';
+import { Button, Card } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
-import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 class FollowedClubCard extends React.Component {
   render() {
-
     return (
         <Card centered>
           <Card.Content>
@@ -28,7 +26,7 @@ class FollowedClubCard extends React.Component {
 }
 
 FollowedClubCard.propTypes = {
-  FollowedClubs: PropTypes.object.isRequired,
+  club: PropTypes.object.isRequired,
 };
 
 export default withRouter(FollowedClubCard);

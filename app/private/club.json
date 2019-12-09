@@ -1,5 +1,21 @@
 [
   {
+    "ClubName": "@test1",
+    "Type": "Academic/Professional",
+    "ContactName": "Rusty Jacinto",
+    "Email": "clubadmin@foo.com",
+    "Website": "",
+    "RIOEmail": "edaily@hawaii.edu"
+  },
+  {
+    "ClubName": "@test2",
+    "Type": "Academic/Professional",
+    "ContactName": "John Bigornia",
+    "Email": "clubadmin@foo.com",
+    "Website": "",
+    "RIOEmail": "edaily@hawaii.edu"
+  },
+  {
     "ClubName": "Academy for Creative Media Student Association",
     "Type": "Academic/Professional",
     "ContactName": "Emma Daily",

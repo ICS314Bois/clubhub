@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card, Header, Container, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
+import PropTypes from 'prop-types';
 import ApprovalClubCard from '../components/ApprovalClubCard';
 import { Clubs } from '../../api/club/Club';
-import PropTypes from 'prop-types';
 
 class Approval extends React.Component {
-  render(){
+  render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Loading</Loader>;
   }
 

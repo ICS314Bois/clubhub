@@ -10,21 +10,20 @@ Meteor.publish('Clubs', function publish() {
 
 /** General logged-in user */
 Meteor.publish('FollowedClubs', function publish() {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return FollowedClubs.find({ owner: username });
-  }
-  return this.ready();
-});
-
-Meteor.publish('StuffAdmin', function publish() {
-  if (this.userId && Roles.userIsInRole(this.userId, 'clubAdmin')) {
+  if (this.userId === FollowedClubs.User && FollowedClubs.Following) {
     return Clubs.find();
   }
   return this.ready();
 });
 
-Meteor.publish('StuffAdmin', function publish() {
+Meteor.publish('clubAdmin', function publish() {
+  if (this.userId && Roles.userIsInRole(this.userId, 'clubAdmin') && Clubs.Email === this.userId) {
+    return Clubs.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish('superAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'superAdmin')) {
     return Clubs.find();
   }

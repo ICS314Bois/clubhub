@@ -1,9 +1,9 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
+import Link from 'react-router-dom/Link';
 import { Container, Card, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
-import { NavLink } from 'react-router-dom';
 import ClubCardFullList from '../components/ClubCardFullList';
 import { Clubs } from '../../api/club/Club';
 
@@ -21,7 +21,7 @@ class ListClubs extends React.Component {
         <div className={'purple-background'}>
           <Container style={padding}>
             <Header as="h2" textAlign="center" >Club List</Header>
-            <div as={NavLink} className='tomorrow-font' exact to='/searchpage'>Search</div>
+            <Link className='tomorrow-font' exact to='/searchpage'>Search</Link>
             <Card.Group itemsPerRow={4}>
               {this.props.clubs.map((club, index) => <ClubCardFullList key={index} club={club}/>)}
             </Card.Group>

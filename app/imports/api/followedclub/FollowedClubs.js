@@ -14,6 +14,8 @@ const FollowedClubsSchema = new SimpleSchema({
   Website: { type: String, optional: true },
   Image: { type: String, optional: true },
   RIOEmail: { type: String, optional: true },
+  Following: Boolean,
+  User: String,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
