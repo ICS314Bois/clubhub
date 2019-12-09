@@ -15,7 +15,6 @@ class ClubCard extends React.Component {
                 <Button
                     icon='delete'
                     floated='right'
-                    onClick={() => this.removeItem(this.props.club._id)}
                 />
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
@@ -23,7 +22,7 @@ class ClubCard extends React.Component {
                   Edit
                 </Link>
             ) : ''}
-            {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') && (Meteor.userId() === this.props.club.Email) ? (
+            {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') && (Meteor.user().username === this.props.club.Email) ? (
                 <Link floated='right' to={`/editcard/${this.props.club._id}`}>
                   Edit
                 </Link>
