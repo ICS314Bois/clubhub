@@ -1,6 +1,6 @@
 import React from 'react';
 import { _ } from 'meteor/underscore';
-import { Card, Feed, Grid, Header, Image, List, Loader } from 'semantic-ui-react';
+import { Card, Feed, Grid, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import ClubCard from '../components/ClubCard';
@@ -36,7 +36,7 @@ class ProfilePage extends React.Component {
             <Header as={'h2'}>Clubs</Header>
             <hr/>
             <Card.Group>
-              {this.props.followedclubs.map((club, index) => <ProfileClubCard key={index} club={club}/>)}
+              {this.props.followedclubs.map((club, index) => <FollowedClubCard key={index} club={club}/>)}
             </Card.Group>
           </Grid.Column>
 
@@ -78,9 +78,10 @@ ProfilePage.propTypes = {
 
 export default withTracker(() => {
   const subscription = Meteor.subscribe('Clubs');
+  const subscription2 = Meteor.subscribe('FollowedClubs');
   return {
     clubs: Clubs.find({}).fetch(),
     followedclubs: FollowedClubs.find({}).fetch(),
-    ready: subscription.ready(),
+    ready: subscription.ready() && subscription2.ready() ,
   };
 })(ProfilePage);

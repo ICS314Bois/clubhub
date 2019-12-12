@@ -1,33 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card } from 'semantic-ui-react';
-import { withRouter, Link } from 'react-router-dom';
+import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
-import { Roles } from 'meteor/alanning:roles';
+import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 class ClubCard extends React.Component {
+
+  isFollowed() {
+    if (FollowedClubs.findOne({ MenuId: this.props.club._id })) {
+      return true;
+    }
+    return false;
+  }
+
+  follow() {
+    const clubName = this.props.club.ClubName;
+    const type = this.props.club.Type;
+    const contactName = this.props.club.ContactName;
+    const email = this.props.club.Email;
+    const website = this.props.club.Website;
+    const rioemail = this.props.club.RIOEmail;
+    FollowedClubs.insert({
+          clubName,
+          type,
+          contactName,
+          email,
+          website,
+          rioemail,
+        },
+        (error) => {
+          if (error) {
+            swal('Error', error.message, 'error');
+          } else {
+            swal('Success', 'Now following ' + clubName + '!', 'success');
+            this.forceUpdate();
+          }
+        });
+  }
+
   render() {
     return (
         <Card centered>
           <Card.Content>
-            {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
-                <Button
-                    icon='delete'
-                    floated='right'
-                    onClick={() => this.removeItem(this.props.club._id)}
-                />
-            ) : ''}
-            {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
-                <Link floated='right' to={`/editcard/${this.props.club._id}`}>
-                  Edit
-                </Link>
-            ) : ''}
-            {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') && (Meteor.userId() === this.props.club.Email) ? (
-                <Link floated='right' to={`/editcard/${this.props.club._id}`}>
-                  Edit
-                </Link>
-            ) : ''}
             <Card.Header>{this.props.club.ClubName}</Card.Header>
             <Card.Meta>{this.props.club.Type}</Card.Meta>
           </Card.Content>
@@ -37,9 +53,17 @@ class ClubCard extends React.Component {
           <Card.Content>
             {this.props.club.Email}
           </Card.Content>
-          <Button color={'green'}>
-            Follow
-          </Button>
+          {Meteor.user() && !this.isFollowed() ? (
+              <Button color='green' icon onClick={() => this.follow()}>
+                Follow
+              </Button>
+          ) : ''}
+          {Meteor.user() && this.isFollowed() ? (
+              <Button color='red' icon onClick={() => this.follow()}>
+                Unfollow
+              </Button>
+          ) : ''}
+
         </Card>
     );
   }
@@ -47,13 +71,13 @@ class ClubCard extends React.Component {
 
 ClubCard.propTypes = {
   club: PropTypes.object.isRequired,
-  currentUser: PropTypes.string,
+  ready: PropTypes.bool.isRequired,
 };
 
-/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
-const NavBarContainer = withTracker(() => ({
-  currentUser: Meteor.user() ? Meteor.user().username : '',
-}))(ClubCard);
-
-/** Enable ReactRouter for this component. https://reacttraining.com/react-router/web/api/withRouter */
-export default withRouter(NavBarContainer);
+/** Wrap this component in withRouter since we use the <Link> React Router element. */
+export default withTracker(() => {
+  const subscription = Meteor.subscribe('FollowedClubs');
+  return {
+    ready: subscription.ready(),
+  };
+})(ClubCard);

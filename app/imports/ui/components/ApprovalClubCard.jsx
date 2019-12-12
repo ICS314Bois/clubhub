@@ -24,6 +24,12 @@ class ApprovalClubCard extends React.Component {
             <Button basic color='red'>
               Decline
             </Button>
+            {Meteor.user('superAdmin') ? (
+                <Button color='grey' icon onClick={() => this.follow()}>
+                  Delete
+                </Button>
+              ) : ''
+            }
           </div>
         </Card>
     );

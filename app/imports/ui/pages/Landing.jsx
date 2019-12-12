@@ -6,7 +6,7 @@ import Link from 'react-router-dom/Link';
 class Landing extends React.Component {
   render() {
     return (
-        <div className={'sunset-background'}>
+        <div className={'students-background'}>
         <Container className='search-bar'>
           <Grid>
             <Grid.Row centered>

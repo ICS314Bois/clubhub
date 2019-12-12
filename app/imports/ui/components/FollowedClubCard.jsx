@@ -17,9 +17,11 @@ class FollowedClubCard extends React.Component {
           <Card.Content>
             {this.props.club.Email}
           </Card.Content>
-          <Button color={'red'} icon onClick={() => this.removeItem(this.props.club._id)}>
-            Unfollow
-          </Button>
+          {Meteor.user() && !this.isFollowed() ? (
+              <Button color={'red'} icon onClick={() => this.removeItem(this.props.club._id)}>
+                Unfollow
+              </Button>
+          ) : ''}
         </Card>
     );
   }

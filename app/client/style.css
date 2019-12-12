@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
 
-.sunset-background {
+.students-background {
   background: url('images/uhstudents.jpg') no-repeat bottom fixed;
   background-size: cover;
   height: 1000px;
@@ -9,7 +9,7 @@
   padding-bottom: 10px;
 }
 
-.purple-background {
+.white-background {
   background: whitesmoke;
 }
 
