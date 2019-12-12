@@ -22,6 +22,7 @@ class ClubCard extends React.Component {
     const email = this.props.club.Email;
     const website = this.props.club.Website;
     const rioemail = this.props.club.RIOEmail;
+    const user = Meteor.user().username;
     FollowedClubs.insert({
           clubName,
           type,
@@ -29,6 +30,7 @@ class ClubCard extends React.Component {
           email,
           website,
           rioemail,
+          user,
         },
         (error) => {
           if (error) {
@@ -36,6 +38,27 @@ class ClubCard extends React.Component {
           } else {
             swal('Success', 'Now following ' + clubName + '!', 'success');
             this.forceUpdate();
+          }
+        });
+  }
+
+  unfollow() {
+    swal({
+      title: 'Are you sure?',
+      text: 'It will disappear from your Favorites page, but you can re-favorite at any time in the Food Options page!',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+        .then((willDelete) => {
+          if (willDelete) {
+            FollowedClubs.remove(FollowedClubs.findOne({ MenuId: this.props.followedClub._id })._id);
+            this.forceUpdate();
+            swal('Poof! You unfavorited this item!', {
+              icon: 'success',
+            });
+          } else {
+            swal('You canceled unfavoriting!');
           }
         });
   }
@@ -59,7 +82,7 @@ class ClubCard extends React.Component {
               </Button>
           ) : ''}
           {Meteor.user() && this.isFollowed() ? (
-              <Button color='red' icon onClick={() => this.follow()}>
+              <Button color='red' icon onClick={() => this.unfollow()}>
                 Unfollow
               </Button>
           ) : ''}
@@ -70,7 +93,7 @@ class ClubCard extends React.Component {
 }
 
 ClubCard.propTypes = {
-  club: PropTypes.object.isRequired,
+  followedClub: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 

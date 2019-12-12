@@ -7,11 +7,19 @@ import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 Meteor.publish('Clubs', function publish() {
     return Clubs.find();
 });
+Meteor.publish('UserFollowing', function publish() {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Clubs.find({ owner: username });
+  }
+  return this.ready();
+});
+
 
 /** General logged-in user */
 Meteor.publish('FollowedClubs', function publish() {
   if (this.userId === FollowedClubs.User && FollowedClubs.Following) {
-    return Clubs.find();
+    return FollowedClubs.find();
   }
   return this.ready();
 });

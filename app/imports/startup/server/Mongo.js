@@ -1,5 +1,6 @@
 import { Clubs } from '../../api/club/Club.js';
 
+
 const clubData = JSON.parse(Assets.getText('club.json'));
 
 function addClub(data) {
