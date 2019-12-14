@@ -37,6 +37,11 @@ class NavBar extends React.Component {
               </Menu.Item>
           ) : ''}
           {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/request" key='clubAdmin'>
+                <Icon className={'file'}/> Request Club
+              </Menu.Item>
+          ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
               <Menu.Item as={NavLink} activeClassName="active" exact to="/approval" key='clubAdmin'>
                 <Icon className={'archive'}/> Manage Clubs
               </Menu.Item>

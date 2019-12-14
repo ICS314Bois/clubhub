@@ -18,6 +18,7 @@ import Approval from '../pages/Approval';
 import ListClubs from '../pages/ListClubs';
 import FeedBackForum from '../pages/FeedBackForum';
 import EditCard from '../pages/EditCard';
+import RequestClub from '../pages/RequestClub';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <Route path="/profile" component={ProfilePage}/>
               <Route path="/clublist" component={ListClubs}/>
+              <ClubAdminRoute path="/request" component={RequestClub}/>
               <ClubAdminRoute path="/approval" component={Approval}/>
               <SuperAdminRoute path="/approval" component={Approval}/>
               <ProtectedRoute path="/feedback" component={FeedBackForum}/>

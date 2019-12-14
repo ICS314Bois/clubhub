@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
-import { Clubs } from '../../api/club/Club';
+import { Clubs } from '../../api/club/Clubs';
 
 class ClubCard extends React.Component {
 

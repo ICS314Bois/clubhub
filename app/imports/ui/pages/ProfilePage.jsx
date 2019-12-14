@@ -4,7 +4,7 @@ import { Card, Feed, Grid, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import ClubCard from '../components/ClubCard';
-import { Clubs } from '../../api/club/Club';
+import { Clubs } from '../../api/club/Clubs';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 /** A simple static component to render some text for the landing page. */
