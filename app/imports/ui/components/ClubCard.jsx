@@ -23,6 +23,7 @@ class ClubCard extends React.Component {
     const email = this.props.clubs.Email;
     const website = this.props.clubs.Website;
     const rioemail = this.props.clubs.RIOEmail;
+    const owner = Meteor.user().username();
     FollowedClubs.insert({
           clubName,
           type,
@@ -30,7 +31,7 @@ class ClubCard extends React.Component {
           email,
           website,
           rioemail,
-          user,
+          owner,
         },
         (error) => {
           if (error) {
@@ -89,14 +90,12 @@ class ClubCard extends React.Component {
 }
 
 ClubCard.propTypes = {
-  clubs: PropTypes.object.isRequired,
   followedClubs: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
 export default withTracker(() => {
-  clubs: Clubs.find({}).fetch();
   followedClubs: FollowedClubs.find({}).fetch();
   const subscription = Meteor.subscribe('FollowedClubs');
   return {
