@@ -1,5 +1,5 @@
 import { Clubs } from '../../api/club/Club.js';
-
+import { FollowedClubs} from '../../api/followedclub/FollowedClubs';
 
 const clubData = JSON.parse(Assets.getText('club.json'));
 

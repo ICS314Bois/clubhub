@@ -5,7 +5,7 @@ import { Grid, Header, Icon, Container } from 'semantic-ui-react';
 class Bottom extends React.Component {
   render() {
     return (
-        <div className='footer'>
+        <div className='footer' background-color={'grey'}>
           <Container centered>
             <Grid columns='four'>
               <Grid.Column></Grid.Column>

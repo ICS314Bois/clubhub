@@ -5,6 +5,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
+import { Clubs } from '../../api/club/Club';
 
 class ClubCard extends React.Component {
 
@@ -16,13 +17,12 @@ class ClubCard extends React.Component {
   }
 
   follow() {
-    const clubName = this.props.club.ClubName;
-    const type = this.props.club.Type;
-    const contactName = this.props.club.ContactName;
-    const email = this.props.club.Email;
-    const website = this.props.club.Website;
-    const rioemail = this.props.club.RIOEmail;
-    const user = Meteor.user().username;
+    const clubName = this.props.clubs.ClubName;
+    const type = this.props.clubs.Type;
+    const contactName = this.props.clubs.ContactName;
+    const email = this.props.clubs.Email;
+    const website = this.props.clubs.Website;
+    const rioemail = this.props.clubs.RIOEmail;
     FollowedClubs.insert({
           clubName,
           type,
@@ -52,7 +52,7 @@ class ClubCard extends React.Component {
     })
         .then((willDelete) => {
           if (willDelete) {
-            FollowedClubs.remove(FollowedClubs.findOne({ MenuId: this.props.followedClub._id })._id);
+            FollowedClubs.remove(FollowedClubs.findOne({ MenuId: this.props.followedClubs._id })._id);
             this.forceUpdate();
             swal('Poof! You unfavorited this item!', {
               icon: 'success',
@@ -70,12 +70,9 @@ class ClubCard extends React.Component {
             <Card.Header>{this.props.club.ClubName}</Card.Header>
             <Card.Meta>{this.props.club.Type}</Card.Meta>
           </Card.Content>
-          <Card.Content>
-            {this.props.club.ContactName}
-          </Card.Content>
-          <Card.Content>
-            {this.props.club.Email}
-          </Card.Content>
+          <Card.Content>{this.props.club.ContactName}</Card.Content>
+          <Card.Content>{this.props.club.Email}</Card.Content>
+          <Card.Content><a href={this.props.club.Website}>{this.props.club.Website}</a></Card.Content>
           {Meteor.user() && !this.isFollowed() ? (
               <Button color='green' icon onClick={() => this.follow()}>
                 Follow
@@ -86,19 +83,21 @@ class ClubCard extends React.Component {
                 Unfollow
               </Button>
           ) : ''}
-
         </Card>
     );
   }
 }
 
 ClubCard.propTypes = {
-  followedClub: PropTypes.object.isRequired,
+  clubs: PropTypes.object.isRequired,
+  followedClubs: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
 export default withTracker(() => {
+  clubs: Clubs.find({}).fetch();
+  followedClubs: FollowedClubs.find({}).fetch();
   const subscription = Meteor.subscribe('FollowedClubs');
   return {
     ready: subscription.ready(),

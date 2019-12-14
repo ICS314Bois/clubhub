@@ -32,10 +32,11 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/profile" component={ProfilePage}/>
+              <Route path="/clublist" component={ListClubs}/>
+              <ClubAdminRoute path="/approval" component={Approval}/>
               <SuperAdminRoute path="/approval" component={Approval}/>
               <ProtectedRoute path="/feedback" component={FeedBackForum}/>
               <ClubAdminRoute path="/editcard/:_id" component={EditCard}/>
-              <Route path="/clublist" component={ListClubs}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>

@@ -4,7 +4,6 @@ import { Card, Feed, Grid, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import ClubCard from '../components/ClubCard';
-import FollowedClubCard from '../components/FollowedClubCard';
 import { Clubs } from '../../api/club/Club';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
@@ -16,7 +15,7 @@ class ProfilePage extends React.Component {
 
   renderPage() {
     return (
-        <div className={'purple-background'}>
+        <div className={'general-background'}>
         <Grid padded={'horizontally'} relaxed={'very'} columns={3}>
             <Grid.Column width={3}>
               {/*Recommendations
@@ -71,7 +70,6 @@ class ProfilePage extends React.Component {
 
 /** Require an array of Stuff documents in the props. */
 ProfilePage.propTypes = {
-  clubs: PropTypes.array.isRequired,
   followedClubs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };

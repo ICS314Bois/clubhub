@@ -3,37 +3,34 @@ import { Roles } from 'meteor/alanning:roles';
 import { Clubs } from '../../api/club/Club';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
-/** Used to display all clubs */
+/** This subscription publishes only the documents associated with the logged in user */
+Meteor.publish('Stuff', function publish() {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Stuffs.find({ owner: username });
+  }
+  return this.ready();
+});
+
+/** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
+Meteor.publish('StuffAdmin', function publish() {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Stuffs.find();
+  }
+  return this.ready();
+});
+
+
+/** Used to display all clubs **/
 Meteor.publish('Clubs', function publish() {
     return Clubs.find();
 });
-Meteor.publish('UserFollowing', function publish() {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Clubs.find({ owner: username });
-  }
-  return this.ready();
-});
-
 
 /** General logged-in user */
 Meteor.publish('FollowedClubs', function publish() {
-  if (this.userId === FollowedClubs.User && FollowedClubs.Following) {
-    return FollowedClubs.find();
-  }
-  return this.ready();
-});
-
-Meteor.publish('clubAdmin', function publish() {
-  if (this.userId && Roles.userIsInRole(this.userId, 'clubAdmin') && Clubs.Email === this.userId) {
-    return Clubs.find();
-  }
-  return this.ready();
-});
-
-Meteor.publish('superAdmin', function publish() {
-  if (this.userId && Roles.userIsInRole(this.userId, 'superAdmin')) {
-    return Clubs.find();
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return FollowedClubs.find({ owner: username });
   }
   return this.ready();
 });

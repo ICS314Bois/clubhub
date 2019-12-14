@@ -19,7 +19,7 @@ class ListClubs extends React.Component {
   renderPage() {
     const padding = { paddingTop: '10px' };
     return (
-        <div className={'white-background'}>
+        <div className={'general-background'}>
           <Container style={padding}>
             <Header as="h2" textAlign="center" >Club List</Header>
             <Link className='tomorrow-font' exact to='/searchpage'>Search</Link>

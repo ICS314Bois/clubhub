@@ -17,11 +17,11 @@ class ApprovalClubCard extends React.Component {
           <Card.Content>
             {this.props.club.Email}
           </Card.Content>
-          <div className='ui two buttons'>
-            <Button basic color='green'>
+          <div className='ui three buttons'>
+            <Button>
               Approve
             </Button>
-            <Button basic color='red'>
+            <Button>
               Decline
             </Button>
             {Meteor.user('superAdmin') ? (

@@ -13,10 +13,14 @@ class Approval extends React.Component {
   renderPage() {
     const padding = { paddingTop: '10px' };
     return (
-          <div className={'white-background'}>
+          <div className={'general-background'}>
           <Container style={padding}>
             <Header as='h1' inverted>Requests</Header>
             <hr/>
+            <Card.Group>
+              {this.props.clubs.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
+            </Card.Group>
+            <Header>Approved Clubs</Header>
             <Card.Group>
               {this.props.clubs.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
             </Card.Group>

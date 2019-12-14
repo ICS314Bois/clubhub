@@ -31,12 +31,17 @@ class NavBar extends React.Component {
                 </Menu.Item>
               ]
           ) : ''}
-
           {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
               <Menu.Item as={NavLink} activeClassName="active" exact to="/approval" key='superAdmin'>
                 <Icon className={'archive'}/> Manage Clubs
               </Menu.Item>
           ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/approval" key='clubAdmin'>
+                <Icon className={'archive'}/> Manage Clubs
+              </Menu.Item>
+          ) : ''}
+
           <Menu.Item>
             {this.props.currentUser === '' ? (
                 <Dropdown text="Login" pointing="top right" icon={'user'}>
