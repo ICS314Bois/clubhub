@@ -17,8 +17,8 @@ class ClubCard extends React.Component {
       buttons: true,
       dangerMode: true,
     })
-        .then((willDelete) => {
-          if (willDelete) {
+        .then((deleteThis) => {
+          if (deleteThis) {
             Clubs.remove(docID);
             swal('Club Deleted', {
               icon: 'success',
