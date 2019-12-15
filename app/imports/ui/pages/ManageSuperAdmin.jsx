@@ -1,38 +1,36 @@
 import React from 'react';
-import { Meteor } from 'meteor/meteor';
-import Link from 'react-router-dom/Link';
-import { Container, Card, Header, Loader } from 'semantic-ui-react';
-import PropTypes from 'prop-types';
+import { Card, Header, Container, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
-import ClubCard from '../components/ClubCard';
+import PropTypes from 'prop-types';
+import ApprovalClubCard from '../components/ApprovalClubCard';
 import { Clubs } from '../../api/club/Club';
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListClubs extends React.Component {
-
+class ManageClubAdmin extends React.Component {
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Loading</Loader>;
   }
 
-  /** Render the page once subscriptions have been received. */
   renderPage() {
     const padding = { paddingTop: '10px' };
     return (
         <div className={'general-background'}>
           <Container style={padding}>
-            <Header as="h2" textAlign="center" inverted>Club List</Header>
-            <Link className='tomorrow-font' exact to='/searchpage'>Search</Link>
-            <Card.Group itemsPerRow={4}>
-              {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
+            <Header as='h1' inverted>Requests</Header>
+            <hr/>
+            <Card.Group>
+              {this.props.clubs.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
+            </Card.Group>
+            <Header>Approved Clubs</Header>
+            <Card.Group>
+              {this.props.clubs.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
             </Card.Group>
           </Container>
         </div>
     );
   }
 }
-
 /** Require an array of Stuff documents in the props. */
-ListClubs.propTypes = {
+ManageClubAdmin.propTypes = {
   clubs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
@@ -44,4 +42,4 @@ export default withTracker(() => {
     clubs: Clubs.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(ListClubs);
+})(ManageClubAdmin);

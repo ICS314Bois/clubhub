@@ -30,6 +30,23 @@ class NavBar extends React.Component {
                   <Icon size={'small'} className={'map signs'}/><div className={'tomorrow-font'}>Find a Club</div>
                 </Menu.Item>]
           ) : ''}
+
+          {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/request" key='clubAdmin'>
+                <Icon className={'file'}/> Request Club
+              </Menu.Item>
+          ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/manageClubAdmin" key='clubAdmin'>
+                <Icon className={'archive'}/> Manage Clubs
+              </Menu.Item>
+          ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/manageSuperAdmin" key='superAdmin'>
+                <Icon className={'archive'}/> Manage Clubs
+              </Menu.Item>
+          ) : ''}
+
           <Menu.Item>
             {this.props.currentUser === '' ? (
                 <Dropdown text="Login" pointing="top right" icon={'user'}>

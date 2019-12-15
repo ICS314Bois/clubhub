@@ -17,6 +17,9 @@ import ListClubs from '../pages/ListClubs';
 import FeedBackForum from '../pages/FeedBackForum';
 import EditCard from '../pages/EditCard';
 import AddClub from '../pages/AddClub';
+import ManageClubAdmin from '../pages/ManageClubAdmin';
+import ManageSuperAdmin from '../pages/ManageSuperAdmin';
+import RequestClub from '../pages/RequestClub';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -31,9 +34,12 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/profile" component={ProfilePage}/>
-              <SuperAdminRoute path="/addclub" component={AddClub}/>
-              <ProtectedRoute path="/feedback" component={FeedBackForum}/>
+              <ClubAdminRoute path="/manageClubAdmin" component={ManageClubAdmin}/>
+              <ClubAdminRoute path="/request" component={RequestClub}/>
               <ClubAdminRoute path="/editcard/:_id" component={EditCard}/>
+              <SuperAdminRoute path="/addclub" component={AddClub}/>
+              <SuperAdminRoute path="/manageSuperAdmin" component={ManageSuperAdmin}/>
+              <ProtectedRoute path="/feedback" component={FeedBackForum}/>
               <Route path="/clublist" component={ListClubs}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
