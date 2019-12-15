@@ -4,9 +4,31 @@ import { Button, Card } from 'semantic-ui-react';
 import { withRouter, Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
+import swal from 'sweetalert';
+import { Clubs } from '../../api/club/Club';
 import { Roles } from 'meteor/alanning:roles';
 
 class ClubCard extends React.Component {
+  removeItem(docID) {
+    swal({
+      title: 'Warning!',
+      text: 'Once deleted, you will not be able to recover this club card!',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+        .then((willDelete) => {
+          if (willDelete) {
+            Clubs.remove(docID);
+            swal('Club Deleted', {
+              icon: 'success',
+            });
+          } else {
+            swal('Canceling...');
+          }
+        });
+  }
+
   render() {
     return (
         <Card centered>
@@ -15,6 +37,7 @@ class ClubCard extends React.Component {
                 <Button
                     icon='delete'
                     floated='right'
+                    onClick={() => this.removeItem(this.props.club._id)}
                 />
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
