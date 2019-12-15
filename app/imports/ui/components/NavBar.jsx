@@ -28,25 +28,36 @@ class NavBar extends React.Component {
               </Menu.Item>,
                 <Menu.Item as={NavLink} activeClassName="active" exact to="/searchpage" key='list'>
                   <Icon size={'small'} className={'map signs'}/><div className={'tomorrow-font'}>Find a Club</div>
-                </Menu.Item>]
+                </Menu.Item>
+              ]
           ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/approval" key='superAdmin'>
+                <Icon className={'archive'}/> Manage Clubs
+              </Menu.Item>
+          ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/request" key='clubAdmin'>
+                <Icon className={'file'}/> Request Club
+              </Menu.Item>
+          ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/approval" key='clubAdmin'>
+                <Icon className={'archive'}/> Manage Clubs
+              </Menu.Item>
+          ) : ''}
+
           <Menu.Item>
             {this.props.currentUser === '' ? (
                 <Dropdown text="Login" pointing="top right" icon={'user'}>
                   <Dropdown.Menu>
-                    <Dropdown.Item icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
+                    <Dropdown.Item text="Sign In" as={NavLink} exact to="/signin"/>
+                    <Dropdown.Item text={'Sign up'} as={NavLink} exact to={'signup'}/>
                   </Dropdown.Menu>
                 </Dropdown>
             ) : (
                 <Dropdown text={this.props.currentUser} pointing="top right" icon={'user'}>
                   <Dropdown.Menu>
-                    <Dropdown.Item text={`Hello ${this.props.currentUser}`}/>
-                    <br/>
-                    {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
-                        <Dropdown.Item as={NavLink} activeClassName="active" exact to="/addclub" key='superAdmin'>
-                          Add Club
-                        </Dropdown.Item>
-                    ) : ''}
                     <Dropdown.Item icon="sign out" text="Sign Out" as={NavLink} exact to="/signout"/>
                   </Dropdown.Menu>
                 </Dropdown>
