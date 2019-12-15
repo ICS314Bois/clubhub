@@ -5,8 +5,8 @@ import { withRouter, Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import swal from 'sweetalert';
-import { Clubs } from '../../api/club/Club';
 import { Roles } from 'meteor/alanning:roles';
+import { Clubs } from '../../api/club/Club';
 
 class ClubCard extends React.Component {
   removeItem(docID) {
