@@ -46,7 +46,7 @@ class ClubCard extends React.Component {
     })
         .then((willDelete) => {
           if (willDelete) {
-            FollowedClubs.remove(FollowedClubs.findOne({ club: this.props.club._id })._id);
+            FollowedClubs.remove(FollowedClubs.findOne({ clubid: this.props.club._id })._id);
             this.forceUpdate();
             swal('You are no longer following ' + clubName + '.', {
               icon: 'success',
