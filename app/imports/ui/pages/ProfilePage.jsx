@@ -36,7 +36,8 @@ class ProfilePage extends React.Component {
               <Header as={'h2'} inverted>Clubs</Header>
               <hr/>
               <Card.Group>
-                {this.props.followedclubs.map((club, index) => <FollowedClubCard key={index} club={club}/>)}
+                {this.props.followedclubs.map((followedclub, index) =>
+                    <FollowedClubCard key={index} followedclub={followedclub}/>)}
               </Card.Group>
             </Grid.Column>
 
@@ -78,9 +79,10 @@ ProfilePage.propTypes = {
 
 export default withTracker(() => {
   const subscription = Meteor.subscribe('Clubs');
+  const subscription2 = Meteor.subscribe('FollowedClubs');
   return {
     clubs: Clubs.find({}).fetch(),
     followedclubs: FollowedClubs.find({}).fetch(),
-    ready: subscription.ready(),
+    ready: subscription.ready() && subscription2.ready(),
   };
 })(ProfilePage);

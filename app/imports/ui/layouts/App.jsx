@@ -30,17 +30,17 @@ class App extends React.Component {
             <NavBar/>
             <Switch>
               <Route exact path="/" component={Landing}/>
+              <Route path="/clublist" component={ListClubs}/>
+              <Route path="/profile" component={ProfilePage}/>
               <Route path="/searchpage" component={SearchPage}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
-              <Route path="/profile" component={ProfilePage}/>
               <ClubAdminRoute path="/manageClubAdmin" component={ManageClubAdmin}/>
               <ClubAdminRoute path="/request" component={RequestClub}/>
               <ClubAdminRoute path="/editcard/:_id" component={EditCard}/>
               <SuperAdminRoute path="/addclub" component={AddClub}/>
               <SuperAdminRoute path="/manageSuperAdmin" component={ManageSuperAdmin}/>
               <ProtectedRoute path="/feedback" component={FeedBackForum}/>
-              <Route path="/clublist" component={ListClubs}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
