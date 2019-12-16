@@ -1,30 +1,58 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card } from 'semantic-ui-react';
-import { withRouter, Link } from 'react-router-dom';
+import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
-import swal from 'sweetalert';
-import { Roles } from 'meteor/alanning:roles';
-import { Clubs } from '../../api/club/Club';
+import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
+import { Clubs } from '../../api/club/Clubs';
 
 class ClubCard extends React.Component {
-  removeItem(docID) {
+
+  isFollowed() {
+    if (FollowedClubs.findOne({ clubid: this.props.club._id })) {
+      return true;
+    }
+    return false;
+  }
+
+  follow() {
+    const clubName = this.props.club.ClubName;
+    const type = this.props.club.Type;
+    const contactName = this.props.club.ContactName;
+    const email = this.props.club.Email;
+    const website = this.props.club.Website;
+    const rioemail = this.props.club.RIOEmail;
+    const clubid = this.props.club._id;
+    const owner = Meteor.user().username;
+    FollowedClubs.insert({ clubName, type, contactName, email, website, rioemail, clubid, owner, },
+        (error) => {
+          if (error) {
+            swal('Error', error.message, 'error');
+          } else {
+            swal('Success', 'Now following ' + clubName + '!', 'success');
+            this.forceUpdate();
+          }
+        });
+  }
+
+  unfollow() {
+    const clubName = this.props.club.ClubName;
     swal({
-      title: 'Warning!',
-      text: 'Once deleted, you will not be able to recover this club card!',
+      text: 'You will no longer be following ' + clubName + '.',
       icon: 'warning',
       buttons: true,
       dangerMode: true,
     })
-        .then((deleteThis) => {
-          if (deleteThis) {
-            Clubs.remove(docID);
-            swal('Club Deleted', {
+        .then((willDelete) => {
+          if (willDelete) {
+            FollowedClubs.remove(FollowedClubs.findOne({ club: this.props.club._id })._id);
+            this.forceUpdate();
+            swal('You are no longer following ' + clubName + '.', {
               icon: 'success',
             });
           } else {
-            swal('Canceling...');
+            swal('You are still following ' + clubName + '.');
           }
         });
   }
@@ -33,49 +61,37 @@ class ClubCard extends React.Component {
     return (
         <Card centered>
           <Card.Content>
-            {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
-                <Button
-                    icon='delete'
-                    floated='right'
-                    onClick={() => this.removeItem(this.props.club._id)}
-                />
-            ) : ''}
-            {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
-                <Link floated='right' to={`/editcard/${this.props.club._id}`}>
-                  Edit
-                </Link>
-            ) : ''}
-            {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') && (Meteor.user().username === this.props.club.Email) ? (
-                <Link floated='right' to={`/editcard/${this.props.club._id}`}>
-                  Edit
-                </Link>
-            ) : ''}
             <Card.Header>{this.props.club.ClubName}</Card.Header>
             <Card.Meta>{this.props.club.Type}</Card.Meta>
           </Card.Content>
-          <Card.Content>
-            {this.props.club.ContactName}
-          </Card.Content>
-          <Card.Content>
-            {this.props.club.Email}
-          </Card.Content>
-          <Button color={'green'}>
-            Follow
-          </Button>
+          <Card.Content>{this.props.club.ContactName}</Card.Content>
+          <Card.Content>{this.props.club.Email}</Card.Content>
+          <Card.Content><a href={this.props.club.Website}>{this.props.club.Website}</a></Card.Content>
+          {Meteor.user() && !this.isFollowed() ? (
+              <Button color='green' icon onClick={() => this.follow()}>
+                Follow
+              </Button>
+          ) : ''}
+          {Meteor.user() && this.isFollowed() ? (
+              <Button color='red' icon onClick={() => this.unfollow()}>
+                Unfollow
+              </Button>
+          ) : ''}
         </Card>
     );
   }
 }
 
 ClubCard.propTypes = {
-  club: PropTypes.object.isRequired,
-  currentUser: PropTypes.string,
+  followedClubs: PropTypes.object.isRequired,
+  ready: PropTypes.bool.isRequired,
 };
 
-/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
-const NavBarContainer = withTracker(() => ({
-  currentUser: Meteor.user() ? Meteor.user().username : '',
-}))(ClubCard);
-
-/** Enable ReactRouter for this component. https://reacttraining.com/react-router/web/api/withRouter */
-export default withRouter(NavBarContainer);
+/** Wrap this component in withRouter since we use the <Link> React Router element. */
+export default withTracker(() => {
+  followedClubs: FollowedClubs.find({}).fetch();
+  const subscription = Meteor.subscribe('FollowedClubs');
+  return {
+    ready: subscription.ready(),
+  };
+})(ClubCard);

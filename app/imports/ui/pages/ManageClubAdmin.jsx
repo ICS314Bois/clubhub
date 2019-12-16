@@ -3,7 +3,11 @@ import { Card, Header, Container, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import ApprovalClubCard from '../components/ApprovalClubCard';
-import { Clubs } from '../../api/club/Club';
+import ClubCardFullList from '../components/ClubCardFullList';
+import ClubCard from '../components/ClubCard';
+import { Clubs } from '../../api/club/Clubs';
+import { Requests } from '../../api/request/Requests';
+import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
 
 class ManageClubAdmin extends React.Component {
   render() {
@@ -18,11 +22,11 @@ class ManageClubAdmin extends React.Component {
             <Header as='h1' inverted>Requests</Header>
             <hr/>
             <Card.Group>
-              {this.props.clubs.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
+              {this.props.requests.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
             </Card.Group>
-            <Header>Approved Clubs</Header>
+            <Header as={'h1'} inverted>Your Approved Clubs</Header>
             <Card.Group>
-              {this.props.clubs.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
+              {this.props.ownedclubs.map((club, index) => <ClubCardFullList key={index} club={club}/>)}
             </Card.Group>
           </Container>
         </div>
@@ -31,15 +35,18 @@ class ManageClubAdmin extends React.Component {
 }
 /** Require an array of Stuff documents in the props. */
 ManageClubAdmin.propTypes = {
-  clubs: PropTypes.array.isRequired,
+  requests: PropTypes.array.isRequired,
+  ownedclubs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
-  const subscription = Meteor.subscribe('Clubs');
+  const subscription2 = Meteor.subscribe('RequestsClubAdmin');
+  const subscription = Meteor.subscribe('OwnedClubs');
   return {
-    clubs: Clubs.find({}).fetch(),
-    ready: subscription.ready(),
+    ownedclubs: OwnedClubs.find({}).fetch(),
+    requests: Requests.find({}).fetch(),
+    ready: subscription.ready() && subscription2.ready(),
   };
 })(ManageClubAdmin);

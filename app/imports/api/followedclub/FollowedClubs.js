@@ -7,15 +7,14 @@ const FollowedClubs = new Mongo.Collection('FollowedClubs');
 
 /** Define a schema to specify the structure of each document in the collection. */
 const FollowedClubsSchema = new SimpleSchema({
-  ClubName: String,
-  Type: String,
-  ContactName: String,
-  Email: String,
-  Website: { type: String, optional: true },
-  Image: { type: String, optional: true },
-  RIOEmail: { type: String, optional: true },
-  Following: Boolean,
-  User: String,
+  clubName: String,
+  type: String,
+  contactName: String,
+  email: String,
+  website: { type: String, optional: true },
+  rioemail: { type: String, optional: true },
+  clubid: String,
+  owner: String,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */

@@ -11,7 +11,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
 import SimpleSchema from 'simpl-schema';
-import { Clubs } from '../../api/club/Club';
+import { Clubs } from '../../api/club/Clubs';
 
 const cardSchema = new SimpleSchema({
   ClubName: String,

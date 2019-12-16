@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { Form, Grid, Dropdown, Input } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
-import { Clubs } from '../../api/club/Club';
+import { Clubs } from '../../api/club/Clubs';
 import FilteredList from '../components/FilteredList';
 
 /** A simple static component to render some text for the landing page. */

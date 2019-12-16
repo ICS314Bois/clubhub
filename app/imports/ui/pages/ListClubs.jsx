@@ -5,7 +5,7 @@ import { Container, Card, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import ClubCard from '../components/ClubCard';
-import { Clubs } from '../../api/club/Club';
+import { Clubs } from '../../api/club/Clubs';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListClubs extends React.Component {

@@ -13,17 +13,17 @@ import { Requests } from '../../api/request/Requests';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
-  ClubName: String,
-  Type: {
+  clubName: String,
+  type: {
     type: String,
     allowedValues: ['Academic', 'Professional', 'Religious', 'Spiritual', 'Political', 'Sports', 'Leisure',
       'Fraternity', 'Sorority', 'Ethnic', 'Culture', 'Service', 'Recreational'],
     defaultValue: 'Academic'
   },
-  ContactName: String,
-  Email: String,
-  Website: String,
-  RIOemail: String
+  contactName: String,
+  email: String,
+  website: String,
+  rioemail: String
 });
 
 /** Renders the Page for adding a document. */
@@ -31,14 +31,14 @@ class RequestClub extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { ClubName, Type, ContactName, Email, Website, RIOemail } = data;
+    const { clubName, type, contactName, email, website, rioemail } = data;
     const owner = Meteor.user().username;
-    Requests.insert({ ClubName, Type, ContactName, Email, Website, RIOemail, owner },
+    Requests.insert({ clubName, type, contactName, email, website, rioemail, owner },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
           } else {
-            swal('Success', 'Club successfully requested!', 'success');
+            swal('Success', 'Club request sent!', 'success');
             formRef.reset();
           }
         });
@@ -49,23 +49,23 @@ class RequestClub extends React.Component {
     let fRef = null;
     return (
         <div className={'general-background'}>
-        <Grid container centered>
-          <Grid.Column>
-            <Header as="h2" textAlign="center" inverted>Request a Club</Header>
-            <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)} >
-              <Segment>
-                <TextField name='ClubName'/>
-                <SelectField name='Type'/>
-                <TextField name='ContactName'/>
-                <TextField name='Email'/>
-                <TextField name='Website'/>
-                <TextField name='RIOemail'/>
-                <SubmitField value={'submit'} />
-                <ErrorsField/>
-              </Segment>
-            </AutoForm>
-          </Grid.Column>
-        </Grid>
+          <Grid container centered>
+            <Grid.Column>
+              <Header as="h2" textAlign="center" inverted>Request a Club</Header>
+              <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)}>
+                <Segment>
+                  <TextField name='clubName'/>
+                  <SelectField name='type'/>
+                  <TextField name='contactName'/>
+                  <TextField name='email'/>
+                  <TextField name='website'/>
+                  <TextField name='rioemail'/>
+                  <SubmitField value={'submit'} />
+                  <ErrorsField/>
+                </Segment>
+              </AutoForm>
+            </Grid.Column>
+          </Grid>
         </div>
     );
   }
