@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 import { Clubs }   from '../../api/club/Clubs';
 import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
 import { Requests } from '../../api/request/Requests';
-
+import { Roles } from 'meteor/alanning:roles';
 class ApprovalClubCard extends React.Component {
 
   approve() {
@@ -28,7 +28,7 @@ class ApprovalClubCard extends React.Component {
           if (willAdd) {
             Requests.remove(this.props.request._id);
             OwnedClubs.insert({clubName, type, contactName, email, website, rioemail, owner});
-            Clubs.insert(clubName, type, contactName, email, website, rioemail);
+            Clubs.insert({clubName, type, contactName, email, website, rioemail});
             swal('The club is now official!', {
               icon: 'success',
             });
