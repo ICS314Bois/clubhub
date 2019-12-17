@@ -56,8 +56,17 @@ Meteor.publish('RequestsSuperAdmin', function publish() {
 });
 
 /** Owned clubs by club admin**/
-Meteor.publish('OwnedClubs', function publish() {
+Meteor.publish('OwnedClubsClubAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'clubAdmin')) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return OwnedClubs.find({ owner: username });
+  }
+  return this.ready();
+});
+
+/** Owned clubs by super admin **/
+Meteor.publish('OwnedClubsSuperAdmin', function publish() {
+  if (this.userId && Roles.userIsInRole(this.userId, 'superAdmin')) {
     const username = Meteor.users.findOne(this.userId).username;
     return OwnedClubs.find({ owner: username });
   }

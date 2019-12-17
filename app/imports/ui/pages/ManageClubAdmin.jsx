@@ -4,8 +4,6 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import ApprovalClubCard from '../components/ApprovalClubCard';
 import ClubCardFullList from '../components/ClubCardFullList';
-import ClubCard from '../components/ClubCard';
-import { Clubs } from '../../api/club/Clubs';
 import { Requests } from '../../api/request/Requests';
 import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
 
@@ -22,7 +20,7 @@ class ManageClubAdmin extends React.Component {
             <Header as='h1' inverted>Requests</Header>
             <hr/>
             <Card.Group>
-              {this.props.requests.map((club, index) => <ApprovalClubCard key={index} club={club}/>)}
+              {this.props.requests.map((request, index) => <ApprovalClubCard key={index} request={request}/>)}
             </Card.Group>
             <Header as={'h1'} inverted>Your Approved Clubs</Header>
             <Card.Group>
@@ -43,10 +41,10 @@ ManageClubAdmin.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   const subscription2 = Meteor.subscribe('RequestsClubAdmin');
-  const subscription = Meteor.subscribe('OwnedClubs');
+  const subscription = Meteor.subscribe('OwnedClubsClubAdmin');
   return {
-    ownedclubs: OwnedClubs.find({}).fetch(),
     requests: Requests.find({}).fetch(),
+    ownedclubs: OwnedClubs.find({}).fetch(),
     ready: subscription.ready() && subscription2.ready(),
   };
 })(ManageClubAdmin);

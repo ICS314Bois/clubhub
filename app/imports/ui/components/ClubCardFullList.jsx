@@ -9,10 +9,10 @@ class ClubCardFullList extends React.Component {
     return (
         <Card centered>
           <Card.Content>
-            <Card.Header>{this.props.club.ClubName}</Card.Header>
-            <Card.Meta>{this.props.club.Type}</Card.Meta>
-            <Card.Meta>{this.props.club.ContactName}</Card.Meta>
-            <Card.Meta>{this.props.club.Email}</Card.Meta>
+            <Card.Header>{this.props.club.clubName}</Card.Header>
+            <Card.Meta>{this.props.club.type}</Card.Meta>
+            <Card.Meta>{this.props.club.contactName}</Card.Meta>
+            <Card.Meta>{this.props.club.email}</Card.Meta>
           </Card.Content>
         </Card>
     );
