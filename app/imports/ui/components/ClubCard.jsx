@@ -4,6 +4,8 @@ import { Button, Card } from 'semantic-ui-react';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
+import { Link } from 'react-router-dom';
+import { Roles } from 'meteor/alanning:roles';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 import { Clubs } from '../../api/club/Clubs';
 
@@ -61,6 +63,23 @@ class ClubCard extends React.Component {
     return (
         <Card centered>
           <Card.Content>
+            {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
+                <Button
+                    icon='delete'
+                    floated='right'
+                    onClick={() => this.removeItem(this.props.club._id)}
+                />
+            ) : ''}
+            {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
+                <Link floated='right' to={`/editcard/${this.props.club._id}`}>
+                  Edit
+                </Link>
+            ) : ''}
+            {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') && (Meteor.user().username === this.props.club.Email) ? (
+                <Link floated='right' to={`/editcard/${this.props.club._id}`}>
+                  Edit
+                </Link>
+            ) : ''}
             <Card.Header>{this.props.club.ClubName}</Card.Header>
             <Card.Meta>{this.props.club.Type}</Card.Meta>
           </Card.Content>
@@ -83,7 +102,7 @@ class ClubCard extends React.Component {
 }
 
 ClubCard.propTypes = {
-  followedClubs: PropTypes.object.isRequired,
+  club: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
