@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card, Dropdown } from 'semantic-ui-react';
-import { NavLink, withRouter } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import swal from 'sweetalert';
 import { Clubs }   from '../../api/club/Clubs';
@@ -17,23 +16,30 @@ class ApprovalClubCard extends React.Component {
     const email = this.props.request.email;
     const website = this.props.request.website;
     const rioemail = this.props.request.rioemail;
-    const clubid = this.props.request._id;
     const owner = this.props.request.owner;
-    OwnedClubs.insert({ clubName, type, contactName, email, website, rioemail, clubid, owner, },
-        (error) => {
-          if (error) {
-            swal('Error', error.message, 'error');
+    swal({
+      title: 'Are you sure?',
+      text: 'The club will become officially recognized.',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+        .then((willAdd) => {
+          if (willAdd) {
+            Requests.remove(this.props.request._id);
+            OwnedClubs.insert({clubName, type, contactName, email, website, rioemail, owner});
+            Clubs.insert(clubName, type, contactName, email, website, rioemail);
+            swal('The club is now official!', {
+              icon: 'success',
+            });
           } else {
-            swal('Success', clubName + ' has been approved!', 'success');
-            this.forceUpdate();
+            swal('You cancelled your approval.');
           }
         });
-    Clubs.insert({clubName, type, contactName, email, website, rioemail, clubid});
-    Requests.remove(Requests.findOne({clubName: this.props.request.clubName}));
   }
 
-  decline() {
-
+  decline(docid) {
+    Requests.remove(docid);
   }
 
   render() {
@@ -57,7 +63,7 @@ class ApprovalClubCard extends React.Component {
                 </Button>
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
-                <Button color='red' onClick={() => this.decline()}>
+                <Button color='red' onClick={() => this.decline(this.props.request.clubid)}>
                   Decline
                 </Button>
             ) : ''}
@@ -71,11 +77,10 @@ ApprovalClubCard.propTypes = {
 };
 
 export default withTracker(() => {
-  const subscription = Meteor.subscribe('Clubs');
   const subscription2 = Meteor.subscribe('OwnedClubsClubAdmin');
   const subscription3 = Meteor.subscribe('OwnedClubsSuperAdmin');
   const subscription4 = Meteor.subscribe('RequestsSuperAdmin');
   return {
-    ready: subscription.ready() && subscription2.ready() && subscription3.ready() && subscription4.ready(),
+    ready: subscription2.ready() && subscription3.ready() && subscription4.ready(),
   };
 })(ApprovalClubCard);

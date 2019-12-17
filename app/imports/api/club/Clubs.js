@@ -7,13 +7,12 @@ const Clubs = new Mongo.Collection('Clubs');
 
 /** Define a schema to specify the structure of each document in the collection. */
 const ClubsSchema = new SimpleSchema({
-  ClubName: String,
-  Type: String,
-  ContactName: String,
-  Email: String,
-  Website: { type: String, optional: true },
-  Image: { type: String, optional: true },
-  RIOEmail: { type: String, optional: true },
+  clubName: String,
+  type: String,
+  contactName: String,
+  email: String,
+  website: { type: String, optional: true },
+  rioemail: { type: String, optional: true },
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */

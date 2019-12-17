@@ -55,6 +55,7 @@ class AddClub extends React.Component {
                     <Form.Group widths='equal'>
                       <TextField name='ClubName'/>
                       <TextField name='ContactName'/>
+                      <TextField name='Email'/>
                       <TextField name='Website'/>
                     </Form.Group>
                     <Form.Group Widths='equal'>

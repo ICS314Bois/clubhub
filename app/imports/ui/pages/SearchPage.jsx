@@ -45,7 +45,7 @@ class SearchPage extends React.Component {
   filterClubType = (club) => {
     let ret = false;
     _.forIn(this.state.selected, (value, key) => {
-      if (club.Type.includes(key)) {
+      if (club.type.includes(key)) {
         ret = ret || value;
       }
     });
@@ -58,7 +58,7 @@ class SearchPage extends React.Component {
       return false;
     }
 
-    if (club.ClubName.includes(this.state.search)) {
+    if (club.clubName.includes(this.state.search)) {
       return true;
     }
   };
@@ -77,7 +77,7 @@ class SearchPage extends React.Component {
       } else {
         for (let i = 0; i < club1.length; i++) {
           for (let j = 0; j < club2.length; j++) {
-            if (club1[i].ClubName === club2[j].ClubName) {
+            if (club1[i].clubName === club2[j].clubName) {
               listRet[listRet.length] = club1[i];
             }
           }

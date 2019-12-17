@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import swal from 'sweetalert';
 import { Button, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';

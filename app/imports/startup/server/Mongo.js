@@ -3,7 +3,7 @@ import { Clubs } from '../../api/club/Clubs.js';
 const clubData = JSON.parse(Assets.getText('club.json'));
 
 function addClub(data) {
-  console.log(`  Adding: ${data.ClubName} (${data.owner})`);
+  console.log(`  Adding: ${data.clubName} (${data.owner})`);
   Clubs.insert(data);
 }
 

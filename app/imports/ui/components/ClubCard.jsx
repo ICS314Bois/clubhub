@@ -38,12 +38,12 @@ class ClubCard extends React.Component {
   }
 
   follow() {
-    const clubName = this.props.club.ClubName;
-    const type = this.props.club.Type;
-    const contactName = this.props.club.ContactName;
-    const email = this.props.club.Email;
-    const website = this.props.club.Website;
-    const rioemail = this.props.club.RIOEmail;
+    const clubName = this.props.club.clubName;
+    const type = this.props.club.type;
+    const contactName = this.props.club.contactName;
+    const email = this.props.club.email;
+    const website = this.props.club.website;
+    const rioemail = this.props.club.rioemail;
     const clubid = this.props.club._id;
     const owner = Meteor.user().username;
     FollowedClubs.insert({ clubName, type, contactName, email, website, rioemail, clubid, owner, },
@@ -94,17 +94,17 @@ class ClubCard extends React.Component {
                   Edit
                 </Link>
             ) : ''}
-            {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') && (Meteor.user().username === this.props.club.Email) ? (
+            {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') && (Meteor.user().username === this.props.club.email) ? (
                 <Link floated='right' to={`/editcard/${this.props.club._id}`}>
                   Edit
                 </Link>
             ) : ''}
-            <Card.Header>{this.props.club.ClubName}</Card.Header>
-            <Card.Meta>{this.props.club.Type}</Card.Meta>
+            <Card.Header>{this.props.club.clubName}</Card.Header>
+            <Card.Meta>{this.props.club.type}</Card.Meta>
           </Card.Content>
-          <Card.Content>{this.props.club.ContactName}</Card.Content>
-          <Card.Content>{this.props.club.Email}</Card.Content>
-          <Card.Content><a href={this.props.club.Website}>{this.props.club.Website}</a></Card.Content>
+          <Card.Content>{this.props.club.contactName}</Card.Content>
+          <Card.Content>{this.props.club.email}</Card.Content>
+          <Card.Content><a href={this.props.club.website}>{this.props.club.website}</a></Card.Content>
           {Meteor.user() && !this.isFollowed() ? (
               <Button color='green' icon onClick={() => this.follow()}>
                 Follow

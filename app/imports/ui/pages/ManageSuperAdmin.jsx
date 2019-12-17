@@ -22,6 +22,7 @@ class ManageClubAdmin extends React.Component {
               {this.props.requests.map((request, index) => <ApprovalClubCard key={index} request={request}/>)}
             </Card.Group>
             <Header inverted>Approved Clubs</Header>
+
             <Card.Group>
               {/**{this.props.clubs.map((club, index) => <ApprovalClubCard key={index} request={club}/>)}**/}
             </Card.Group>
