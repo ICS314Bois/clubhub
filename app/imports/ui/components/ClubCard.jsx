@@ -10,6 +10,25 @@ import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 import { Clubs } from '../../api/club/Clubs';
 
 class ClubCard extends React.Component {
+  removeClub(docID) {
+    swal({
+      title: 'Are you sure?',
+      text: 'Once deleted, information can not be recovered!',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+        .then((willDelete) => {
+          if (willDelete) {
+            Clubs.remove(docID);
+            swal('Club deleted!', {
+              icon: 'success',
+            });
+          } else {
+            swal('Canceled');
+          }
+        });
+  }
 
   isFollowed() {
     if (FollowedClubs.findOne({ clubid: this.props.club._id })) {
@@ -67,7 +86,7 @@ class ClubCard extends React.Component {
                 <Button
                     icon='delete'
                     floated='right'
-                    onClick={() => this.removeItem(this.props.club._id)}
+                    onClick={() => this.removeClub(this.props.club._id)}
                 />
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
