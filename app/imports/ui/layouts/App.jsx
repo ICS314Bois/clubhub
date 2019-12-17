@@ -13,7 +13,6 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import SearchPage from '../pages/SearchPage';
 import ProfilePage from '../pages/ProfilePage';
-import ListClubs from '../pages/ListClubs';
 import FeedBackForum from '../pages/FeedBackForum';
 import EditCard from '../pages/EditCard';
 import AddClub from '../pages/AddClub';
@@ -40,7 +39,6 @@ class App extends React.Component {
               <SuperAdminRoute path="/addclub" component={AddClub}/>
               <SuperAdminRoute path="/manageSuperAdmin" component={ManageSuperAdmin}/>
               <ProtectedRoute path="/feedback" component={FeedBackForum}/>
-              <Route path="/clublist" component={ListClubs}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
