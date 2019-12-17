@@ -1,9 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'semantic-ui-react';
-import { withRouter } from 'react-router-dom';
+import { Button, Card } from 'semantic-ui-react';
+import { Link, withRouter } from 'react-router-dom';
+import {FollowedClubs} from '../../api/followedclub/FollowedClubs';
 
-class DisplayClubCard extends React.Component {
+
+class OwnedClubCard extends React.Component {
+
+  notify() {
+    
+  }
+
+  sendNotification() {
+
+  }
 
   render() {
     return (
@@ -14,13 +24,16 @@ class DisplayClubCard extends React.Component {
             <Card.Meta>{this.props.club.contactName}</Card.Meta>
             <Card.Meta>{this.props.club.email}</Card.Meta>
           </Card.Content>
+          {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+              <TextField name='clubName'/>
+          ) : ''}
         </Card>
     );
   }
 }
 
-DisplayClubCard.propTypes = {
+OwnedClubCard.propTypes = {
   club: PropTypes.object.isRequired,
 };
 
-export default withRouter(DisplayClubCard);
+export default withRouter(OwnedClubCard);

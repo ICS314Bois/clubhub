@@ -3,7 +3,7 @@ import { Card, Header, Container, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import ApprovalClubCard from '../components/ApprovalClubCard';
-import ClubCardFullList from '../components/DisplayClubCard';
+import OwnedClubCard from '../components/OwnedClubCard';
 import { Requests } from '../../api/request/Requests';
 import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
 
@@ -24,7 +24,7 @@ class ManageClubAdmin extends React.Component {
             </Card.Group>
             <Header as={'h1'} inverted>Your Approved Clubs</Header>
             <Card.Group>
-              {this.props.ownedclubs.map((club, index) => <ClubCardFullList key={index} club={club}/>)}
+              {this.props.ownedclubs.map((club, index) => <OwnedClubCard key={index} club={club}/>)}
             </Card.Group>
           </Container>
         </div>
