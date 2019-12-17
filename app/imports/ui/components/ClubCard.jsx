@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card } from 'semantic-ui-react';
+import { Button, Card, Image } from 'semantic-ui-react';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -100,6 +100,10 @@ class ClubCard extends React.Component {
                 </Link>
             ) : ''}
             <Card.Header>{this.props.club.ClubName}</Card.Header>
+            <Image
+                size='small'
+                src={this.props.club.Image}
+            />
             <Card.Meta>{this.props.club.Type}</Card.Meta>
           </Card.Content>
           <Card.Content>{this.props.club.ContactName}</Card.Content>
