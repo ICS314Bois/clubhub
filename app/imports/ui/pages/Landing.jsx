@@ -36,19 +36,6 @@ class Landing extends React.Component {
                 </div>
               </Header>
             </Grid.Row>
-            <Grid.Row centered>
-
-            </Grid.Row>
-            <Grid.Row centered>
-              <Button animated='vertical'>
-                <Button.Content hidden>
-                  <Icon className={'rightarrow'} />
-                </Button.Content>
-                <Button.Content visible><a><Link className='tomorrow-font' exact to='/searchpage'>
-                  Find a club now!
-                </Link></a></Button.Content>
-              </Button>
-            </Grid.Row>
           </Grid>
         </Container>
         </div>

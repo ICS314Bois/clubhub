@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Card } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 
-class ClubCardFullList extends React.Component {
+class DisplayClubCard extends React.Component {
 
   render() {
     return (
@@ -19,8 +19,8 @@ class ClubCardFullList extends React.Component {
   }
 }
 
-ClubCardFullList.propTypes = {
+DisplayClubCard.propTypes = {
   club: PropTypes.object.isRequired,
 };
 
-export default withRouter(ClubCardFullList);
+export default withRouter(DisplayClubCard);

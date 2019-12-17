@@ -3,7 +3,7 @@ import { Card, Header, Container, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import ApprovalClubCard from '../components/ApprovalClubCard';
-import ClubCardFullList from '../components/ClubCardFullList';
+import ClubCardFullList from '../components/DisplayClubCard';
 import { Requests } from '../../api/request/Requests';
 import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
 

@@ -4,6 +4,7 @@ import { Button, Card, Dropdown } from 'semantic-ui-react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import swal from 'sweetalert';
+import { Clubs }   from '../../api/club/Clubs';
 import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
 import { Requests } from '../../api/request/Requests';
 
@@ -27,6 +28,7 @@ class ApprovalClubCard extends React.Component {
             this.forceUpdate();
           }
         });
+    Clubs.insert({clubName, type, contactName, email, website, rioemail, clubid});
     Requests.remove(Requests.findOne({clubName: this.props.request.clubName}));
   }
 
@@ -69,10 +71,11 @@ ApprovalClubCard.propTypes = {
 };
 
 export default withTracker(() => {
-  const subscription = Meteor.subscribe('OwnedClubsClubAdmin');
-  const subscription2 = Meteor.subscribe('OwnedClubsSuperAdmin');
-  const subscription3 = Meteor.subscribe('RequestsSuperAdmin');
+  const subscription = Meteor.subscribe('Clubs');
+  const subscription2 = Meteor.subscribe('OwnedClubsClubAdmin');
+  const subscription3 = Meteor.subscribe('OwnedClubsSuperAdmin');
+  const subscription4 = Meteor.subscribe('RequestsSuperAdmin');
   return {
-    ready: subscription.ready() && subscription2.ready(),
+    ready: subscription.ready() && subscription2.ready() && subscription3.ready() && subscription4.ready(),
   };
 })(ApprovalClubCard);
