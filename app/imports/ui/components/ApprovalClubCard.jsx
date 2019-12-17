@@ -7,6 +7,7 @@ import { Clubs }   from '../../api/club/Clubs';
 import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
 import { Requests } from '../../api/request/Requests';
 import { Roles } from 'meteor/alanning:roles';
+import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 class ApprovalClubCard extends React.Component {
 
   approve() {
@@ -38,8 +39,24 @@ class ApprovalClubCard extends React.Component {
         });
   }
 
-  decline(docid) {
-    Requests.remove(docid);
+  decline() {
+    const clubName = this.props.request.clubName;
+    swal({
+      text: clubName + ' will be deleted from requests.',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+        .then((willDelete) => {
+          if (willDelete) {
+            Requests.remove(this.props.request._id);
+            swal(clubName + ' has been declined.', {
+              icon: 'success',
+            });
+          } else {
+            swal(clubName + ' is still pending.');
+          }
+        });
   }
 
   render() {
@@ -63,7 +80,7 @@ class ApprovalClubCard extends React.Component {
                 </Button>
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
-                <Button color='red' onClick={() => this.decline(this.props.request.clubid)}>
+                <Button color='red' onClick={() => this.decline()}>
                   Decline
                 </Button>
             ) : ''}
