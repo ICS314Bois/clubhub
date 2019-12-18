@@ -8,12 +8,7 @@ const Requests = new Mongo.Collection('Requests');
 /** Define a schema to specify the structure of each document in the collection. */
 const RequestsSchema = new SimpleSchema({
   clubName: String,
-  type: {
-    type: String,
-    allowedValues: ['Academic', 'Professional', 'Religious', 'Spiritual', 'Political', 'Sports', 'Leisure',
-      'Fraternity', 'Sorority', 'Ethnic', 'Culture', 'Service', 'Recreational'],
-    defaultValue: 'Academic'
-  },
+  type: [{ type: String, optional: true }],
   contactName: String,
   email: String,
   website: String,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card, Image, Label } from 'semantic-ui-react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import swal from 'sweetalert';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
@@ -92,7 +92,7 @@ class FollowedClubCard extends React.Component {
           <Card.Description style={padding}><strong>Club President: </strong>{this.props.club.contactName}
           </Card.Description>
           <Card.Description style={padding}><strong>Email: </strong>{this.props.club.Email}</Card.Description>
-          <Card.Description style={padding}><strong>Website: </strong><Link to={this.props.club.website}>{this.props.club.website}</Link></Card.Description>
+          <Card.Description style={padding}><strong>Website: </strong>{this.props.club.website}</Card.Description>
           <Card.Description style={padding}><strong>Description:</strong><br/>{this.props.club.description
           }</Card.Description>
           <Button color={'red'} icon onClick={() => this.removeClub(this.props.club._id)}>

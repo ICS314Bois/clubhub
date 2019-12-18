@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card, Dropdown } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
+import { Button, Card } from 'semantic-ui-react';
+import { Meteor } from 'meteor/meteor';
 import swal from 'sweetalert';
-import { Clubs }   from '../../api/club/Clubs';
+import { Roles } from 'meteor/alanning:roles';
+import { Clubs } from '../../api/club/Clubs';
 import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
 import { Requests } from '../../api/request/Requests';
-import { Roles } from 'meteor/alanning:roles';
-import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
-class ApprovalClubCard extends React.Component {
 
+class ApprovalClubCard extends React.Component {
   approve() {
     const clubName = this.props.request.clubName;
     const type = this.props.request.type;
@@ -28,8 +28,8 @@ class ApprovalClubCard extends React.Component {
         .then((willAdd) => {
           if (willAdd) {
             Requests.remove(this.props.request._id);
-            OwnedClubs.insert({clubName, type, contactName, email, website, rioemail, owner});
-            Clubs.insert({clubName, type, contactName, email, website, rioemail});
+            OwnedClubs.insert({ clubName, type, contactName, email, website, rioemail, owner });
+            Clubs.insert({ clubName, type, contactName, email, website, rioemail });
             swal('The club is now official!', {
               icon: 'success',
             });
