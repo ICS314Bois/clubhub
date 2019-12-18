@@ -11,14 +11,19 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
 import SimpleSchema from 'simpl-schema';
+import _ from 'lodash';
 import { Clubs } from '../../api/club/Clubs';
 
 const cardSchema = new SimpleSchema({
   ClubName: String,
-  Type: { type: String, optional: true },
+  Type: [{
+    type: String,
+    label: 'Type: ',
+  }],
   ContactName: String,
   Email: String,
-  Website: { type: String, optional: true },
+  Website: { type: String, optional: true, defaultValue: 'https://react.semantic-ui.com/images/wireframe/image.png' },
+  Description: { type: String, optional: true, defaultValue: 'change me' },
   Image: { type: String, optional: true },
   RIOEmail: { type: String, optional: true },
 });
@@ -26,9 +31,9 @@ const cardSchema = new SimpleSchema({
 class AddClub extends React.Component {
   submit(data) {
     const {
-      ClubName, ContactName, Type, Email, Website, Image, RIOEmail,
+      ClubName, ContactName, Email, Type, Website, Image, Description, RIOEmail,
     } = data;
-    Clubs.insert({ ClubName, ContactName, Type, Email, Website, Image, RIOEmail },
+    Clubs.insert({ ClubName, ContactName, Type, Email, Website, Image, Description, RIOEmail },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
@@ -58,85 +63,32 @@ class AddClub extends React.Component {
                       <TextField name='Email'/>
                       <TextField name='Website'/>
                     </Form.Group>
-                    <Form.Group Widths='equal'>
-                      <Form.Field
-                          label='Academic'
-                          value='Academic'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Professional'
-                          value='Professional'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Athletic'
-                          value='Athletic'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Religious'
-                          value='Religious'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Spiritual'
-                          value='Spiritual'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field label='Political'
-                                  value='Political'
-                                  type='checkbox'
-                                  control='input'
-                      />
-                    </Form.Group>
-                    <Form.Group width='equal'>
-                      <Form.Field
-                          label='Sports'
-                          value='Sports'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Leisure'
-                          value='Leisure'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Service'
-                          value='Service'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Fraternity'
-                          value='Fraternity'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Sorority'
-                          value='Sorority'
-                          type='checkbox'
-                          control='input'
-                      />
-                      <Form.Field
-                          label='Recreational'
-                          value='Recreational'
-                          type='checkbox'
-                          control='input'
-                      />
-                    </Form.Group>
                     <Form.Group widths='equal'>
+                      <TextField name='Description'/>
                       <TextField name='Image'/>
                       <TextField name='RIOEmail'/>
                     </Form.Group>
+                    <SelectField
+                        name='Type'
+                        options={[
+                          { label: 'Academic', value: 'Academic' },
+                          { label: 'Professional', value: 'Professional' },
+                          { label: 'Athletic', value: 'Athletic' },
+                          { label: 'Religious', value: 'Religious' },
+                          { label: 'Spiritual', value: 'Spiritual' },
+                          { label: 'Political', value: 'Political' },
+                          { label: 'Sports', value: 'Sports' },
+                          { label: 'Leisure', value: 'Leisure' },
+                          { label: 'Service', value: 'Service' },
+                          { label: 'Fraternity', value: 'Fraternity' },
+                          { label: 'Sorority', value: 'Soroity' },
+                          { label: 'Recreational', value: 'Recreational' },
+                          { label: 'Student Affairs', value: 'Student Affairs' },
+                          { label: 'Ethnic', value: 'Ethnic' },
+                          { label: 'Cultural', value: 'Cultural' },
+                          { label: 'Honorary Society', value: 'Honorary Society' },
+                        ]}
+                    />
                     <SubmitField value='submit'/>
                     <ErrorsField/>
                   </Segment>

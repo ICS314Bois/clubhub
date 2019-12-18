@@ -7,17 +7,26 @@ const Clubs = new Mongo.Collection('Clubs');
 
 /** Define a schema to specify the structure of each document in the collection. */
 const ClubsSchema = new SimpleSchema({
-  clubName: String,
-  type: String,
-  contactName: String,
-  email: String,
-  website: { type: String, optional: true },
-  image: {
+  ClubName: String,
+  Type: [{ type: String }],
+  ContactName: String,
+  Email: String,
+  Website: {
+    type: String,
+    optional: true,
+    defaultValue: 'N/A'
+  },
+  Image: {
     type: String,
     defaultValue: 'https://react.semantic-ui.com/images/wireframe/image.png',
     optional: true,
   },
-  rioemail: { type: String, optional: true },
+  Description: {
+    type: String,
+    defaultValue: 'magnus opus change me',
+    optional: true,
+  },
+  RIOEmail: { type: String, optional: true },
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card, Image } from 'semantic-ui-react';
+import { Button, Card, Image, Label } from 'semantic-ui-react';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -39,15 +39,16 @@ class ClubCard extends React.Component {
   }
 
   follow() {
-    const clubName = this.props.club.clubName;
-    const type = this.props.club.type;
-    const contactName = this.props.club.contactName;
-    const email = this.props.club.email;
-    const website = this.props.club.website;
-    const rioemail = this.props.club.rioemail;
+    const clubName = this.props.club.ClubName;
+    const type = this.props.club.Type;
+    const contactName = this.props.club.ContactName;
+    const email = this.props.club.Email;
+    const website = this.props.club.Website;
+    const description = this.props.club.Description;
+    const rioemail = this.props.club.RIOEmail;
     const clubid = this.props.club._id;
     const owner = Meteor.user().username;
-    FollowedClubs.insert({ clubName, type, contactName, email, website, rioemail, clubid, owner, },
+    FollowedClubs.insert({ clubName, type, contactName, email, description, website, rioemail, clubid, owner, },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
@@ -80,9 +81,10 @@ class ClubCard extends React.Component {
   }
 
   render() {
+    const padding = { paddingBottom: '10px', paddingLeft: '10px' };
     return (
-        <Card centered>
-          <Card.Content>
+        <Card>
+          <Card.Description textAlign={'right'}>
             {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
                 <Button
                     icon='delete'
@@ -90,6 +92,72 @@ class ClubCard extends React.Component {
                     onClick={() => this.removeClub(this.props.club._id)}
                 />
             ) : ''}
+          </Card.Description>
+          <Card.Description centered>
+            <Image
+                size='medium'
+                src={this.props.club.Image}
+            />
+          </Card.Description>
+          <Card.Content>
+            <Card.Header>{this.props.club.ClubName}</Card.Header>
+          </Card.Content>
+          <Card.Description style={padding}>
+            {this.props.club.Type.includes('Academic') ? (
+                <Label color='red'>Academic</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Professional') ? (
+                <Label color='orange'>Professional</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Athletic') ? (
+                <Label color='yellow'>Athletic</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Religious') ? (
+                <Label color='olive'>Religious</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Spiritual') ? (
+                <Label color='green'>Spiritual</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Political') ? (
+                <Label color='teal'>Political</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Sports') ? (
+                <Label color='blue'>Sports</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Leisure') ? (
+                <Label color='violet'>Leisure</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Service') ? (
+                <Label color='purple'>Service</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Fraternity') ? (
+                <Label color='pink'>Fraternity</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Sorority') ? (
+                <Label color='brown'>Sorority</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Recreational') ? (
+                <Label color='grey'>Recreational</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Student Affairs') ? (
+                <Label color='black'>Student Affairs</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Ethnic') ? (
+                <Label color='violet'>Ethnic</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Cultural') ? (
+                <Label color='purple'>Cultural</Label>
+            ) : ''}
+            {this.props.club.Type.includes('Honorary Society') ? (
+                <Label color='red'>Honorary Society</Label>
+            ) : ''}
+          </Card.Description>
+          <Card.Description style={padding}><strong>Club President: </strong>{this.props.club.ContactName}</Card.Description>
+          <Card.Description style={padding}><strong>Email: </strong>{this.props.club.Email}</Card.Description>
+          <Card.Description style={padding}><strong>Website: </strong><Link to={this.props.club.Website}>{this.props.club.Website}</Link></Card.Description>
+          <Card.Description style={padding}><strong>Description:</strong><br/>{this.props.club.Description
+          }</Card.Description>
+          <Card.Description>
             {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
                 <Link floated='right' to={`/editcard/${this.props.club._id}`}>
                   Edit
@@ -100,22 +168,13 @@ class ClubCard extends React.Component {
                   Edit
                 </Link>
             ) : ''}
-            <Card.Header>{this.props.club.clubName}</Card.Header>
-            <Image
-                size='small'
-                src={this.props.club.image}
-            />
-            <Card.Meta>{this.props.club.type}</Card.Meta>
-          </Card.Content>
-          <Card.Content>{this.props.club.contactName}</Card.Content>
-          <Card.Content>{this.props.club.email}</Card.Content>
-          <Card.Content>{this.props.club.website}</Card.Content>
-          {Meteor.user() && !this.isFollowed() ? (
+          </Card.Description>
+          {Meteor.user() && !this.isFollowed() && !Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
               <Button color='green' icon onClick={() => this.follow()}>
                 Follow
               </Button>
           ) : ''}
-          {Meteor.user() && this.isFollowed() ? (
+          {Meteor.user() && this.isFollowed() && !Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
               <Button color='red' icon onClick={() => this.unfollow()}>
                 Unfollow
               </Button>
@@ -128,12 +187,13 @@ class ClubCard extends React.Component {
 ClubCard.propTypes = {
   club: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
+  followedclub: PropTypes.object,
 };
 
 export default withTracker(() => {
-  followedClubs: FollowedClubs.find({}).fetch();
   const subscription = Meteor.subscribe('FollowedClubs');
   return {
+    followedclubs: FollowedClubs.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(ClubCard);
