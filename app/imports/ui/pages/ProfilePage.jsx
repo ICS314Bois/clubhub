@@ -1,9 +1,7 @@
 import React from 'react';
-import { _ } from 'meteor/underscore';
 import { Card, Feed, Grid, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
-import { Meteor } from 'meteor/meteor';
 import ClubCard from '../components/ClubCard';
 import FollowedClubCard from '../components/FollowedClubCard';
 import { Clubs } from '../../api/club/Clubs';
@@ -11,12 +9,6 @@ import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
-  randomClubs() {
-    const sampleclubs = _.sample(this.props.clubs, 5);
-    console.log(sampleclubs);
-    return sampleclubs;
-  }
-
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Loading</Loader>;
   }
@@ -32,8 +24,7 @@ class ProfilePage extends React.Component {
               <Header as={'h2'} inverted>Recommendations</Header>
               <hr/>
               <Card.Group>
-                {this.randomClubs().map((club, index) =>
-                    <ClubCard key={index} club={club}/>)}
+                {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
               </Card.Group>
             </Grid.Column>
 
@@ -44,7 +35,7 @@ class ProfilePage extends React.Component {
               <Header as={'h2'} inverted>Clubs</Header>
               <hr/>
               <Card.Group>
-                {this.props.followedclubs.map((club, index) => <FollowedClubCard key={index} followedclub={club}/>)}
+                {this.props.followedclubs.map((club, index) => <FollowedClubCard key={index} club={club}/>)}
               </Card.Group>
             </Grid.Column>
 
@@ -52,12 +43,21 @@ class ProfilePage extends React.Component {
               {/*Club Notifications
               - Displays messages created by club owners
             */}
-              <Header as={'h2'} inverted>Club Notifications</Header>
-              <hr/>
               <Card>
                 <Card.Content>
+                  <Card.Header>Club Notifications</Card.Header>
+                </Card.Content>
+                <Card.Content>
                   <Feed>
-                    {this.props.followedclubs.map((followedclub, index) => <FollowedClubs key={index} followedclub={followedclub}/>)}
+                    <Feed.Event>
+                      <Feed.Label image='/images/meteor-logo.png'/>
+                      <Feed.Content>
+                        <Feed.Date content='1 day ago'/>
+                        <Feed.Summary>
+
+                        </Feed.Summary>
+                      </Feed.Content>
+                    </Feed.Event>
                   </Feed>
                 </Card.Content>
               </Card>
@@ -76,10 +76,10 @@ ProfilePage.propTypes = {
 };
 
 export default withTracker(() => {
-  const subscription2 = Meteor.subscribe('FollowedClubs');
+  const subscription = Meteor.subscribe('Clubs');
   return {
     clubs: Clubs.find({}).fetch(),
     followedclubs: FollowedClubs.find({}).fetch(),
-    ready: subscription2.ready(),
+    ready: subscription.ready(),
   };
 })(ProfilePage);
