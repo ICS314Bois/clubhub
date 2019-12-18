@@ -10,7 +10,7 @@ import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
   randomClubs() {
-    const sampleclubs = _.sample(this.props.clubs, 5);
+    const sampleclubs = _.sample(this.props.clubs, 3);
     console.log(sampleclubs);
     return sampleclubs;
   }

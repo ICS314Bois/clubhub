@@ -168,12 +168,12 @@ class ClubCard extends React.Component {
                 </Link>
             ) : ''}
           </Card.Description>
-          {Meteor.user() && !this.isFollowed() && !Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+          {Meteor.user() && !this.isFollowed() ? (
               <Button color='green' icon onClick={() => this.follow()}>
                 Follow
               </Button>
           ) : ''}
-          {Meteor.user() && this.isFollowed() && !Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
+          {Meteor.user() && this.isFollowed() ? (
               <Button color='red' icon onClick={() => this.unfollow()}>
                 Unfollow
               </Button>
