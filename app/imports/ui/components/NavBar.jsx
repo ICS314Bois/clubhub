@@ -8,6 +8,7 @@ import { Roles } from 'meteor/alanning:roles';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 /** (Universal) Clubs tab needs to be routed */
+
 /** (User) Interests tab needs to be routed */
 /** (Admin) Admin page needs to be routed */
 class NavBar extends React.Component {
@@ -16,15 +17,19 @@ class NavBar extends React.Component {
     return (
         <Menu style={menuStyle} attached="top" borderless inverted>
           <Menu.Item as={NavLink} activeClassName="" exact to="/">
-            <Header as='h2' inverted><div className={'tomorrow-font'}>Clubs Of Manoa</div></Header>
+            <Header as='h2' inverted>
+              <div className={'tomorrow-font'}>Clubs Of Manoa</div>
+            </Header>
           </Menu.Item>
           <Menu.Item position="right" as={NavLink} activeClassName="" exact to="/searchpage">
-            <Icon size={'small'} className={'users'}/><div className={'tomorrow-font'}>Clubs</div>
+            <Icon size={'small'} className={'users'}/>
+            <div className={'tomorrow-font'}>Clubs</div>
           </Menu.Item>
 
           {this.props.currentUser ? (
               <Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>
-                <Icon size={'small'} className={'list'}/><div className={'tomorrow-font'}>Profile</div>
+                <Icon size={'small'} className={'list'}/>
+                <div className={'tomorrow-font'}>Profile</div>
               </Menu.Item>
           ) : ''}
 
@@ -62,11 +67,9 @@ class NavBar extends React.Component {
                         </Dropdown.Item>
                     ) : ''}
                     {this.props.currentUser === '' ? (
-                        <Dropdown text="Login" pointing="top right" icon={'user'}>
-                          <Dropdown.Menu>
-                            <Dropdown.Item icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
-                          </Dropdown.Menu>
-                        </Dropdown>
+                        <Dropdown.Menu>
+                          <Dropdown.Item icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
+                        </Dropdown.Menu>
                     ) : ''}
                     <Dropdown.Item icon="sign out" text="Sign Out" as={NavLink} exact to="/signout"/>
                   </Dropdown.Menu>
