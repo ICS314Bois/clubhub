@@ -87,7 +87,7 @@ class SearchPage extends React.Component {
       } else {
         for (let i = 0; i < club1.length; i++) {
           for (let j = 0; j < club2.length; j++) {
-            if (club1[i].clubName === club2[j].clubName) {
+            if (club1[i].ClubName === club2[j].ClubName) {
               listRet[listRet.length] = club1[i];
             }
           }
