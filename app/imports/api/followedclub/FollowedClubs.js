@@ -11,7 +11,20 @@ const FollowedClubsSchema = new SimpleSchema({
   type: [{ type: String }],
   contactName: String,
   email: String,
-  website: { type: String, optional: true },
+  website: {
+    type: String,
+    optional: true,
+    defaultValue: 'N/A',
+  },
+  image: {
+    type: String,
+    optional: true,
+  },
+  description: {
+    type: String,
+    defaultValue: 'magnus opus change me',
+    optional: true,
+  },
   rioemail: { type: String, optional: true },
   clubid: String,
   owner: String,

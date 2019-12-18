@@ -18,7 +18,7 @@ class FilteredList extends React.Component {
     const padding = { paddingTop: '20px', paddingBottom: '3020px' };
     return (
         <Container style={padding}>
-          <Card.Group>
+          <Card.Group itemsPerRow={4}>
             {this.props.clubListResult.map((club, index) => <ClubCard key={index} club={club}/>)}
           </Card.Group>
         </Container>

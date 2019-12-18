@@ -6,13 +6,14 @@ function addClub(data) {
   const ClubName = data.ClubName;
   const ContactName = data.ContactName;
   const Email = data.Email;
+  const Website = data.Website;
   const RIOEmail = data.RIOEmail;
   const cType = data.Type;
   console.log(cType);
   const Type = cType.split('/');
-  console.log(ClubName, ContactName, Email, RIOEmail, Type);
+  console.log(ClubName, ContactName, Email, Website, RIOEmail, Type);
   console.log(`  Adding: ${data.ClubName} (${data.owner})`);
-  Clubs.insert({ ClubName, ContactName, Type, Email, RIOEmail });
+  Clubs.insert({ ClubName, ContactName, Type, Email, Website, RIOEmail });
 }
 
 if (Clubs.find().count() === 0) {

@@ -23,13 +23,14 @@ const cardSchema = new SimpleSchema({
   Email: String,
   Website: { type: String, optional: true },
   Image: { type: String, optional: true },
+  Description: { type: String, optional: true },
   RIOEmail: { type: String, optional: true },
 });
 
 class EditCard extends React.Component {
   submit(data) {
     const {
-      ClubName, ContactName, Type, Email, Website, Image, RIOEmail, _id,
+      ClubName, ContactName, Type, Email, Website, Image, Description, RIOEmail, _id,
     } = data;
     console.log(data);
     Clubs.update(_id, {
@@ -40,6 +41,7 @@ class EditCard extends React.Component {
             Email,
             Website,
             Image,
+            Description,
             RIOEmail,
           },
         },
@@ -73,6 +75,7 @@ class EditCard extends React.Component {
                   </Form.Group>
                   <Form.Group widths='equal'>
                     <TextField name='Image'/>
+                    <TextField name='Description'/>
                     <TextField name='RIOEmail'/>
                   </Form.Group>
                   <SelectField

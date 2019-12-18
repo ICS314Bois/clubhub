@@ -49,13 +49,14 @@ class SearchPage extends React.Component {
   filterClubType = (club) => {
     let ret = false;
     _.forIn(this.state.selected, (value, key) => {
+      console.log(value, key);
       if (club.Type.includes(key)) {
         ret = ret || value;
       }
-      if (club.Type === 'Honorary Society' && key === 'Honorary_Society') {
+      if (key === 'Honorary_Society' && club.Type.includes('Honorary Society')) {
         ret = ret || value;
       }
-      if (club.Type === 'Student Affairs' && key === 'Student_Affairs') {
+      if (club.Type.includes('Student Affairs') && key === 'Student_Affairs') {
         ret = ret || value;
       }
     });
@@ -110,11 +111,9 @@ class SearchPage extends React.Component {
     return (
         <div className='general-background'>
           <Grid style={padding}>
-            <Input icon='users' iconPosition='left' style={iconPadding} placeholder='Search Clubs...' onChange={this.handleClubSearch}/>
+            <Input style={iconPadding} placeholder='Search Clubs...' onChange={this.handleClubSearch}/>
             <Dropdown
                 icon='filter'
-                floating
-                labeled
                 button
                 className='icon'
             >
@@ -208,7 +207,7 @@ class SearchPage extends React.Component {
                       />
                       <Form.Field
                           label='Student Affairs'
-                          value='Recreational'
+                          value='Student_Affairs'
                           type='checkbox'
                           control='input'
                           onChange={this.handleClubType}
@@ -221,8 +220,8 @@ class SearchPage extends React.Component {
                           onChange={this.handleClubType}
                       />
                       <Form.Field
-                          label='Ethic'
-                          value='Ethic'
+                          label='Ethnic'
+                          value='Ethnic'
                           type='checkbox'
                           control='input'
                           onChange={this.handleClubType}

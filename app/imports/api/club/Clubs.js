@@ -11,10 +11,19 @@ const ClubsSchema = new SimpleSchema({
   Type: [{ type: String }],
   ContactName: String,
   Email: String,
-  Website: { type: String, optional: true },
+  Website: {
+    type: String,
+    optional: true,
+    defaultValue: 'N/A'
+  },
   Image: {
     type: String,
     defaultValue: 'https://react.semantic-ui.com/images/wireframe/image.png',
+    optional: true,
+  },
+  Description: {
+    type: String,
+    defaultValue: 'magnus opus change me',
     optional: true,
   },
   RIOEmail: { type: String, optional: true },

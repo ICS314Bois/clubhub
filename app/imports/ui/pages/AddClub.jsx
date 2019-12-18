@@ -22,7 +22,8 @@ const cardSchema = new SimpleSchema({
   }],
   ContactName: String,
   Email: String,
-  Website: { type: String, optional: true },
+  Website: { type: String, optional: true, defaultValue: 'https://react.semantic-ui.com/images/wireframe/image.png' },
+  Description: { type: String, optional: true, defaultValue: 'change me' },
   Image: { type: String, optional: true },
   RIOEmail: { type: String, optional: true },
 });
@@ -30,9 +31,9 @@ const cardSchema = new SimpleSchema({
 class AddClub extends React.Component {
   submit(data) {
     const {
-      ClubName, ContactName, Email, Type, Website, Image, RIOEmail,
+      ClubName, ContactName, Email, Type, Website, Image, Description, RIOEmail,
     } = data;
-    Clubs.insert({ ClubName, ContactName, Type, Email, Website, Image, RIOEmail },
+    Clubs.insert({ ClubName, ContactName, Type, Email, Website, Image, Description, RIOEmail },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
@@ -62,6 +63,11 @@ class AddClub extends React.Component {
                       <TextField name='Email'/>
                       <TextField name='Website'/>
                     </Form.Group>
+                    <Form.Group widths='equal'>
+                      <TextField name='Description'/>
+                      <TextField name='Image'/>
+                      <TextField name='RIOEmail'/>
+                    </Form.Group>
                     <SelectField
                         name='Type'
                         options={[
@@ -81,12 +87,8 @@ class AddClub extends React.Component {
                           { label: 'Ethnic', value: 'Ethnic' },
                           { label: 'Cultural', value: 'Cultural' },
                           { label: 'Honorary Society', value: 'Honorary Society' },
-                          ]}
+                        ]}
                     />
-                    <Form.Group widths='equal'>
-                      <TextField name='Image'/>
-                      <TextField name='RIOEmail'/>
-                    </Form.Group>
                     <SubmitField value='submit'/>
                     <ErrorsField/>
                   </Segment>
