@@ -12,6 +12,11 @@ const ClubsSchema = new SimpleSchema({
   contactName: String,
   email: String,
   website: { type: String, optional: true },
+  image: {
+    type: String,
+    defaultValue: 'https://react.semantic-ui.com/images/wireframe/image.png',
+    optional: true,
+  },
   rioemail: { type: String, optional: true },
 }, { tracker: Tracker });
 

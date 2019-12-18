@@ -24,6 +24,10 @@ class SearchPage extends React.Component {
         Fraternity: false,
         Sorority: false,
         Recreational: false,
+        Student_Affairs: false,
+        Ethnic: false,
+        Cultural: false,
+        Honorary_Society: false,
       },
       search: '',
     };
@@ -48,6 +52,12 @@ class SearchPage extends React.Component {
       if (club.type.includes(key)) {
         ret = ret || value;
       }
+      if (club.Type === 'Honorary Society' && key === 'Honorary_Society') {
+        ret = ret || value;
+      }
+      if (club.Type === 'Student Affairs' && key === 'Student_Affairs') {
+        ret = ret || value;
+      }
     });
     return ret;
   };
@@ -65,12 +75,12 @@ class SearchPage extends React.Component {
 
   clubList = (club1, club2) => {
     const listRet = [];
-    if (_.isEmpty(club1)) {
+    if (_.isEmpty(club1) && !_.isEmpty(club2)) {
       for (let i = 0; i < club2.length; i++) {
         listRet[listRet.length] = club2[i];
       }
     } else
-      if (_.isEmpty(club2)) {
+      if (_.isEmpty(club2) && !_.isEmpty(club1)) {
         for (let i = 0; i < club1.length; i++) {
           listRet[listRet.length] = club1[i];
         }
@@ -89,14 +99,19 @@ class SearchPage extends React.Component {
   render() {
     const clubTypeFilter = _.filter(this.props.clubs, c => this.filterClubType(c));
     const clubNameFilter = _.filter(this.props.clubs, c => this.filterClubName(c));
-    const clubListResult = this.clubList(clubTypeFilter, clubNameFilter);
-    const padding = { paddingTop: '30px', paddingLeft: '15px' };
+    let clubListResult;
+    if (_.isEmpty(clubTypeFilter) && _.isEmpty(clubNameFilter)) {
+      clubListResult = this.props.clubs;
+    } else {
+        clubListResult = this.clubList(clubTypeFilter, clubNameFilter);
+      }
+    const padding = { paddingTop: '30px', paddingLeft: '15px', paddingBottom: '30px' };
+    const iconPadding = { paddingRight: '15px' };
     return (
         <div className='general-background'>
           <Grid style={padding}>
-            <Input icon='users' iconPosition='left' placeholder='Search Clubs...' onChange={this.handleClubSearch}/>
+            <Input icon='users' iconPosition='left' style={iconPadding} placeholder='Search Clubs...' onChange={this.handleClubSearch}/>
             <Dropdown
-                text='Club Filter'
                 icon='filter'
                 floating
                 labeled
@@ -187,6 +202,34 @@ class SearchPage extends React.Component {
                       <Form.Field
                           label='Recreational'
                           value='Recreational'
+                          type='checkbox'
+                          control='input'
+                          onChange={this.handleClubType}
+                      />
+                      <Form.Field
+                          label='Student Affairs'
+                          value='Recreational'
+                          type='checkbox'
+                          control='input'
+                          onChange={this.handleClubType}
+                      />
+                      <Form.Field
+                          label='Cultural'
+                          value='Cultural'
+                          type='checkbox'
+                          control='input'
+                          onChange={this.handleClubType}
+                      />
+                      <Form.Field
+                          label='Ethic'
+                          value='Ethic'
+                          type='checkbox'
+                          control='input'
+                          onChange={this.handleClubType}
+                      />
+                      <Form.Field
+                          label='Honorary Society'
+                          value='Honorary_Society'
                           type='checkbox'
                           control='input'
                           onChange={this.handleClubType}

@@ -12,7 +12,7 @@ const OwnedClubsSchema = new SimpleSchema({
     type: String,
     allowedValues: ['Academic', 'Professional', 'Religious', 'Spiritual', 'Political', 'Sports', 'Leisure',
       'Fraternity', 'Sorority', 'Ethnic', 'Culture', 'Service', 'Recreational'],
-    defaultValue: 'Academic'
+    defaultValue: 'Academic',
   },
   contactName: String,
   email: String,

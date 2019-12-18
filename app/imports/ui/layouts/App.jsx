@@ -13,7 +13,6 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import SearchPage from '../pages/SearchPage';
 import ProfilePage from '../pages/ProfilePage';
-import ListClubs from '../pages/ListClubs';
 import FeedBackForum from '../pages/FeedBackForum';
 import EditCard from '../pages/EditCard';
 import AddClub from '../pages/AddClub';
