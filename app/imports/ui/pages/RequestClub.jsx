@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
+import LongTextField from 'uniforms-semantic/LongTextField';
 import SelectField from 'uniforms-semantic/SelectField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
@@ -14,13 +15,24 @@ import { Requests } from '../../api/request/Requests';
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
   clubName: String,
-  type: [{
-    type: String,
-    label: 'Type: ',
-  }],
+  type: [{type: String}],
   contactName: String,
   email: String,
-  website: String,
+  website: {
+    type: String,
+    optional: true,
+    defaultValue: 'N/A',
+  },
+  image: {
+    type: String,
+    defaultValue: 'https://react.semantic-ui.com/images/wireframe/image.png',
+    optional: true,
+  },
+  description: {
+    type: String,
+    defaultValue: 'magnus opus change me',
+    optional: true,
+  },
   rioemail: String,
 });
 
@@ -29,9 +41,9 @@ class RequestClub extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { clubName, type, contactName, email, website, rioemail } = data;
+    const { clubName, type, contactName, email, website, image, description, rioemail } = data;
     const owner = Meteor.user().username;
-    Requests.insert({ clubName, type, contactName, email, website, rioemail, owner },
+    Requests.insert({ clubName, type, contactName, email, website, image, description, rioemail, owner },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
@@ -72,12 +84,11 @@ class RequestClub extends React.Component {
                         { label: 'Ethnic', value: 'Ethnic' },
                         { label: 'Cultural', value: 'Cultural' },
                         { label: 'Honorary Society', value: 'Honorary Society' },
-                      ]}
-                  />
+                      ]}/>
                   <TextField name='contactName'/>
                   <TextField name='email'/>
                   <TextField name='website'/>
-                  <TextField name='rioemail'/>
+                  <LongTextField name='description'/>
                   <SubmitField value={'submit'} />
                   <ErrorsField/>
                 </Segment>

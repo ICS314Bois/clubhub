@@ -8,15 +8,24 @@ const OwnedClubs = new Mongo.Collection('OwnedClubs');
 /** Define a schema to specify the structure of each document in the collection. */
 const OwnedClubsSchema = new SimpleSchema({
   clubName: String,
-  type: {
-    type: String,
-    allowedValues: ['Academic', 'Professional', 'Religious', 'Spiritual', 'Political', 'Sports', 'Leisure',
-      'Fraternity', 'Sorority', 'Ethnic', 'Culture', 'Service', 'Recreational'],
-    defaultValue: 'Academic',
-  },
+  type: [{type: String}],
   contactName: String,
   email: String,
-  website: String,
+  website: {
+    type: String,
+    optional: true,
+    defaultValue: 'N/A',
+  },
+  image: {
+    type: String,
+    defaultValue: 'https://react.semantic-ui.com/images/wireframe/image.png',
+    optional: true,
+  },
+  description: {
+    type: String,
+    defaultValue: 'magnus opus change me',
+    optional: true,
+  },
   rioemail: String,
   owner: String,
 }, { tracker: Tracker });

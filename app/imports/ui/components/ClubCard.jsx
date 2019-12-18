@@ -155,8 +155,7 @@ class ClubCard extends React.Component {
           <Card.Description style={padding}><strong>Club President: </strong>{this.props.club.ContactName}</Card.Description>
           <Card.Description style={padding}><strong>Email: </strong>{this.props.club.Email}</Card.Description>
           <Card.Description style={padding}><strong>Website: </strong>{this.props.club.Website}</Card.Description>
-          <Card.Description style={padding}><strong>Description:</strong><br/>{this.props.club.Description
-          }</Card.Description>
+          <Card.Description style={padding}><strong>Description:</strong><br/>{this.props.club.Description}</Card.Description>
           <Card.Description>
             {Roles.userIsInRole(Meteor.userId(), 'superAdmin') ? (
                 <Link floated='right' exact to={`/editcard/${this.props.club._id}`}>
