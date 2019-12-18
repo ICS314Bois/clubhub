@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button, Card, Image, Label } from 'semantic-ui-react';
+import { withRouter, Link } from 'react-router-dom';
 import swal from 'sweetalert';
-import { Meteor } from 'meteor/meteor';
-import { Button, Card, Label, Image } from 'semantic-ui-react';
-import { withTracker, Link } from 'meteor/react-meteor-data';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 class FollowedClubCard extends React.Component {
-
-  removeItem(docID) {
-    const clubName = this.props.club.clubName
+  removeClub(docID) {
     swal({
-      text: 'You will no longer be following ' + clubName + '.',
+      title: 'Are you sure?',
+      text: 'Once unfollowed, you can always follow again.',
       icon: 'warning',
       buttons: true,
       dangerMode: true,
@@ -19,11 +17,11 @@ class FollowedClubCard extends React.Component {
         .then((willDelete) => {
           if (willDelete) {
             FollowedClubs.remove(docID);
-            swal('You are no longer following ' + clubName + '.', {
+            swal('Club Unfollowed!', {
               icon: 'success',
             });
           } else {
-            swal('You are still following ' + clubName + '.');
+            swal('Canceled');
           }
         });
   }
@@ -93,7 +91,7 @@ class FollowedClubCard extends React.Component {
           </Card.Description>
           <Card.Description style={padding}><strong>Club President: </strong>{this.props.club.contactName}
           </Card.Description>
-          <Card.Description style={padding}><strong>Email: </strong>{this.props.club.email}</Card.Description>
+          <Card.Description style={padding}><strong>Email: </strong>{this.props.club.Email}</Card.Description>
           <Card.Description style={padding}><strong>Website: </strong><Link to={this.props.club.website}>{this.props.club.website}</Link></Card.Description>
           <Card.Description style={padding}><strong>Description:</strong><br/>{this.props.club.description
           }</Card.Description>
@@ -107,13 +105,6 @@ class FollowedClubCard extends React.Component {
 
 FollowedClubCard.propTypes = {
   club: PropTypes.object.isRequired,
-  ready: PropTypes.bool.isRequired,
 };
 
-/** Wrap this component in withRouter since we use the <Link> React Router element. */
-export default withTracker(() => {
-  const subscription = Meteor.subscribe('FollowedClubs');
-  return {
-    ready: subscription.ready(),
-  };
-})(FollowedClubCard);
+export default withRouter(FollowedClubCard);
