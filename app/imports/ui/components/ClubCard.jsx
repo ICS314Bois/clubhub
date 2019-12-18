@@ -162,7 +162,7 @@ class ClubCard extends React.Component {
                   Edit
                 </Link>
             ) : ''}
-            {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') && (Meteor.user().username === this.props.club.email) ? (
+            {(Meteor.user().username === this.props.club.email) ? (
                 <Link floated='right' exact to={`/editcard/${this.props.club._id}`}>
                   Edit
                 </Link>
