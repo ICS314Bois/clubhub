@@ -68,7 +68,7 @@ class SearchPage extends React.Component {
       return false;
     }
 
-    if (club.clubName.includes(this.state.search)) {
+    if (club.ClubName.includes(this.state.search)) {
       return true;
     }
   };
