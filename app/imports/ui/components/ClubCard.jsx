@@ -127,13 +127,14 @@ class ClubCard extends React.Component {
 ClubCard.propTypes = {
   club: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
+  followedclub: PropTypes.object,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
 export default withTracker(() => {
-  followedClubs: FollowedClubs.find({}).fetch();
   const subscription = Meteor.subscribe('FollowedClubs');
   return {
+    followedclubs: FollowedClubs.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(ClubCard);

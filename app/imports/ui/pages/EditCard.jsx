@@ -15,8 +15,11 @@ import { Clubs } from '../../api/club/Clubs';
 
 const cardSchema = new SimpleSchema({
   ClubName: String,
-  Type: { type: String, optional: true },
   ContactName: String,
+  Type: [{
+    type: String,
+    label: 'Type: ',
+  }],
   Email: String,
   Website: { type: String, optional: true },
   Image: { type: String, optional: true },
@@ -28,11 +31,12 @@ class EditCard extends React.Component {
     const {
       ClubName, ContactName, Type, Email, Website, Image, RIOEmail, _id,
     } = data;
+    console.log(data);
     Clubs.update(_id, {
           $set: {
             ClubName,
-            ContactName,
             Type,
+            ContactName,
             Email,
             Website,
             Image,
@@ -64,87 +68,34 @@ class EditCard extends React.Component {
                   <Form.Group widths='equal'>
                     <TextField name='ClubName'/>
                     <TextField name='ContactName'/>
+                    <TextField name='Email'/>
                     <TextField name='Website'/>
-                  </Form.Group>
-                  <Form.Group Widths='equal'>
-                    <Form.Field
-                        label='Academic'
-                        value='Academic'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Professional'
-                        value='Professional'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Athletic'
-                        value='Athletic'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Religious'
-                        value='Religious'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Spiritual'
-                        value='Spiritual'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field label='Political'
-                                value='Political'
-                                type='checkbox'
-                                control='input'
-                    />
-                  </Form.Group>
-                  <Form.Group width='equal'>
-                    <Form.Field
-                        label='Sports'
-                        value='Sports'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Leisure'
-                        value='Leisure'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Service'
-                        value='Service'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Fraternity'
-                        value='Fraternity'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Sorority'
-                        value='Sorority'
-                        type='checkbox'
-                        control='input'
-                    />
-                    <Form.Field
-                        label='Recreational'
-                        value='Recreational'
-                        type='checkbox'
-                        control='input'
-                    />
                   </Form.Group>
                   <Form.Group widths='equal'>
                     <TextField name='Image'/>
                     <TextField name='RIOEmail'/>
                   </Form.Group>
+                  <SelectField
+                      name='Type'
+                      options={[
+                        { label: 'Academic', value: 'Academic' },
+                        { label: 'Professional', value: 'Professional' },
+                        { label: 'Athletic', value: 'Athletic' },
+                        { label: 'Religious', value: 'Religious' },
+                        { label: 'Spiritual', value: 'Spiritual' },
+                        { label: 'Political', value: 'Political' },
+                        { label: 'Sports', value: 'Sports' },
+                        { label: 'Leisure', value: 'Leisure' },
+                        { label: 'Service', value: 'Service' },
+                        { label: 'Fraternity', value: 'Fraternity' },
+                        { label: 'Sorority', value: 'Soroity' },
+                        { label: 'Recreational', value: 'Recreational' },
+                        { label: 'Student Affairs', value: 'Student Affairs' },
+                        { label: 'Ethnic', value: 'Ethnic' },
+                        { label: 'Cultural', value: 'Cultural' },
+                        { label: 'Honorary Society', value: 'Honorary Society' },
+                      ]}
+                  />
                   <SubmitField value='submit'/>
                   <ErrorsField/>
                 </Segment>

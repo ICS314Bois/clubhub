@@ -16,11 +16,10 @@ import { Clubs } from '../../api/club/Clubs';
 
 const cardSchema = new SimpleSchema({
   ClubName: String,
-  Type: {
-    type: Array,
+  Type: [{
+    type: String,
     label: 'Type: ',
-  },
-  'Type.$': String,
+  }],
   ContactName: String,
   Email: String,
   Website: { type: String, optional: true },
