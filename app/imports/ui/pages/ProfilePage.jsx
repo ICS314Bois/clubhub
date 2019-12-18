@@ -1,14 +1,13 @@
 import React from 'react';
 import { _ } from 'meteor/underscore';
-import { Card, Feed, Grid, Header, Image, List, Loader } from 'semantic-ui-react';
+import { Card, Feed, Grid, Header, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
+import { Meteor } from 'meteor/meteor';
 import ClubCard from '../components/ClubCard';
 import FollowedClubCard from '../components/FollowedClubCard';
-import ClubEvent from '../components/ClubEvent';
 import { Clubs } from '../../api/club/Clubs';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
-
 
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
@@ -45,8 +44,7 @@ class ProfilePage extends React.Component {
               <Header as={'h2'} inverted>Clubs</Header>
               <hr/>
               <Card.Group>
-                {this.props.followedclubs.map((followedclub, index) =>
-                    <FollowedClubCard key={index} followedclub={followedclub}/>)}
+                {this.props.followedclubs.map((club, index) => <FollowedClubCard key={index} followedclub={club}/>)}
               </Card.Group>
             </Grid.Column>
 
@@ -59,8 +57,7 @@ class ProfilePage extends React.Component {
               <Card>
                 <Card.Content>
                   <Feed>
-                    {this.props.followedclubs.map((followedclub, index) =>
-                        <ClubEvent key={index} followedclub={followedclub}/>)}
+                    {this.props.followedclubs.map((followedclub, index) => <FollowedClubs key={index} followedclub={followedclub}/>)}
                   </Feed>
                 </Card.Content>
               </Card>
@@ -79,11 +76,10 @@ ProfilePage.propTypes = {
 };
 
 export default withTracker(() => {
-  const subscription = Meteor.subscribe('Clubs');
   const subscription2 = Meteor.subscribe('FollowedClubs');
   return {
     clubs: Clubs.find({}).fetch(),
     followedclubs: FollowedClubs.find({}).fetch(),
-    ready: subscription.ready() && subscription2.ready(),
+    ready: subscription2.ready(),
   };
 })(ProfilePage);

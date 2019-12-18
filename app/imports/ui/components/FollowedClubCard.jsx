@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import swal from 'sweetalert';
-import { Button, Card } from 'semantic-ui-react';
-import { withTracker } from 'meteor/react-meteor-data';
+import { Button, Card, Label, Image } from 'semantic-ui-react';
+import { withTracker, Link } from 'meteor/react-meteor-data';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 class FollowedClubCard extends React.Component {
 
   removeItem(docID) {
-    const clubName = this.props.followedclub.clubName
+    const clubName = this.props.club.clubName
     swal({
       text: 'You will no longer be following ' + clubName + '.',
       icon: 'warning',
@@ -92,7 +92,7 @@ class FollowedClubCard extends React.Component {
           </Card.Description>
           <Card.Description style={padding}><strong>Club President: </strong>{this.props.club.contactName}
           </Card.Description>
-          <Card.Description style={padding}><strong>Email: </strong>{this.props.club.Email}</Card.Description>
+          <Card.Description style={padding}><strong>Email: </strong>{this.props.club.email}</Card.Description>
           <Card.Description style={padding}><strong>Website: </strong><Link to={this.props.club.website}>{this.props.club.website}</Link></Card.Description>
           <Card.Description style={padding}><strong>Description:</strong><br/>{this.props.club.description
           }</Card.Description>
@@ -105,7 +105,7 @@ class FollowedClubCard extends React.Component {
 }
 
 FollowedClubCard.propTypes = {
-  followedclub: PropTypes.object.isRequired,
+  club: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 

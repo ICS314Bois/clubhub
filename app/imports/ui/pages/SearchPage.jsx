@@ -49,7 +49,7 @@ class SearchPage extends React.Component {
   filterClubType = (club) => {
     let ret = false;
     _.forIn(this.state.selected, (value, key) => {
-      if (club.type.includes(key)) {
+      if (club.Type.includes(key)) {
         ret = ret || value;
       }
       if (key === 'Honorary_Society' && club.Type.includes('Honorary Society')) {
