@@ -14,16 +14,14 @@ import { Requests } from '../../api/request/Requests';
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
   clubName: String,
-  type: {
+  type: [{
     type: String,
-    allowedValues: ['Academic', 'Professional', 'Religious', 'Spiritual', 'Political', 'Sports', 'Leisure',
-      'Fraternity', 'Sorority', 'Ethnic', 'Culture', 'Service', 'Recreational'],
-    defaultValue: 'Academic'
-  },
+    label: 'Type: ',
+  }],
   contactName: String,
   email: String,
   website: String,
-  rioemail: String
+  rioemail: String,
 });
 
 /** Renders the Page for adding a document. */
@@ -55,7 +53,27 @@ class RequestClub extends React.Component {
               <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)}>
                 <Segment>
                   <TextField name='clubName'/>
-                  <SelectField name='type'/>
+                  <SelectField
+                      name='type'
+                      options={[
+                        { label: 'Academic', value: 'Academic' },
+                        { label: 'Professional', value: 'Professional' },
+                        { label: 'Athletic', value: 'Athletic' },
+                        { label: 'Religious', value: 'Religious' },
+                        { label: 'Spiritual', value: 'Spiritual' },
+                        { label: 'Political', value: 'Political' },
+                        { label: 'Sports', value: 'Sports' },
+                        { label: 'Leisure', value: 'Leisure' },
+                        { label: 'Service', value: 'Service' },
+                        { label: 'Fraternity', value: 'Fraternity' },
+                        { label: 'Sorority', value: 'Soroity' },
+                        { label: 'Recreational', value: 'Recreational' },
+                        { label: 'Student Affairs', value: 'Student Affairs' },
+                        { label: 'Ethnic', value: 'Ethnic' },
+                        { label: 'Cultural', value: 'Cultural' },
+                        { label: 'Honorary Society', value: 'Honorary Society' },
+                      ]}
+                  />
                   <TextField name='contactName'/>
                   <TextField name='email'/>
                   <TextField name='website'/>

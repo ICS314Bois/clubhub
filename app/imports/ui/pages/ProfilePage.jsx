@@ -10,6 +10,12 @@ import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
+  randomClubs() {
+    const sampleclubs = _.sample(this.props.clubs, 5);
+    console.log(sampleclubs);
+    return sampleclubs;
+  }
+
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Loading</Loader>;
   }
@@ -25,7 +31,7 @@ class ProfilePage extends React.Component {
               <Header as={'h2'} inverted>Recommendations</Header>
               <hr/>
               <Card.Group>
-                {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
+                {this.randomClubs().map((club, index) => <ClubCard key={index} club={club}/>)}
               </Card.Group>
             </Grid.Column>
 
