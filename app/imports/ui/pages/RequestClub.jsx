@@ -15,7 +15,7 @@ import { Requests } from '../../api/request/Requests';
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
   clubName: String,
-  type: [{type: String}],
+  type: [{ type: String }],
   contactName: String,
   email: String,
   website: {
@@ -33,7 +33,7 @@ const formSchema = new SimpleSchema({
     defaultValue: 'magnus opus change me',
     optional: true,
   },
-  rioemail: String,
+  rioemail: { type: String, optional: true },
 });
 
 /** Renders the Page for adding a document. */
@@ -88,6 +88,7 @@ class RequestClub extends React.Component {
                   <TextField name='contactName'/>
                   <TextField name='email'/>
                   <TextField name='website'/>
+                  <TextField name='rioemail'/>
                   <LongTextField name='description'/>
                   <SubmitField value={'submit'} />
                   <ErrorsField/>
