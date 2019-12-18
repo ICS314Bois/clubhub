@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
+import TextField from 'uniforms-semantic/TextField';
 import {FollowedClubs} from '../../api/followedclub/FollowedClubs';
 
 
 class OwnedClubCard extends React.Component {
 
   notify() {
-    
+
   }
 
   sendNotification() {
@@ -25,7 +26,9 @@ class OwnedClubCard extends React.Component {
             <Card.Meta>{this.props.club.email}</Card.Meta>
           </Card.Content>
           {Roles.userIsInRole(Meteor.userId(), 'clubAdmin') ? (
-              <TextField name='clubName'/>
+              <Button icon='delete' floated='right' onClick={() => this.removeClub(this.props.club._id)}>
+                  Send
+              </Button>
           ) : ''}
         </Card>
     );

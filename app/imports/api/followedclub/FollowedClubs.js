@@ -15,7 +15,7 @@ const FollowedClubsSchema = new SimpleSchema({
   rioemail: { type: String, optional: true },
   clubid: String,
   owner: String,
-  notification: String,
+  notification: { type: String, defaultValue:'No notification for now.' }  ,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */

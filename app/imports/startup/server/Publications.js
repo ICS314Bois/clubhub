@@ -5,6 +5,7 @@ import { Clubs } from '../../api/club/Clubs';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 import { Requests} from '../../api/request/Requests';
 import { OwnedClubs } from '../../api/ownedclub/OwnedClubs';
+import { ClubNotifications } from '../../api/clubnotification/ClubNotifications';
 
 /** Stuff Examples **/
 /** This subscription publishes only the documents associated with the logged in user */
@@ -69,6 +70,15 @@ Meteor.publish('OwnedClubsSuperAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'superAdmin')) {
     const username = Meteor.users.findOne(this.userId).username;
     return OwnedClubs.find({ owner: username });
+  }
+  return this.ready();
+});
+
+/** Club requests for users **/
+Meteor.publish('ClubRequestsUser', function publish() {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return ClubNotifications.find({ clubid: username });
   }
   return this.ready();
 });

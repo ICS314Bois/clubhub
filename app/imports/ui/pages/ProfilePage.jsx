@@ -5,11 +5,19 @@ import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import ClubCard from '../components/ClubCard';
 import FollowedClubCard from '../components/FollowedClubCard';
+import ClubEvent from '../components/ClubEvent';
 import { Clubs } from '../../api/club/Clubs';
 import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 
+
 /** A simple static component to render some text for the landing page. */
 class ProfilePage extends React.Component {
+  randomClubs() {
+    const sampleclubs = _.sample(this.props.clubs, 5);
+    console.log(sampleclubs);
+    return sampleclubs;
+  }
+
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Loading</Loader>;
   }
@@ -25,7 +33,8 @@ class ProfilePage extends React.Component {
               <Header as={'h2'} inverted>Recommendations</Header>
               <hr/>
               <Card.Group>
-                {this.props.clubs.map((club, index) => <ClubCard key={index} club={club}/>)}
+                {this.randomClubs().map((club, index) =>
+                    <ClubCard key={index} club={club}/>)}
               </Card.Group>
             </Grid.Column>
 
@@ -45,21 +54,13 @@ class ProfilePage extends React.Component {
               {/*Club Notifications
               - Displays messages created by club owners
             */}
+              <Header as={'h2'} inverted>Club Notifications</Header>
+              <hr/>
               <Card>
                 <Card.Content>
-                  <Card.Header>Club Notifications</Card.Header>
-                </Card.Content>
-                <Card.Content>
                   <Feed>
-                    <Feed.Event>
-                      <Feed.Label image='/images/meteor-logo.png'/>
-                      <Feed.Content>
-                        <Feed.Date content='1 day ago'/>
-                        <Feed.Summary>
-
-                        </Feed.Summary>
-                      </Feed.Content>
-                    </Feed.Event>
+                    {this.props.followedclubs.map((followedclub, index) =>
+                        <ClubEvent key={index} followedclub={followedclub}/>)}
                   </Feed>
                 </Card.Content>
               </Card>

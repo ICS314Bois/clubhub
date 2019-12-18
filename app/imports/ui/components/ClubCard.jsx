@@ -10,6 +10,7 @@ import { FollowedClubs } from '../../api/followedclub/FollowedClubs';
 import { Clubs } from '../../api/club/Clubs';
 
 class ClubCard extends React.Component {
+
   removeClub(docID) {
     swal({
       title: 'Are you sure?',
@@ -104,7 +105,7 @@ class ClubCard extends React.Component {
           </Card.Content>
           <Card.Content>{this.props.club.contactName}</Card.Content>
           <Card.Content>{this.props.club.email}</Card.Content>
-          <Card.Content><a href={this.props.club.website}>{this.props.club.website}</a></Card.Content>
+          <Card.Content>{this.props.club.website}</Card.Content>
           {Meteor.user() && !this.isFollowed() ? (
               <Button color='green' icon onClick={() => this.follow()}>
                 Follow
