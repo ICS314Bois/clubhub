@@ -14,7 +14,7 @@ const ClubsSchema = new SimpleSchema({
   Website: {
     type: String,
     optional: true,
-    defaultValue: 'N/A'
+    defaultValue: 'N/A',
   },
   Image: {
     type: String,
